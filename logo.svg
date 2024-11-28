@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FlowChat</title>
-  </head>
-  <body>
-    <div style="display: flex;justify-content: center;align-items: center;height: 100vh;width: 100%;flex-direction: column;">
+<?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="113.534 106.132 226.881 226.881" width="226.881px" height="226.881px">
   <g id="object-2">
     <path d="M 178.65 181.685 C 184.274 159.13 198.324 147.85 220.805 147.85 C 254.531 147.85 258.746 173.226 275.609 177.455 C 286.852 180.277 296.686 176.047 305.118 164.768 C 299.499 187.322 285.448 198.601 262.962 198.601 C 229.237 198.601 225.021 173.226 208.159 168.996 C 196.921 166.175 187.08 170.404 178.65 181.685 Z M 136.493 232.437 C 142.118 209.882 156.167 198.601 178.65 198.601 C 212.374 198.601 216.59 223.978 233.452 228.207 C 244.697 231.028 254.531 226.8 262.962 215.519 C 257.343 238.073 243.293 249.354 220.805 249.354 C 187.08 249.354 182.865 223.978 166.003 219.749 C 154.765 216.927 144.924 221.156 136.493 232.437 Z" style="fill: rgb(255, 255, 255);" id="object-1"/>
@@ -19,8 +11,3 @@
   <path d="M 268.098 150.191 L 268.098 228.108" style="fill: none; stroke-linecap: round; stroke-width: 17px; stroke: rgb(255, 255, 255);"/>
   <path d="M 292.072 180.159 L 292.072 198.14" style="fill: none; stroke-linecap: round; stroke-width: 17px; stroke: rgb(255, 255, 255);"/>
 </svg>
-      <h1>FlowChat</h1>
-      <h2>Coming Soon</h2>
-    </div>
-  </body>
-</html>
