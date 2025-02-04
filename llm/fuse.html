@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fuse.js Dynamic Website Search</title>
+  <script src="./fuse.js"></script>
+</head>
+
+<body>
+  <h1>Dynamic Static Website Search with Fuse.js</h1>
+
+  <label for="searchInput">Search:</label>
+  <input type="text" id="searchInput" placeholder="Enter your search term">
+  <button onclick="performSearch()">Search</button>
+
+  <h2>Results:</h2>
+  <pre id="results"></pre>
+
+  <h2>Available Data:</h2>
+  <pre id="datalist"></pre>
+  <script>
+    // Website content represented as raw data for comprehensive search
+    const websiteContent =
+      [
+        {
+          "section": "Chat Overview",
+          "content": "FlowChat offers AI-powered chatbots for 24/7 customer support, seamlessly integrating into websites.",
+          "keywords": ["FlowChat", "AI chatbot", "24/7 support", "real-time assistance", "website integration", "customer inquiry"],
+          "questions": [
+            "What is FlowChat?",
+            "How does the chatbot work?",
+            "Can it integrate into my website?"
+          ],
+          "fuseKeys": "Chat Overview FlowChat offers AI-powered chatbots for 24/7 customer support, seamlessly integrating into websites. FlowChat AI chatbot 24/7 support real-time assistance website integration customer inquiry What is FlowChat? How does the chatbot work? Can it integrate into my website?"
+        },
+        {
+          "section": "Product Benefits",
+          "content": "FlowChat's AI chatbot provides continuous support, saves time, and ensures no customer inquiry is missed.",
+          "keywords": ["continuous support", "saves time", "no missed inquiries", "business efficiency", "real-time help"],
+          "questions": [
+            "What are the benefits of FlowChat's AI chatbot?",
+            "How does it save time for businesses?",
+            "Will it ensure all customer inquiries are addressed?"
+          ],
+          "fuseKeys": "Product Benefits FlowChat's AI chatbot provides continuous support, saves time, and ensures no customer inquiry is missed. continuous support saves time no missed inquiries business efficiency real-time help What are the benefits of FlowChat's AI chatbot? How does it save time for businesses? Will it ensure all customer inquiries are addressed?"
+        },
+        {
+          "section": "Pricing",
+          "content": "FlowChat has a one-time fee which is negotiable.",
+          "keywords": ["one-time fee", "negotiable", "cost", "pricing model", "affordability"],
+          "questions": [
+            "What is the cost of FlowChat?",
+            "Is the pricing negotiable?",
+            "Are there any ongoing fees?"
+          ],
+          "fuseKeys": "Pricing FlowChat has a one-time fee which is negotiable. one-time fee negotiable cost pricing model affordability What is the cost of FlowChat? Is the pricing negotiable? Are there any ongoing fees?"
+        },
+        {
+          "section": "Booking",
+          "link": '<a href="https://calendly.com/electro-electra/30min" style="font-weight: bold;text-decoration: underline;color: white;" target="_blank">Click to book a meeting</a>',
+          "content": "Book a 30-minute meeting with FlowChat to discuss further.",
+          "keywords": ["schedule meeting", "book appointment", "30-minute session", "meeting link"],
+          "questions": [
+            "How can I schedule a meeting?",
+            "Can I book a consultation with FlowChat?",
+            "Is the booking process simple?"
+          ],
+          "fuseKeys": "Booking Book a 30-minute meeting with FlowChat to discuss further. schedule meeting book appointment 30-minute session meeting link How can I schedule a meeting? Can I book a consultation with FlowChat? Is the booking process simple?"
+        },
+        {
+          "section": "Contact",
+          "content": "For additional information, call +923234917974.",
+          "keywords": ["contact", "phone number", "support", "customer inquiry", "call for help"],
+          "questions": [
+            "How do I contact FlowChat?",
+            "Is there a phone number for support?",
+            "Who can I call for more details?"
+          ],
+          "fuseKeys": "Contact For additional information, call +923234917974. contact phone number support customer inquiry call for help How do I contact FlowChat? Is there a phone number for support? Who can I call for more details?"
+        },
+      ]
+
+    // Display the nicely formatted data
+    document.getElementById("datalist").textContent = JSON.stringify(websiteContent, null, 2);
+
+    // Configure Fuse.js
+    const options = {
+      keys: ['fuseKeys', 'section', 'content', 'keywords', 'questions'], // Searchable fields
+      includeScore: true,
+      threshold: 0.6, // Adjust for better natural language matching
+      ignoreLocation: true, // Match anywhere in text     threshold: 0.3, // Fuzzy matching sensitivity
+    };
+    const fuse = new Fuse(websiteContent, options);
+
+    const promptConfig = {
+      persona: {
+        name: "Emma",
+        role: "Friendly and energetic helpdesk salesperson",
+        company: "FlowChat",
+        product: "AI-powered chatbots for 24/7 customer support",
+        tone: "Professional yet enthusiastic",
+      },
+      productDetails: {
+        benefits: [
+          "Provides continuous support",
+          "Saves businesses time",
+          "Ensures no customer inquiry is missed",
+        ],
+      },
+      instructions: {
+        style: "Chat with concise, natural responses like a human salesperson.",
+        writing: "use inline html ul li and simple inline css to make it look professional",
+        avoid: [
+          "Mentioning being an AI",
+          "Repeating responses",
+          "Overly emotional tone",
+          "Asking too many questions",
+        ],
+        focus: [
+          "Providing helpful information",
+          "Staying sales-focused and brief",
+          "Encouraging booking through the provided link",
+        ],
+        responseLength: "2-3 lines max",
+        tone: "Friendly and sales-focused",
+      },
+    };
+    // Perform search and display results
+    function performSearch() {
+      const query = document.getElementById('searchInput').value;
+      var results = fuse.search(query);
+      var refined = []
+      for (var i = 0; i < results.length; i++) {
+        delete results[i].refIndex;
+        delete results[i].score;
+        delete results[i].item.section;
+        delete results[i].item.keywords;
+        delete results[i].item.questions;
+        delete results[i].item.content;
+        refined.push(results[i].item)
+      }
+      var prompt = promptConfig;
+      prompt.query = query;
+      prompt.context = refined;
+
+      const resultsList = document.getElementById('results');
+      resultsList.innerHTML = '';
+      resultsList.textContent = JSON.stringify(prompt, null, 2);
+    }
+  </script>
+
+</body>
+
+</html>

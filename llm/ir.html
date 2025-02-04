@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Powered Q&A</title>
+</head>
+
+<body>
+  <h1>AI-Powered Q&A</h1>
+  <div id="conversation"
+    style="height: 300px; overflow-y: scroll; border: 1px solid #ddd; padding: 10px; background-color: #f9f9f9;"></div>
+
+  <div>
+    <input type="text" id="question" placeholder="Ask a question..."
+      style="padding: 8px; width: 70%; margin-right: 10px;" />
+    <button onclick="askQuestion()" style="padding: 8px 15px;">Ask</button>
+  </div>
+
+  <script>
+
+    const data = [
+      // Persona
+      {category: "Persona", attribute: "Name", details: "Emma"},
+      {category: "Persona", attribute: "Role", details: "Friendly and energetic helpdesk salesperson"},
+      {category: "Persona", attribute: "Company", details: "FlowChat"},
+      {category: "Persona", attribute: "Product", details: "AI-powered chatbots for 24/7 customer support"},
+      {category: "Persona", attribute: "Tone", details: "Professional yet enthusiastic"},
+      {category: "Persona", attribute: "Experience", details: "5 years in customer support"},
+
+      // Product Details
+      {category: "Product Details", attribute: "Benefits", details: "Provides continuous support, Saves businesses time, Ensures no customer inquiry is missed"},
+      {category: "Product Details", attribute: "Pricing", details: "One-time fee (negotiable)"},
+      {category: "Product Details", attribute: "Booking Link", details: "Click to book a meeting"},
+      {category: "Product Details", attribute: "Contact Number", details: "+923234917974"},
+      {category: "Product Details", attribute: "Available Languages", details: "English, Spanish, French, German"},
+      {category: "Product Details", attribute: "Support Hours", details: "24/7"},
+      {category: "Product Details", attribute: "Target Audience", details: "Small businesses, Startups, E-commerce platforms"},
+
+      // Instructions
+      {category: "Instructions", attribute: "Style", details: "Chat with concise, natural responses like a human salesperson"},
+      {category: "Instructions", attribute: "Avoid", details: "Mentioning being an AI, Repeating responses, Overly emotional tone, Asking too many questions"},
+      {category: "Instructions", attribute: "Focus", details: "Providing helpful information, Staying sales-focused and brief, Encouraging booking through the provided link"},
+      {category: "Instructions", attribute: "Response Length", details: "2-3 lines max"},
+      {category: "Instructions", attribute: "Tone", details: "Friendly and sales-focused"},
+      {category: "Instructions", attribute: "Key Phrases", details: "Booking a meeting, Negotiating pricing, Product demo"},
+
+      // Customer Engagement
+      {category: "Customer Engagement", attribute: "Greeting", details: "Hello! How can I assist you today?"},
+      {category: "Customer Engagement", attribute: "Closing", details: "Thank you for your time! Let me know if you need further assistance."},
+      {category: "Customer Engagement", attribute: "Upselling Technique", details: "Highlight the value of a premium version if it suits their needs."},
+      {category: "Customer Engagement", attribute: "Customer Feedback Request", details: "Would you mind sharing your feedback with us?"},
+
+      // FAQ Section
+      {category: "FAQ", attribute: "Refund Policy", details: "Refund requests can be submitted within 30 days of purchase."},
+      {category: "FAQ", attribute: "Data Security", details: "We implement encryption and GDPR compliance to protect customer data."},
+      {category: "FAQ", attribute: "Payment Methods", details: "We accept credit cards, PayPal, and wire transfers."},
+      {category: "FAQ", attribute: "Support Channels", details: "Email, Live chat, Phone support."},
+
+      // Technical Info
+      {category: "Technical Info", attribute: "API Availability", details: "API available for integrating chatbot with other platforms."},
+      {category: "Technical Info", attribute: "Platform Compatibility", details: "Supports web, mobile, and desktop platforms."},
+      {category: "Technical Info", attribute: "Security Features", details: "Advanced encryption and two-factor authentication for data protection."},
+      {category: "Technical Info", attribute: "Deployment", details: "Can be deployed in the cloud or on-premises."},
+
+      // Customer Support
+      {category: "Customer Support", attribute: "Phone Support Hours", details: "Mon-Fri, 9 AM to 6 PM (UTC)"},
+      {category: "Customer Support", attribute: "Response Time", details: "Average response time is under 1 hour."},
+      {category: "Customer Support", attribute: "Phone Support Hours", details: "Mon-Fri, 9 AM to 6 PM (UTC)"},
+      {category: "Customer Support", attribute: "Live Chat Availability", details: "Available 24/7 for quick resolutions."},
+      {category: "Customer Support", attribute: "Knowledge Base", details: "Access detailed documentation and guides anytime."},
+
+      // Team Details
+      {category: "Team Details", attribute: "Sales Team", details: "Energetic, customer-focused, highly skilled in product demonstrations."},
+      {category: "Team Details", attribute: "Support Team", details: "Trained to resolve queries and ensure customer satisfaction."},
+      {category: "Team Details", attribute: "Tech Team", details: "Working on improving product performance and adding new features."},
+
+      // Pricing Models
+      {category: "Pricing Models", attribute: "Subscription", details: "Monthly and annual subscriptions available."},
+      {category: "Pricing Models", attribute: "Custom Plan", details: "Custom pricing based on customer needs."},
+      {category: "Pricing Models", attribute: "Free Trial", details: "14-day free trial for new users."}
+    ];
+    function askQuestion() {
+      const question = document.getElementById('question').value.toLowerCase();
+      const conversationDiv = document.getElementById('conversation');
+
+      // Show user question in the conversation
+      conversationDiv.innerHTML += `<div style="padding: 8px; margin-bottom: 10px; background-color: #d9f7be; text-align: right; border-radius: 4px;">${question}</div>`;
+
+      // Retrieve and display response
+      let response = findAnswer(question);
+
+      // If no relevant answer is found
+      if (!response) {
+        response = "Sorry, I couldn't find an answer to that question. Can you ask something else?";
+      }
+
+      conversationDiv.innerHTML += `<div style="padding: 8px; margin-bottom: 10px; background-color: #f0f0f0; border-radius: 4px;">${response}</div>`;
+
+      // Scroll to the latest message
+      conversationDiv.scrollTop = conversationDiv.scrollHeight;
+
+      // Clear the input field after asking
+      document.getElementById('question').value = '';
+    }
+
+    function findAnswer(query) {
+      const lowerQuery = query.toLowerCase();
+      const matches = [];
+
+      // Search for relevance across category, attribute, and details
+      data.forEach(item => {
+        let relevanceScore = 0;
+
+        if (lowerQuery.includes(item.category.toLowerCase())) {
+          relevanceScore += 2; // Match on category
+        }
+        if (lowerQuery.includes(item.attribute.toLowerCase())) {
+          relevanceScore += 3; // Match on attribute
+        }
+        if (lowerQuery.includes(item.details.toLowerCase())) {
+          relevanceScore += 1; // Match on details
+        }
+
+        if (relevanceScore > 0) {
+          matches.push({
+            score: relevanceScore,
+            answer: `<strong>${item.category}:</strong> ${item.attribute} - ${item.details}`
+          });
+        }
+      });
+
+      // Sort matches by relevance
+      matches.sort((a, b) => b.score - a.score);
+
+      // Provide up to the top 3 matches
+      const topAnswers = matches.slice(0, 3).map(match => match.answer);
+
+      // If no matches found, provide a fallback response
+      if (topAnswers.length === 0) {
+        return "Sorry, I couldn't find an answer to that question. Can you ask something else?";
+      }
+
+      return topAnswers.join("<br><br>");
+    }
+
+    // Function to retrieve specific information based on category and attribute
+    function getAnswerForCategory(category, attribute) {
+      const item = data.find(i => i.category === category && i.attribute === attribute);
+      return item ? `<strong>${item.category}:</strong> ${item.attribute} - ${item.details}` : null;
+    }
+  </script>
+</body>
+
+</html>
