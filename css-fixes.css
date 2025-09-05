@@ -1,0 +1,183 @@
+/* CSS fixes for layout and styling issues */
+
+/* Fix any missing or broken styles */
+.svg-placeholder {
+    display: inline-block;
+    min-width: 16px;
+    min-height: 16px;
+}
+
+.svg-error {
+    color: #999;
+    font-size: 12px;
+    display: inline-block;
+}
+
+/* Ensure SVG icons display properly */
+.svg-loaded svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Fix any layout issues with containers */
+.styles_container__MgZK9,
+.styles_container___G84j,
+.styles_container__B8AWX,
+.styles_container__zX2fr {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Ensure images display properly */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix any flexbox issues */
+.d-flex {
+    display: flex !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+/* Fix button styling */
+.styles_button__UViuC {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Fix any z-index issues */
+.styles_header__A7wGU {
+    position: relative;
+    z-index: 100;
+}
+
+/* Ensure proper spacing */
+.styles_content__wrapper__fm3YH {
+    width: 100%;
+}
+
+/* Fix any overflow issues */
+.styles_container___G84j {
+    overflow-x: hidden;
+}
+
+/* Mobile responsiveness fixes */
+@media (max-width: 768px) {
+    .styles_grid__mKmss {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .styles_nav__TOfG9 {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 1rem;
+        z-index: 1000;
+    }
+    
+    .styles_nav__TOfG9.active {
+        display: block;
+    }
+    
+    .styles_menuButton__rVWes {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .styles_content_title__53IYc {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .styles_model__iFRfx {
+        margin-top: 2rem;
+    }
+    
+    .styles_button_group__Yd7Xm {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .styles_button__UViuC {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .styles_content_title__53IYc {
+        font-size: 1.5rem;
+    }
+    
+    .styles_content_description__KiDbh {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .styles_container__MgZK9 {
+        padding: 0 1rem;
+    }
+}
+
+/* Ensure proper background images */
+.styles_hero__LV3La {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fix any missing gradients or backgrounds */
+.styles_stackContainer__nV_c2 {
+    background: transparent;
+}
+
+/* Animation fixes */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.styles_content__9fty9 {
+    animation: slideIn 0.6s ease-out;
+}
+
+/* Fix any missing hover states */
+.styles_button__UViuC:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.styles_social__r5XIR:hover {
+    opacity: 0.8;
+}
+
+/* Ensure proper grid layouts */
+.styles_grid__84m7Z {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Fix any positioning issues */
+.styles_model__iFRfx {
+    position: relative;
+    z-index: 1;
+}
