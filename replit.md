@@ -1,39 +1,41 @@
-# Langflow Marketing Website
+# Langflow Website - Replit Setup
 
-## Overview
-This is a static marketing website for Langflow, a low-code AI builder for agentic and RAG applications. The project was imported from GitHub and appears to be an exported Next.js static site with pre-built HTML, CSS, and assets.
+## Project Overview
+This is a static website for Langflow (langflow.org) that was exported from a Next.js application. The project contains the complete marketing website with HTML, CSS, JavaScript, and media assets.
 
 ## Project Structure
-- `index.html` - Main website landing page
-- `server.py` - Python HTTP server for serving static files
-- `assets/` - CSS and JavaScript assets
-  - `css/inline-styles.css` - Extracted inline styles
-  - `js/svg-loader.js` - Dynamic SVG loading script
-  - `images/` - Image assets for the website
-  - `svgs/` - SVG icon files
-- `_next/` - Next.js build output with static CSS and media
-- `images/` - Main image assets (logos, graphics, etc.)
-- `svgs/` - Additional SVG files
-- `blog/` - Contains RSS feed file
+- `index.html` - Main website homepage
+- `_next/` - Next.js exported static assets (CSS files)
+- `assets/` - Custom assets including CSS, JavaScript, and images
+- `images/` - Website images and graphics
+- `svgs/` - SVG icons and graphics
+- `server.py` - Python HTTP server configured for Replit environment
 
-## Technical Setup
-- **Frontend**: Static HTML/CSS/JavaScript (exported from Next.js)
-- **Server**: Python 3.11 HTTP server with CORS support
+## Setup Completed
+1. **Language Installation**: Python 3.11 installed
+2. **Static Server**: Created Python HTTP server with proper MIME types for CSS/JS files
+3. **Workflow Configuration**: Set up "Static Server" workflow running on port 5000
+4. **Deployment Configuration**: Configured for autoscale deployment
+5. **Asset Management**: Fixed missing images by copying from `_next/static/media/`
+6. **CORS & Caching**: Configured server for Replit proxy environment with proper headers
+
+## Current Status
+- ✅ Server running successfully on port 5000
+- ✅ CSS files loading with correct MIME types (`text/css`)
+- ✅ All major assets loading (images, SVGs, stylesheets)
+- ✅ Deployment configuration ready
+- ✅ Website fully functional
+
+## Technical Details
+- **Server**: Python HTTP server with custom handler for proper MIME types
 - **Port**: 5000 (configured for Replit environment)
-- **Assets**: Comprehensive SVG loader system for dynamic icon loading
-
-## Development
-The website is now configured to run in the Replit environment with:
-- Static file server with proper CORS headers
-- Cache-control headers to prevent caching issues in Replit's iframe
-- Support for all static assets (CSS, JS, images, SVGs)
-
-## Deployment
-Configured for Replit autoscale deployment using the Python HTTP server.
+- **Host**: 0.0.0.0 (allows external access through Replit proxy)
+- **Caching**: Disabled to prevent Replit iframe caching issues
+- **CORS**: Enabled for cross-origin requests
 
 ## Recent Changes
-- **2025-09-05**: Initial setup in Replit environment
-  - Created Python HTTP server for static file serving
-  - Configured workflow for port 5000
-  - Set up deployment configuration
-  - All assets and functionality working correctly
+- Fixed CSS MIME type issue that was preventing proper styling
+- Copied missing images from `_next/static/media/` to `images/` directory
+- Ensured proper server configuration for Replit's proxy environment
+
+The website is now running correctly and ready for use in the Replit environment.

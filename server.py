@@ -14,6 +14,28 @@ class StaticFileHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=os.getcwd(), **kwargs)
     
+    def guess_type(self, path):
+        """Override to ensure proper MIME types for CSS and JS files."""
+        base, ext = os.path.splitext(path)
+        if ext == '.css':
+            return 'text/css'
+        elif ext == '.js':
+            return 'application/javascript'
+        elif ext == '.svg':
+            return 'image/svg+xml'
+        elif ext == '.png':
+            return 'image/png'
+        elif ext == '.jpg' or ext == '.jpeg':
+            return 'image/jpeg'
+        elif ext == '.gif':
+            return 'image/gif'
+        elif ext == '.ico':
+            return 'image/x-icon'
+        elif ext == '.html':
+            return 'text/html'
+        else:
+            return super().guess_type(path)
+    
     def end_headers(self):
         # Add CORS headers for Replit proxy
         self.send_header('Access-Control-Allow-Origin', '*')
@@ -40,15 +62,6 @@ class StaticFileHandler(http.server.SimpleHTTPRequestHandler):
         # Serve the file
         super().do_GET()
     
-    def guess_type(self, path):
-        """Guess the type of a file."""
-        base, ext = os.path.splitext(path)
-        if ext in self.extensions_map:
-            return self.extensions_map[ext]
-        ext = ext.lower()
-        if ext in self.extensions_map:
-            return self.extensions_map[ext]
-        return self.extensions_map.get('.html', 'text/html')
 
 # Set up proper MIME types
 mimetypes.add_type('application/javascript', '.js')
