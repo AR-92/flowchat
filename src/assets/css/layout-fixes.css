@@ -1,0 +1,147 @@
+/* CSS fixes for layout and image alignment issues */
+
+/* Ensure images scale properly and maintain aspect ratio */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Fix container overflow issues */
+.styles_container__MgZK9,
+.styles_container__yup16 {
+    overflow: hidden;
+}
+
+/* Ensure proper flexbox alignment */
+.styles_social__r5XIR {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Fix image alignment in grid layouts */
+.styles_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+/* Ensure proper spacing and alignment for hero sections */
+.styles_hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Fix header alignment */
+.styles_header__A7wGU {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Ensure proper responsive behavior */
+@media (max-width: 768px) {
+    .styles_container__MgZK9 {
+        padding: 0 16px;
+    }
+    
+    .styles_grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Fix any layout shifts */
+* {
+    box-sizing: border-box;
+}
+
+/* Ensure SVG icons display properly */
+.svg-placeholder {
+    display: inline-block;
+    vertical-align: middle;
+}
+/* Fix for gradient background image */
+img[alt="gradient"] {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Fix for gradient background image */
+.styles_stackContainer__nV_c2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.styles_stackContainer__nV_c2 > img[alt="gradient"] {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Fix for card images */
+.styles_cardContainer__r_6Ua > img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Fix for get started section */
+.styles_get_started__oir_J {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Fix for footer alignment */
+.styles_footer___5qD3 .styles_container__FcDn2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.styles_footer___5qD3 .styles_innerContainer__x_gp4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Ensure proper responsive behavior for footer */
+@media (max-width: 768px) {
+    .styles_footer___5qD3 .styles_container__FcDn2 {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .styles_footer___5qD3 .styles_innerContainer__x_gp4 {
+        justify-content: center;
+    }
+}
+
+/* Fix social media alignment */
+.styles_footer___5qD3 .styles_right__F53yd {
+    display: flex;
+    align-items: center;
+}
+
+.styles_footer___5qD3 .styles_container__yup16 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}

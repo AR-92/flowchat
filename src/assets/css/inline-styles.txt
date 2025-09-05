@@ -1,0 +1,5 @@
+style="color: transparent"
+style="cursor: pointer"
+style="mask-type: alpha"
+style="padding: 0"
+style="width: 50%"
