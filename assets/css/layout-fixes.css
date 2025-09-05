@@ -73,6 +73,7 @@ img[alt="gradient"] {
     left: 0;
     z-index: -1;
     opacity: 0.7;
+}
 
 /* Fix for gradient background image */
 .styles_stackContainer__nV_c2 {
@@ -97,10 +98,50 @@ img[alt="gradient"] {
     display: block;
 }
 
-/* Fix for getStarted image */
-img[alt="getStarted"] {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 2rem 0;
+/* Fix for get started section */
+.styles_get_started__oir_J {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Fix for footer alignment */
+.styles_footer___5qD3 .styles_container__FcDn2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.styles_footer___5qD3 .styles_innerContainer__x_gp4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Ensure proper responsive behavior for footer */
+@media (max-width: 768px) {
+    .styles_footer___5qD3 .styles_container__FcDn2 {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .styles_footer___5qD3 .styles_innerContainer__x_gp4 {
+        justify-content: center;
+    }
+}
+
+/* Fix social media alignment */
+.styles_footer___5qD3 .styles_right__F53yd {
+    display: flex;
+    align-items: center;
+}
+
+.styles_footer___5qD3 .styles_container__yup16 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
