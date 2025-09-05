@@ -1,0 +1,37 @@
+<svg
+                                            width="19"
+                                            height="18"
+                                            viewBox="0 0 19 18"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        >
+                                            <rect
+                                                x="1.58008"
+                                                y="1.08008"
+                                                width="15.84"
+                                                height="15.84"
+                                                rx="7.92"
+                                                fill="url(#pattern0_2002_954)"
+                                            ></rect>
+                                            <defs>
+                                                <pattern
+                                                    id="pattern0_2002_954"
+                                                    patternContentUnits="objectBoundingBox"
+                                                    width="1"
+                                                    height="1"
+                                                >
+                                                    <use
+                                                        xlink:href="#image0_2002_954"
+                                                        transform="translate(-0.202703 -0.135135) scale(0.00337838)"
+                                                    ></use>
+                                                </pattern>
+                                                <image
+                                                    id="image0_2002_954"
+                                                    width="422"
+                                                    height="390"
+                                                    preserveAspectRatio="none"
+                                                    xlink:href="/assets/images/image_1757030813459029992.png"
+                                                ></image>
+                                            </defs>
+                                        </svg>

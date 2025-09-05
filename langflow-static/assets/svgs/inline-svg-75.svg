@@ -1,0 +1,36 @@
+<svg
+                                            width="18"
+                                            height="18"
+                                            viewBox="0 0 18 18"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        >
+                                            <rect
+                                                x="2.69922"
+                                                y="0.179932"
+                                                width="12.472"
+                                                height="17.64"
+                                                fill="url(#pattern0_2002_1636)"
+                                            ></rect>
+                                            <defs>
+                                                <pattern
+                                                    id="pattern0_2002_1636"
+                                                    patternContentUnits="objectBoundingBox"
+                                                    width="1"
+                                                    height="1"
+                                                >
+                                                    <use
+                                                        xlink:href="#image0_2002_1636"
+                                                        transform="scale(0.00552486 0.00390625)"
+                                                    ></use>
+                                                </pattern>
+                                                <image
+                                                    id="image0_2002_1636"
+                                                    width="181"
+                                                    height="256"
+                                                    preserveAspectRatio="none"
+                                                    xlink:href="/assets/images/image_1757030812628571921.png"
+                                                ></image>
+                                            </defs>
+                                        </svg>
