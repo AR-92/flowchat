@@ -1,473 +1,473 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Langflow Blog</title>
-    <description>Explore the latest news, updates, and insights from the Langflow team. Learn about the latest features, best practices, and how to get the most out of Langflow.</description>
-    <link>https://www.langflow.org/blog</link>
+    <title>FlowChat Blog</title>
+    <description>Explore the latest news, updates, and insights from the FlowChat team. Learn about the latest features, best practices, and how to get the most out of FlowChat.</description>
+    <link>https://www.flowchat.org/blog</link>
     <language>en-us</language>
     <lastBuildDate>Fri, 29 Aug 2025 21:26:49 GMT</lastBuildDate>
-    <atom:link href="https://www.langflow.org/blog/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.flowchat.org/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image>
-      <url>https://langflow.org/images/logo.png</url>
-      <title>Langflow Blog</title>
-      <link>https://www.langflow.org/blog</link>
+      <url>https://flowchat.org/images/logo.png</url>
+      <title>FlowChat Blog</title>
+      <link>https://www.flowchat.org/blog</link>
     </image>
     <item>
-      <title><![CDATA[Build an alt text generator with Langflow and Next.js ]]></title>
-      <link>https://langflow.org/blog/alt-text-generator-langflow-next-js</link>
-      <guid isPermaLink="true">https://langflow.org/blog/alt-text-generator-langflow-next-js</guid>
+      <title><![CDATA[Build an alt text generator with FlowChat and Next.js ]]></title>
+      <link>https://flowchat.org/blog/alt-text-generator-langflow-next-js</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/alt-text-generator-langflow-next-js</guid>
       <pubDate>Tue, 26 Aug 2025 07:09:56 GMT</pubDate>
-      <description><![CDATA[Tired of the tedious task of writing alt text? This article will show you how to build AltTextr, an AI-powered app using Langflow, Next.js, and OpenAI that you collaborate with to generate high-quality alternative text, helping you create better, more accessible websites.]]></description>
-      <author>please-reply@langflow.org (Phil Nash,Unknown)</author>
+      <description><![CDATA[Tired of the tedious task of writing alt text? This article will show you how to build AltTextr, an AI-powered app using FlowChat, Next.js, and OpenAI that you collaborate with to generate high-quality alternative text, helping you create better, more accessible websites.]]></description>
+      <author>please-reply@flowchat.org (Phil Nash,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/aa1a2a5ed27e9b4445383ef26766bcfed5c5adab-960x540.jpg" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Build Your Own GPT-5: Smart Model Routing with Langflow]]></title>
-      <link>https://langflow.org/blog/how-to-build-your-own-gpt-5</link>
-      <guid isPermaLink="true">https://langflow.org/blog/how-to-build-your-own-gpt-5</guid>
+      <title><![CDATA[Build Your Own GPT-5: Smart Model Routing with FlowChat]]></title>
+      <link>https://flowchat.org/blog/how-to-build-your-own-gpt-5</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/how-to-build-your-own-gpt-5</guid>
       <pubDate>Mon, 25 Aug 2025 11:24:00 GMT</pubDate>
-      <description><![CDATA[Between o3, o1, 4o, GPT-5, Claude-4.1-opus, Gemini, etc. choosing the right model name for our applications can feel like picking a health insurance plan. In this post, we fix this with Langflow by building a powerful Multi-Agent System (MAS) that implements the LLM-as-judge pattern: one agent decides "think" or "default," an if-else routes the query, and specialized agents do the work.]]></description>
-      <author>please-reply@langflow.org (Tejas Kumar,Unknown)</author>
+      <description><![CDATA[Between o3, o1, 4o, GPT-5, Claude-4.1-opus, Gemini, etc. choosing the right model name for our applications can feel like picking a health insurance plan. In this post, we fix this with FlowChat by building a powerful Multi-Agent System (MAS) that implements the LLM-as-judge pattern: one agent decides "think" or "default," an if-else routes the query, and specialized agents do the work.]]></description>
+      <author>please-reply@flowchat.org (Tejas Kumar,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/151308630f3420b2b28ca34208da820522d2ecfb-960x540.jpg" length="0" type="image/jpeg" />
     </item>
     <item>
       <title><![CDATA[How to Build a Deep-Research Multi‑Agent System]]></title>
-      <link>https://langflow.org/blog/how-to-build-a-deep-research-multi-agent-system</link>
-      <guid isPermaLink="true">https://langflow.org/blog/how-to-build-a-deep-research-multi-agent-system</guid>
+      <link>https://flowchat.org/blog/how-to-build-a-deep-research-multi-agent-system</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/how-to-build-a-deep-research-multi-agent-system</guid>
       <pubDate>Fri, 15 Aug 2025 10:48:21 GMT</pubDate>
-      <description><![CDATA[This blog post dives into Multi-Agent Systems (MAS) and explains how to build a basic deep research workflow in Langflow and explains when to prefer them over single-agent systems. We also explore how Langflow particularly shines here, enabling rapid iteration and cherry picking the best models per specialized agentic task.]]></description>
-      <author>please-reply@langflow.org (Tejas Kumar,Unknown)</author>
+      <description><![CDATA[This blog post dives into Multi-Agent Systems (MAS) and explains how to build a basic deep research workflow in FlowChat and explains when to prefer them over single-agent systems. We also explore how FlowChat particularly shines here, enabling rapid iteration and cherry picking the best models per specialized agentic task.]]></description>
+      <author>please-reply@flowchat.org (Tejas Kumar,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/a67886daac6d6db0864685cd592261636b5197ec-960x540.png" length="0" type="image/jpeg" />
     </item>
     <item>
       <title><![CDATA[100k stars on GitHub ⭐️]]></title>
-      <link>https://langflow.org/blog/100k-stars-on-github</link>
-      <guid isPermaLink="true">https://langflow.org/blog/100k-stars-on-github</guid>
+      <link>https://flowchat.org/blog/100k-stars-on-github</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/100k-stars-on-github</guid>
       <pubDate>Thu, 14 Aug 2025 23:17:00 GMT</pubDate>
-      <description><![CDATA[Langflow just hit 100k stars on GitHub!
+      <description><![CDATA[FlowChat just hit 100k stars on GitHub!
 
-Langflow began as a small experiment and has grown into something far bigger than we ever imagined — thanks to the thousands who’ve written code, fixed bugs, shared feedback, and trusted it for their projects.
+FlowChat began as a small experiment and has grown into something far bigger than we ever imagined — thanks to the thousands who’ve written code, fixed bugs, shared feedback, and trusted it for their projects.
 
 Hitting 100k stars is a proud milestone, but our mission to democratize AI goes on — and we still treat every day like it’s day one.
 
 Thank you for being part of this journey.]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/d72329842d6cf9b463f52eff8e3c45abaa663ac0-1600x900.png" length="0" type="image/jpeg" />
     </item>
     <item>
       <title><![CDATA[The Troubleshooter: Using Render's MCP service to Make Life Easier]]></title>
-      <link>https://langflow.org/blog/the-troubleshooter-using-mcp-in-render</link>
-      <guid isPermaLink="true">https://langflow.org/blog/the-troubleshooter-using-mcp-in-render</guid>
+      <link>https://flowchat.org/blog/the-troubleshooter-using-mcp-in-render</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/the-troubleshooter-using-mcp-in-render</guid>
       <pubDate>Thu, 14 Aug 2025 15:25:28 GMT</pubDate>
-      <description><![CDATA[I recently came across Render's new MCP service, and as an avid user of Render to deploy various Python and Javascript based applications, it seemed like a good time to check out how I could use it in my day to day operations. This blog post dives into my experience using this new service with Cursor, Warp, and Langflow and how I was able to use to improve my service with agents.]]></description>
-      <author>please-reply@langflow.org (David Jones-Gilardi,Unknown)</author>
+      <description><![CDATA[I recently came across Render's new MCP service, and as an avid user of Render to deploy various Python and Javascript based applications, it seemed like a good time to check out how I could use it in my day to day operations. This blog post dives into my experience using this new service with Cursor, Warp, and FlowChat and how I was able to use to improve my service with agents.]]></description>
+      <author>please-reply@flowchat.org (David Jones-Gilardi,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/dee3726e71763328a4f5ebc310541896aceb0bf2-1149x1071.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[How to run OpenAI’s gpt-oss and GPT-5 models on Langflow ]]></title>
-      <link>https://langflow.org/blog/openai-gpt-oss-and-gpt-5-on-langflow</link>
-      <guid isPermaLink="true">https://langflow.org/blog/openai-gpt-oss-and-gpt-5-on-langflow</guid>
+      <title><![CDATA[How to run OpenAI’s gpt-oss and GPT-5 models on FlowChat ]]></title>
+      <link>https://flowchat.org/blog/openai-gpt-oss-and-gpt-5-on-langflow</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/openai-gpt-oss-and-gpt-5-on-langflow</guid>
       <pubDate>Tue, 12 Aug 2025 00:39:27 GMT</pubDate>
-      <description><![CDATA[Learn how to enable access to the newest OpenAI models, GPT-5 and the open-source gpt-oss-20b and gpt-oss-120b, within Langflow. From running locally, to cloud services, and employing the models as agents, check out how to start using the latest models in Langflow.]]></description>
-      <author>please-reply@langflow.org (Phil Nash,Unknown)</author>
+      <description><![CDATA[Learn how to enable access to the newest OpenAI models, GPT-5 and the open-source gpt-oss-20b and gpt-oss-120b, within FlowChat. From running locally, to cloud services, and employing the models as agents, check out how to start using the latest models in FlowChat.]]></description>
+      <author>please-reply@flowchat.org (Phil Nash,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/f6f80c78bcb8e1cf23c214f5b6f9de42c12d71e1-960x540.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Query, Split, Search, Synthesize: Automating Deep Research with JigsawStack and Langflow]]></title>
-      <link>https://langflow.org/blog/query-split-search-synthesize-automating-deep-research-with-jigsawstack-and-langflow</link>
-      <guid isPermaLink="true">https://langflow.org/blog/query-split-search-synthesize-automating-deep-research-with-jigsawstack-and-langflow</guid>
+      <title><![CDATA[Query, Split, Search, Synthesize: Automating Deep Research with JigsawStack and FlowChat]]></title>
+      <link>https://flowchat.org/blog/query-split-search-synthesize-automating-deep-research-with-jigsawstack-and-langflow</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/query-split-search-synthesize-automating-deep-research-with-jigsawstack-and-langflow</guid>
       <pubDate>Mon, 28 Jul 2025 22:15:16 GMT</pubDate>
-      <description><![CDATA[While platforms like Perplexity and OpenAI offer deep research through closed systems, developers can now build their own transparent, extensible research agents using JigsawStack's open-source framework within Langflow. This hands-on guide shows how to create a multi-step research pipeline that breaks down complex queries, performs iterative web searches, and compiles evidence-backed reports—all through visual workflows that accelerate development without writing code.
+      <description><![CDATA[While platforms like Perplexity and OpenAI offer deep research through closed systems, developers can now build their own transparent, extensible research agents using JigsawStack's open-source framework within FlowChat. This hands-on guide shows how to create a multi-step research pipeline that breaks down complex queries, performs iterative web searches, and compiles evidence-backed reports—all through visual workflows that accelerate development without writing code.
 Learn to prototype AI research agents that you can see, modify, and scale for your specific needs.]]></description>
-      <author>please-reply@langflow.org (Harsha Vardhan Khurdula,Melissa Herrera,Unknown)</author>
+      <author>please-reply@flowchat.org (Harsha Vardhan Khurdula,Melissa Herrera,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/d698964f1a0dd55638b38700c7e49c2e44943216-982x568.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Langflow 1.5: Docling, Windows Support and Improved UX]]></title>
-      <link>https://langflow.org/blog/langflow-1-5-docling-windows-support-and-improved-ux</link>
-      <guid isPermaLink="true">https://langflow.org/blog/langflow-1-5-docling-windows-support-and-improved-ux</guid>
+      <title><![CDATA[FlowChat 1.5: Docling, Windows Support and Improved UX]]></title>
+      <link>https://flowchat.org/blog/langflow-1-5-docling-windows-support-and-improved-ux</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/langflow-1-5-docling-windows-support-and-improved-ux</guid>
       <pubDate>Thu, 10 Jul 2025 16:25:00 GMT</pubDate>
-      <description><![CDATA[Langflow 1.5 brings a simplified, stable foundation for building AI workflows. With clean core components, improved execution, and a smoother UI, Langflow keeps evolving for real-world use. Langflow Desktop is now available for Windows, and the new Docling Bundle takes document processing to a new level.]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <description><![CDATA[FlowChat 1.5 brings a simplified, stable foundation for building AI workflows. With clean core components, improved execution, and a smoother UI, FlowChat keeps evolving for real-world use. FlowChat Desktop is now available for Windows, and the new Docling Bundle takes document processing to a new level.]]></description>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/ee65e36a236750a842d96009846a517378c487a7-1600x900.jpg" length="0" type="image/jpeg" />
     </item>
     <item>
       <title><![CDATA[How to Create Secure AI Applications]]></title>
-      <link>https://langflow.org/blog/how-to-create-secure-ai-applications</link>
-      <guid isPermaLink="true">https://langflow.org/blog/how-to-create-secure-ai-applications</guid>
+      <link>https://flowchat.org/blog/how-to-create-secure-ai-applications</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/how-to-create-secure-ai-applications</guid>
       <pubDate>Thu, 26 Jun 2025 20:51:12 GMT</pubDate>
       <description><![CDATA[💡This post also exists as a video for those who prefer watching over reading.
 
 You’ve built an impressive AI agent. It can query databases, call external APIs, and even ]]></description>
-      <author>please-reply@langflow.org (Tejas Kumar,Unknown)</author>
+      <author>please-reply@flowchat.org (Tejas Kumar,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/459fd119e144ad16a843f23a70aac92bd427c934-960x540.png" length="0" type="image/jpeg" />
     </item>
     <item>
       <title><![CDATA[LLM Observability Explained (feat. Langfuse, LangSmith, and LangWatch)]]></title>
-      <link>https://langflow.org/blog/llm-observability-explained-feat-langfuse-langsmith-and-langwatch</link>
-      <guid isPermaLink="true">https://langflow.org/blog/llm-observability-explained-feat-langfuse-langsmith-and-langwatch</guid>
+      <link>https://flowchat.org/blog/llm-observability-explained-feat-langfuse-langsmith-and-langwatch</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/llm-observability-explained-feat-langfuse-langsmith-and-langwatch</guid>
       <pubDate>Mon, 23 Jun 2025 15:08:04 GMT</pubDate>
       <description><![CDATA[Building a new application powered by Large Language Models (LLMs) is an exciting venture. With frameworks and APIs at our fingertips, creating a proof-of-concept can tak]]></description>
-      <author>please-reply@langflow.org (Tejas Kumar,Unknown)</author>
+      <author>please-reply@flowchat.org (Tejas Kumar,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/34e89b4ecff751714b5a659fa3f55731d453b0e5-960x540.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[From 'no-reply' to 'please-reply': How to build an AI-Powered Email Assistant with Langflow and SendGrid]]></title>
-      <link>https://langflow.org/blog/from-no-reply-to-please-reply-how-to-build-an-ai-powered-email-assistant-with-langflow-and-sendgrid</link>
-      <guid isPermaLink="true">https://langflow.org/blog/from-no-reply-to-please-reply-how-to-build-an-ai-powered-email-assistant-with-langflow-and-sendgrid</guid>
+      <title><![CDATA[From 'no-reply' to 'please-reply': How to build an AI-Powered Email Assistant with FlowChat and SendGrid]]></title>
+      <link>https://flowchat.org/blog/from-no-reply-to-please-reply-how-to-build-an-ai-powered-email-assistant-with-langflow-and-sendgrid</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/from-no-reply-to-please-reply-how-to-build-an-ai-powered-email-assistant-with-langflow-and-sendgrid</guid>
       <pubDate>Wed, 11 Jun 2025 15:45:02 GMT</pubDate>
-      <description><![CDATA[This post will walk you through how you can build your own "please-reply" system using Langflow, the easiest way to build AI agents, and SendGrid's Inbound Parse. We'll show you how you can build one for your own organization.]]></description>
-      <author>please-reply@langflow.org (Tejas Kumar,Unknown)</author>
+      <description><![CDATA[This post will walk you through how you can build your own "please-reply" system using FlowChat, the easiest way to build AI agents, and SendGrid's Inbound Parse. We'll show you how you can build one for your own organization.]]></description>
+      <author>please-reply@flowchat.org (Tejas Kumar,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/f586bcc9adcd79b9c6f680e098970b8bce8d5d7d-960x540.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Build AI powered phone calls with Twilio ConversationRelay and Langflow]]></title>
-      <link>https://langflow.org/blog/ai-phone-calls-twilio-langflow</link>
-      <guid isPermaLink="true">https://langflow.org/blog/ai-phone-calls-twilio-langflow</guid>
+      <title><![CDATA[Build AI powered phone calls with Twilio ConversationRelay and FlowChat]]></title>
+      <link>https://flowchat.org/blog/ai-phone-calls-twilio-langflow</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/ai-phone-calls-twilio-langflow</guid>
       <pubDate>Tue, 10 Jun 2025 01:41:15 GMT</pubDate>
-      <description><![CDATA[Connect your Langflow flows to phone calls using Twilio ConversationRelay and build AI-powered voice assistants. Learn to handle speech-to-text and text-to-speech, and how to stream responses for a more natural conversation.]]></description>
-      <author>please-reply@langflow.org (Phil Nash,Unknown)</author>
+      <description><![CDATA[Connect your FlowChat flows to phone calls using Twilio ConversationRelay and build AI-powered voice assistants. Learn to handle speech-to-text and text-to-speech, and how to stream responses for a more natural conversation.]]></description>
+      <author>please-reply@flowchat.org (Phil Nash,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/de7f072786bfc0de571b065d70d675a22052672b-960x540.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Generate Personalized Action Figures and Mythical Creatures using next.js and AI with Langflow]]></title>
-      <link>https://langflow.org/blog/generate-personalized-action-figures-and-mythical-creatures-using-ai-with-langflow</link>
-      <guid isPermaLink="true">https://langflow.org/blog/generate-personalized-action-figures-and-mythical-creatures-using-ai-with-langflow</guid>
+      <title><![CDATA[Generate Personalized Action Figures and Mythical Creatures using next.js and AI with FlowChat]]></title>
+      <link>https://flowchat.org/blog/generate-personalized-action-figures-and-mythical-creatures-using-ai-with-langflow</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/generate-personalized-action-figures-and-mythical-creatures-using-ai-with-langflow</guid>
       <pubDate>Fri, 23 May 2025 15:44:07 GMT</pubDate>
       <description><![CDATA[Hello, fellow dev nerds! 👋 Inspired by some intriguing displays at GitHub Universe, we embarked on a mission to create an app that generates unique, visually stunning "C]]></description>
-      <author>please-reply@langflow.org (David Jones-Gilardi,Unknown)</author>
+      <author>please-reply@flowchat.org (David Jones-Gilardi,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/1ac83095bb17c671a17188589e70d34a66d9589c-2000x1105.png" length="0" type="image/jpeg" />
     </item>
     <item>
       <title><![CDATA[Building an AI-powered Fashion Recommendation App]]></title>
-      <link>https://langflow.org/blog/building-an-ai-powered-fashion-recommendation-app</link>
-      <guid isPermaLink="true">https://langflow.org/blog/building-an-ai-powered-fashion-recommendation-app</guid>
+      <link>https://flowchat.org/blog/building-an-ai-powered-fashion-recommendation-app</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/building-an-ai-powered-fashion-recommendation-app</guid>
       <pubDate>Thu, 15 May 2025 23:04:41 GMT</pubDate>
       <description><![CDATA[In this guide, Melissa Herrera walks through the development process of creating an AI fashion recommendation app that takes user-provided images and/or text queries to deliver tailored clothing recommendations.]]></description>
-      <author>please-reply@langflow.org (Melissa Herrera,Unknown)</author>
+      <author>please-reply@flowchat.org (Melissa Herrera,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/a084f29c80b92ec0870f0431210886bc3c972915-1280x720.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[How to Host Your AI Agents and MCP Servers on Langflow Anywhere]]></title>
-      <link>https://langflow.org/blog/how-to-host-langflow</link>
-      <guid isPermaLink="true">https://langflow.org/blog/how-to-host-langflow</guid>
+      <title><![CDATA[How to Host Your AI Agents and MCP Servers on FlowChat Anywhere]]></title>
+      <link>https://flowchat.org/blog/how-to-host-langflow</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/how-to-host-langflow</guid>
       <pubDate>Mon, 12 May 2025 17:23:07 GMT</pubDate>
-      <description><![CDATA[This guide will walk you through deploying Langflow to a variety of popular hosting platforms -  FlightControl, Fly.io, Render, and Hetzner - transforming your local projects into globally accessible AI powerhouses.]]></description>
-      <author>please-reply@langflow.org (Tejas Kumar,Unknown)</author>
+      <description><![CDATA[This guide will walk you through deploying FlowChat to a variety of popular hosting platforms -  FlightControl, Fly.io, Render, and Hetzner - transforming your local projects into globally accessible AI powerhouses.]]></description>
+      <author>please-reply@flowchat.org (Tejas Kumar,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/3df20e7bdd7029638d0472793bafae739d1aa1ce-960x540.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Langflow 1.4: Organize Workflows + Connect with MCP]]></title>
-      <link>https://langflow.org/blog/langflow-1-4-organize-workflows-connect-with-mcp</link>
-      <guid isPermaLink="true">https://langflow.org/blog/langflow-1-4-organize-workflows-connect-with-mcp</guid>
+      <title><![CDATA[FlowChat 1.4: Organize Workflows + Connect with MCP]]></title>
+      <link>https://flowchat.org/blog/langflow-1-4-organize-workflows-connect-with-mcp</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/langflow-1-4-organize-workflows-connect-with-mcp</guid>
       <pubDate>Wed, 07 May 2025 14:00:15 GMT</pubDate>
       <description><![CDATA[TL;DR
 
-Langflow 1.4 introduces Projects to organize and scale workflows and makes it simple to expose them over MCP. With Langflow Desktop, your machine becomes a local A]]></description>
-      <author>please-reply@langflow.org (Scott Regan,Unknown)</author>
+FlowChat 1.4 introduces Projects to organize and scale workflows and makes it simple to expose them over MCP. With FlowChat Desktop, your machine becomes a local A]]></description>
+      <author>please-reply@flowchat.org (Scott Regan,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/80979ab05bf95a4ecab05809d6bccac32449209c-1600x900.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[🌐 Web Search in Your AI Agents: A Langflow Tutorial]]></title>
-      <link>https://langflow.org/blog/web-search-in-your-ai-agents-a-langflow-tutorial</link>
-      <guid isPermaLink="true">https://langflow.org/blog/web-search-in-your-ai-agents-a-langflow-tutorial</guid>
+      <title><![CDATA[🌐 Web Search in Your AI Agents: A FlowChat Tutorial]]></title>
+      <link>https://flowchat.org/blog/web-search-in-your-ai-agents-a-langflow-tutorial</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/web-search-in-your-ai-agents-a-langflow-tutorial</guid>
       <pubDate>Thu, 01 May 2025 19:25:51 GMT</pubDate>
-      <description><![CDATA[LLM models face a significant limitation: they're often restricted to information available in their training data. But what if your AI agent could retrieve up-to-date information from the web in real time? Let's walk you through how to implement web search capabilities in your Langflow flows.]]></description>
-      <author>please-reply@langflow.org (Melissa Herrera,Unknown)</author>
+      <description><![CDATA[LLM models face a significant limitation: they're often restricted to information available in their training data. But what if your AI agent could retrieve up-to-date information from the web in real time? Let's walk you through how to implement web search capabilities in your FlowChat flows.]]></description>
+      <author>please-reply@flowchat.org (Melissa Herrera,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/2a4a465b27944bbbb4754059c7ef57263efc5fc2-960x540.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Introduction to Webhooks in Langflow (Step-by-Step Guide)]]></title>
-      <link>https://langflow.org/blog/introduction-to-webhooks-in-langflow-step-by</link>
-      <guid isPermaLink="true">https://langflow.org/blog/introduction-to-webhooks-in-langflow-step-by</guid>
+      <title><![CDATA[Introduction to Webhooks in FlowChat (Step-by-Step Guide)]]></title>
+      <link>https://flowchat.org/blog/introduction-to-webhooks-in-langflow-step-by</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/introduction-to-webhooks-in-langflow-step-by</guid>
       <pubDate>Fri, 18 Apr 2025 19:00:42 GMT</pubDate>
-      <description><![CDATA[Hey there, developers! 👋 Melissa here, and today I'm diving into the world of webhooks in Langflow. Whether you're a seasoned coder or just getting started, this guide w]]></description>
-      <author>please-reply@langflow.org (Melissa Herrera,Unknown)</author>
+      <description><![CDATA[Hey there, developers! 👋 Melissa here, and today I'm diving into the world of webhooks in FlowChat. Whether you're a seasoned coder or just getting started, this guide w]]></description>
+      <author>please-reply@flowchat.org (Melissa Herrera,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/3df20e7bdd7029638d0472793bafae739d1aa1ce-960x540.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Langflow Launch Week Wrap Up]]></title>
-      <link>https://langflow.org/blog/langflow-launch-week-wrap-up</link>
-      <guid isPermaLink="true">https://langflow.org/blog/langflow-launch-week-wrap-up</guid>
+      <title><![CDATA[FlowChat Launch Week Wrap Up]]></title>
+      <link>https://flowchat.org/blog/langflow-launch-week-wrap-up</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/langflow-launch-week-wrap-up</guid>
       <pubDate>Mon, 07 Apr 2025 15:40:45 GMT</pubDate>
-      <description><![CDATA[Wrapping-up a big week of Langflow launches, including: MCP, file system & data pipelines, Voice Mode, Desktop and GraphRAG.]]></description>
-      <author>please-reply@langflow.org (Carter Rabasa,Unknown)</author>
+      <description><![CDATA[Wrapping-up a big week of FlowChat launches, including: MCP, file system & data pipelines, Voice Mode, Desktop and GraphRAG.]]></description>
+      <author>please-reply@flowchat.org (Carter Rabasa,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/fba08842d528d25ef1f992c59f4f15860580c1b2-960x540.png" length="0" type="image/jpeg" />
     </item>
     <item>
       <title><![CDATA[Launch Week Day 5 - Graph RAG 🕸️]]></title>
-      <link>https://langflow.org/blog/launch-week-day-5-graph-rag</link>
-      <guid isPermaLink="true">https://langflow.org/blog/launch-week-day-5-graph-rag</guid>
+      <link>https://flowchat.org/blog/launch-week-day-5-graph-rag</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/launch-week-day-5-graph-rag</guid>
       <pubDate>Fri, 04 Apr 2025 13:27:21 GMT</pubDate>
-      <description><![CDATA[The new Graph RAG component in Langflow takes your workflows to the next level by improving accuracy and incorporating data relationships directly.]]></description>
-      <author>please-reply@langflow.org (Melissa Herrera,Unknown)</author>
+      <description><![CDATA[The new Graph RAG component in FlowChat takes your workflows to the next level by improving accuracy and incorporating data relationships directly.]]></description>
+      <author>please-reply@flowchat.org (Melissa Herrera,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/bcd174a675f5f15d24640bbdb6d41d0f55a578bf-960x540.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Launch Week Day 4 - Langflow Desktop 👨🏽‍💻]]></title>
-      <link>https://langflow.org/blog/launch-week-day-4-langflow-desktop</link>
-      <guid isPermaLink="true">https://langflow.org/blog/launch-week-day-4-langflow-desktop</guid>
+      <title><![CDATA[Launch Week Day 4 - FlowChat Desktop 👨🏽‍💻]]></title>
+      <link>https://flowchat.org/blog/launch-week-day-4-langflow-desktop</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/launch-week-day-4-langflow-desktop</guid>
       <pubDate>Thu, 03 Apr 2025 07:21:18 GMT</pubDate>
-      <description><![CDATA[We’re excited to launch Langflow Desktop, a new version of Langflow that developers can run natively on their development machines. ]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <description><![CDATA[We’re excited to launch FlowChat Desktop, a new version of FlowChat that developers can run natively on their development machines. ]]></description>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/964997ddef7689c31879884333c10c129f090a4c-960x540.png" length="0" type="image/jpeg" />
     </item>
     <item>
       <title><![CDATA[Launch Week Day 3 - Voice Mode 🎙️]]></title>
-      <link>https://langflow.org/blog/launch-week-day-3-voice-mode</link>
-      <guid isPermaLink="true">https://langflow.org/blog/launch-week-day-3-voice-mode</guid>
+      <link>https://flowchat.org/blog/launch-week-day-3-voice-mode</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/launch-week-day-3-voice-mode</guid>
       <pubDate>Wed, 02 Apr 2025 13:13:44 GMT</pubDate>
-      <description><![CDATA[Today, we’re thrilled to introduce a cool new feature in Langflow: Voice Mode! 🎤 This new addition allows you to engage in natural, voice-based conversations with any of your Langflow flows.]]></description>
-      <author>please-reply@langflow.org (David Jones-Gilardi,Unknown)</author>
+      <description><![CDATA[Today, we’re thrilled to introduce a cool new feature in FlowChat: Voice Mode! 🎤 This new addition allows you to engage in natural, voice-based conversations with any of your FlowChat flows.]]></description>
+      <author>please-reply@flowchat.org (David Jones-Gilardi,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/36da26bf45ce1241614aa6484a84506614785e6b-960x540.png" length="0" type="image/jpeg" />
     </item>
     <item>
       <title><![CDATA[Launch Week Day 2 - Files & Data 💾]]></title>
-      <link>https://langflow.org/blog/launch-week-day-2-files-data</link>
-      <guid isPermaLink="true">https://langflow.org/blog/launch-week-day-2-files-data</guid>
+      <link>https://flowchat.org/blog/launch-week-day-2-files-data</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/launch-week-day-2-files-data</guid>
       <pubDate>Tue, 01 Apr 2025 13:19:32 GMT</pubDate>
-      <description><![CDATA[Big updates to Langflow, including:  📤 Multi-file Uploads, 🗃️ New File Management System, 🔄 Cross-Flow File Access,  📊 Enhanced CSV Handling.]]></description>
-      <author>please-reply@langflow.org (Melissa Herrera,Unknown)</author>
+      <description><![CDATA[Big updates to FlowChat, including:  📤 Multi-file Uploads, 🗃️ New File Management System, 🔄 Cross-Flow File Access,  📊 Enhanced CSV Handling.]]></description>
+      <author>please-reply@flowchat.org (Melissa Herrera,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/a25e88abe618a4c62baaaa766797cfdf60a09b5f-960x540.png" length="0" type="image/jpeg" />
     </item>
     <item>
       <title><![CDATA[Launch Week Day 1 - MCP ⚡️]]></title>
-      <link>https://langflow.org/blog/launch-week-day-1-mcp</link>
-      <guid isPermaLink="true">https://langflow.org/blog/launch-week-day-1-mcp</guid>
+      <link>https://flowchat.org/blog/launch-week-day-1-mcp</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/launch-week-day-1-mcp</guid>
       <pubDate>Mon, 31 Mar 2025 22:00:08 GMT</pubDate>
-      <description><![CDATA[Langflow can now be used as both an MCP client and MCP server. As a client, you can use a built-in MCP component to interact with external MCP servers within your agentic flows. As a server, you can turn your existing Langflow workflows into tools that other MCP clients can access and orchestrate.]]></description>
-      <author>please-reply@langflow.org (David Jones-Gilardi,Unknown)</author>
+      <description><![CDATA[FlowChat can now be used as both an MCP client and MCP server. As a client, you can use a built-in MCP component to interact with external MCP servers within your agentic flows. As a server, you can turn your existing FlowChat workflows into tools that other MCP clients can access and orchestrate.]]></description>
+      <author>please-reply@flowchat.org (David Jones-Gilardi,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/016f4194862940d9eca0918021eb38b15eba9873-960x540.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Announcing Langflow Launch Week]]></title>
-      <link>https://langflow.org/blog/announcing-langflow-launch-week</link>
-      <guid isPermaLink="true">https://langflow.org/blog/announcing-langflow-launch-week</guid>
+      <title><![CDATA[Announcing FlowChat Launch Week]]></title>
+      <link>https://flowchat.org/blog/announcing-langflow-launch-week</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/announcing-langflow-launch-week</guid>
       <pubDate>Fri, 28 Mar 2025 18:33:34 GMT</pubDate>
       <description><![CDATA[Five Days. Big Ideas. New SuperPowers for Your AI Agents.
 
 📅 March 31 – April 4, 2025
 
-Langflow is evolving—and we’ve got something special for you. Starting March 31, w]]></description>
-      <author>please-reply@langflow.org (Scott Regan,Unknown)</author>
+FlowChat is evolving—and we’ve got something special for you. Starting March 31, w]]></description>
+      <author>please-reply@flowchat.org (Scott Regan,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/e63084b558395cd1586a4ea6df87bd7a1ece87bf-1384x782.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Building a YouTube Transcription Agent with Langflow]]></title>
-      <link>https://langflow.org/blog/building-a-youtube-transcription-agent-with-langflow-2</link>
-      <guid isPermaLink="true">https://langflow.org/blog/building-a-youtube-transcription-agent-with-langflow-2</guid>
+      <title><![CDATA[Building a YouTube Transcription Agent with FlowChat]]></title>
+      <link>https://flowchat.org/blog/building-a-youtube-transcription-agent-with-langflow-2</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/building-a-youtube-transcription-agent-with-langflow-2</guid>
       <pubDate>Sun, 23 Mar 2025 15:04:55 GMT</pubDate>
-      <description><![CDATA[TLDR:In this tutorial, we’ll walk through creating a YouTube Transcription Agent in Langflow.
+      <description><![CDATA[TLDR:In this tutorial, we’ll walk through creating a YouTube Transcription Agent in FlowChat.
 
 By the end, you’ll have an AI agent that can transcribe a YouTube video’s a]]></description>
-      <author>please-reply@langflow.org (Scott Regan,Unknown)</author>
+      <author>please-reply@flowchat.org (Scott Regan,Unknown)</author>
       
     </item>
     <item>
-      <title><![CDATA[Introducing MCP Integration in Langflow]]></title>
-      <link>https://langflow.org/blog/introducing-mcp-integration-in-langflow</link>
-      <guid isPermaLink="true">https://langflow.org/blog/introducing-mcp-integration-in-langflow</guid>
+      <title><![CDATA[Introducing MCP Integration in FlowChat]]></title>
+      <link>https://flowchat.org/blog/introducing-mcp-integration-in-langflow</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/introducing-mcp-integration-in-langflow</guid>
       <pubDate>Wed, 12 Mar 2025 21:12:04 GMT</pubDate>
       <description><![CDATA[Model Context Protocol (MCP) is an open standard from Anthropic, largely inspired by language servers (LSP) from Microsoft and VS Code. It is designed to establish seamle]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/5e309ab1059198561bf0a065f0a2d87320655a1d-960x540.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Big news for Langflow!]]></title>
-      <link>https://langflow.org/blog/big-news-for-langflow</link>
-      <guid isPermaLink="true">https://langflow.org/blog/big-news-for-langflow</guid>
+      <title><![CDATA[Big news for FlowChat!]]></title>
+      <link>https://flowchat.org/blog/big-news-for-langflow</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/big-news-for-langflow</guid>
       <pubDate>Tue, 25 Feb 2025 15:30:16 GMT</pubDate>
-      <description><![CDATA[IBM plans to acquire DataStax, the parent company of Langflow]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <description><![CDATA[IBM plans to acquire DataStax, the parent company of FlowChat]]></description>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/163b5116394457b55ad8fa67234e5f5eb6c5ab28-1500x750.png" length="0" type="image/jpeg" />
     </item>
     <item>
       <title><![CDATA[Transfer Learning, Pre-Training, or Fine-Tuning?]]></title>
-      <link>https://langflow.org/blog/transfer-learning-pre-training-or-fine-tuning</link>
-      <guid isPermaLink="true">https://langflow.org/blog/transfer-learning-pre-training-or-fine-tuning</guid>
+      <link>https://flowchat.org/blog/transfer-learning-pre-training-or-fine-tuning</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/transfer-learning-pre-training-or-fine-tuning</guid>
       <pubDate>Mon, 20 Jan 2025 03:56:33 GMT</pubDate>
       <description><![CDATA[Learn how machine learning concepts have evolved in GenAI times]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/071f4a7c6b38c2cce2c317273a0762e3975ce0da-800x343.jpg" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Langflow 1.1 Release]]></title>
-      <link>https://langflow.org/blog/langflow-1-1-release-67c7528de7bcce001bb28072</link>
-      <guid isPermaLink="true">https://langflow.org/blog/langflow-1-1-release-67c7528de7bcce001bb28072</guid>
+      <title><![CDATA[FlowChat 1.1 Release]]></title>
+      <link>https://flowchat.org/blog/langflow-1-1-release-67c7528de7bcce001bb28072</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/langflow-1-1-release-67c7528de7bcce001bb28072</guid>
       <pubDate>Thu, 21 Nov 2024 00:42:48 GMT</pubDate>
       <description><![CDATA[A Delightful Invitation to Agentic Pipelines! 🚀]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/e127cdbeac3b3785c8d4a740e61ce013eb6f0552-1200x600.png" length="0" type="image/jpeg" />
     </item>
     <item>
       <title><![CDATA[Text Splitting: Beyond Basic RAG]]></title>
-      <link>https://langflow.org/blog/text-splitting-beyond-basic-rag</link>
-      <guid isPermaLink="true">https://langflow.org/blog/text-splitting-beyond-basic-rag</guid>
+      <link>https://flowchat.org/blog/text-splitting-beyond-basic-rag</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/text-splitting-beyond-basic-rag</guid>
       <pubDate>Wed, 16 Oct 2024 14:27:01 GMT</pubDate>
       <description><![CDATA[In RAG, splitting text into chunks is key to making retrieval effective. But there’s more than one way to do it. Some methods are quick and…]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/d5292f377be67220dda16dde48da8b8157aafde1-1200x519.png" length="0" type="image/jpeg" />
     </item>
     <item>
       <title><![CDATA[Prompt Caching in LLMs: Intuition]]></title>
-      <link>https://langflow.org/blog/prompt-caching-in-llms-intuition</link>
-      <guid isPermaLink="true">https://langflow.org/blog/prompt-caching-in-llms-intuition</guid>
+      <link>https://flowchat.org/blog/prompt-caching-in-llms-intuition</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/prompt-caching-in-llms-intuition</guid>
       <pubDate>Fri, 04 Oct 2024 18:55:51 GMT</pubDate>
       <description><![CDATA[A brief tour of how caching works in attention-based models]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/06f84fce171afd39d60dc435cdeff869278ca2a7-1200x658.png" length="0" type="image/jpeg" />
     </item>
     <item>
       <title><![CDATA[Beyond Basic RAG: Retrieval Weighting]]></title>
-      <link>https://langflow.org/blog/beyond-basic-rag-retrieval-weighting</link>
-      <guid isPermaLink="true">https://langflow.org/blog/beyond-basic-rag-retrieval-weighting</guid>
+      <link>https://flowchat.org/blog/beyond-basic-rag-retrieval-weighting</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/beyond-basic-rag-retrieval-weighting</guid>
       <pubDate>Wed, 04 Sep 2024 22:04:10 GMT</pubDate>
       <description><![CDATA[In Retrieval-Augmented Generation (RAG) systems, it’s common to assume that simply feeding an entire text corpus and relying on plain…]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/c0de95280d62a75155748bfc736bf056b2622be9-1200x520.png" length="0" type="image/jpeg" />
     </item>
     <item>
       <title><![CDATA[Beyond Basic RAG: Similarity ≠ Relevance]]></title>
-      <link>https://langflow.org/blog/beyond-basic-rag-similarity-relevance</link>
-      <guid isPermaLink="true">https://langflow.org/blog/beyond-basic-rag-similarity-relevance</guid>
+      <link>https://flowchat.org/blog/beyond-basic-rag-similarity-relevance</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/beyond-basic-rag-similarity-relevance</guid>
       <pubDate>Tue, 27 Aug 2024 23:56:03 GMT</pubDate>
       <description><![CDATA[RAG systems often rely on similarity as a proxy for relevance when retrieving text chunks. If a text is similar to a query, we assume it…]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/226848b870dd2d2c9f00bdd90a69e39b418a75fe-1200x520.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Langflow 1.0 is out… with a Cloud Service!]]></title>
-      <link>https://langflow.org/blog/langflow-1-0-is-out-with-a-cloud-service</link>
-      <guid isPermaLink="true">https://langflow.org/blog/langflow-1-0-is-out-with-a-cloud-service</guid>
+      <title><![CDATA[FlowChat 1.0 is out… with a Cloud Service!]]></title>
+      <link>https://flowchat.org/blog/langflow-1-0-is-out-with-a-cloud-service</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/langflow-1-0-is-out-with-a-cloud-service</guid>
       <pubDate>Mon, 24 Jun 2024 13:58:47 GMT</pubDate>
-      <description><![CDATA[It’s official! 🚀 Langflow 1.0 is launched, along with a new cloud service]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <description><![CDATA[It’s official! 🚀 FlowChat 1.0 is launched, along with a new cloud service]]></description>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/c5f8b36fb9cd8440cb3bba82f0058d4a6f1edaa2-800x450.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Langflow New Release — 1.0.51a]]></title>
-      <link>https://langflow.org/blog/langflow-new-release-1-0-51a</link>
-      <guid isPermaLink="true">https://langflow.org/blog/langflow-new-release-1-0-51a</guid>
+      <title><![CDATA[FlowChat New Release — 1.0.51a]]></title>
+      <link>https://flowchat.org/blog/langflow-new-release-1-0-51a</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/langflow-new-release-1-0-51a</guid>
       <pubDate>Tue, 11 Jun 2024 13:45:25 GMT</pubDate>
       <description><![CDATA[We're almost crossed the alpha finish line — expect bugs, excitement, and a final release soon!]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/657c979909e5d414b316532c032c29e56971c831-800x457.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Langflow + DataStax: Better Together]]></title>
-      <link>https://langflow.org/blog/langflow-datastax-better-together</link>
-      <guid isPermaLink="true">https://langflow.org/blog/langflow-datastax-better-together</guid>
+      <title><![CDATA[FlowChat + DataStax: Better Together]]></title>
+      <link>https://flowchat.org/blog/langflow-datastax-better-together</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/langflow-datastax-better-together</guid>
       <pubDate>Thu, 04 Apr 2024 13:02:04 GMT</pubDate>
-      <description><![CDATA[The past few weeks have been nuts, and we’ve been itching to share some huge news with you all… 🥁 Langflow is joining DataStax!]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <description><![CDATA[The past few weeks have been nuts, and we’ve been itching to share some huge news with you all… 🥁 FlowChat is joining DataStax!]]></description>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/121720cda2c3725456504e71c855014bba449f16-1200x675.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Langflow Micro Tutorials — Transform Chain]]></title>
-      <link>https://langflow.org/blog/langflow-micro-tutorials-transform-chain</link>
-      <guid isPermaLink="true">https://langflow.org/blog/langflow-micro-tutorials-transform-chain</guid>
+      <title><![CDATA[FlowChat Micro Tutorials — Transform Chain]]></title>
+      <link>https://flowchat.org/blog/langflow-micro-tutorials-transform-chain</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/langflow-micro-tutorials-transform-chain</guid>
       <pubDate>Sun, 22 Oct 2023 16:15:44 GMT</pubDate>
-      <description><![CDATA[Welcome back to our Langflow micro tutorials series! In this article, we’ll continue exploring simple Langflow examples and the design of…]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <description><![CDATA[Welcome back to our FlowChat micro tutorials series! In this article, we’ll continue exploring simple FlowChat examples and the design of…]]></description>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/9766d357c9e813947d0de477f35e08798917eb80-1200x656.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Langflow Micro Tutorials — Links Scraper]]></title>
-      <link>https://langflow.org/blog/langflow-micro-tutorials-links-scraper</link>
-      <guid isPermaLink="true">https://langflow.org/blog/langflow-micro-tutorials-links-scraper</guid>
+      <title><![CDATA[FlowChat Micro Tutorials — Links Scraper]]></title>
+      <link>https://flowchat.org/blog/langflow-micro-tutorials-links-scraper</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/langflow-micro-tutorials-links-scraper</guid>
       <pubDate>Tue, 10 Oct 2023 00:35:51 GMT</pubDate>
-      <description><![CDATA[Welcome back to our Langflow micro tutorials series! In this article, we’ll continue exploring simple Langflow examples and custom…]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <description><![CDATA[Welcome back to our FlowChat micro tutorials series! In this article, we’ll continue exploring simple FlowChat examples and custom…]]></description>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/2dab345ea0e989e01cb14f363c589b2a7d09b0fe-1200x658.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Langflow Micro Tutorials — Micro Tutorial Writer]]></title>
-      <link>https://langflow.org/blog/langflow-micro-tutorials-micro-tutorial-writer</link>
-      <guid isPermaLink="true">https://langflow.org/blog/langflow-micro-tutorials-micro-tutorial-writer</guid>
+      <title><![CDATA[FlowChat Micro Tutorials — Micro Tutorial Writer]]></title>
+      <link>https://flowchat.org/blog/langflow-micro-tutorials-micro-tutorial-writer</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/langflow-micro-tutorials-micro-tutorial-writer</guid>
       <pubDate>Sun, 24 Sep 2023 20:52:40 GMT</pubDate>
-      <description><![CDATA[Welcome back to our Langflow micro tutorials series! We’ll continue exploring simple Langflow examples, focusing on ideas and custom…]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <description><![CDATA[Welcome back to our FlowChat micro tutorials series! We’ll continue exploring simple FlowChat examples, focusing on ideas and custom…]]></description>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/ba16743731df02203254c0fe4f1c65c7ea7a9a8f-800x439.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Announcing Langfuse Integration with Langflow]]></title>
-      <link>https://langflow.org/blog/announcing-langfuse-integration-with-langflow</link>
-      <guid isPermaLink="true">https://langflow.org/blog/announcing-langfuse-integration-with-langflow</guid>
+      <title><![CDATA[Announcing Langfuse Integration with FlowChat]]></title>
+      <link>https://flowchat.org/blog/announcing-langfuse-integration-with-langflow</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/announcing-langfuse-integration-with-langflow</guid>
       <pubDate>Thu, 21 Sep 2023 22:40:56 GMT</pubDate>
       <description><![CDATA[We are thrilled to introduce an integration with Langfuse, an open-source observability & analytics solution for LLM-based applications.]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/5ebde106c6d7a3a0805bdb685a78b40b351fadb6-800x518.jpg" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Langflow Micro Tutorials — Batch Web Loader]]></title>
-      <link>https://langflow.org/blog/langflow-micro-tutorials-batch-web-loader</link>
-      <guid isPermaLink="true">https://langflow.org/blog/langflow-micro-tutorials-batch-web-loader</guid>
+      <title><![CDATA[FlowChat Micro Tutorials — Batch Web Loader]]></title>
+      <link>https://flowchat.org/blog/langflow-micro-tutorials-batch-web-loader</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/langflow-micro-tutorials-batch-web-loader</guid>
       <pubDate>Tue, 19 Sep 2023 19:12:43 GMT</pubDate>
-      <description><![CDATA[Welcome back to our Langflow micro tutorials series! In this article, we’ll continue exploring simple Langflow examples and custom…]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <description><![CDATA[Welcome back to our FlowChat micro tutorials series! In this article, we’ll continue exploring simple FlowChat examples and custom…]]></description>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/1a2d55fe53587be089f7eb4ef6fbd50f6806bbdb-800x439.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Langflow Micro Tutorials — Enhanced Truncator]]></title>
-      <link>https://langflow.org/blog/langflow-micro-tutorials-enhanced-truncator</link>
-      <guid isPermaLink="true">https://langflow.org/blog/langflow-micro-tutorials-enhanced-truncator</guid>
+      <title><![CDATA[FlowChat Micro Tutorials — Enhanced Truncator]]></title>
+      <link>https://flowchat.org/blog/langflow-micro-tutorials-enhanced-truncator</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/langflow-micro-tutorials-enhanced-truncator</guid>
       <pubDate>Fri, 15 Sep 2023 16:57:23 GMT</pubDate>
-      <description><![CDATA[Welcome back to our Langflow micro tutorials series! We’re continuing with simple Langflow examples, emphasizing the design of custom…]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <description><![CDATA[Welcome back to our FlowChat micro tutorials series! We’re continuing with simple FlowChat examples, emphasizing the design of custom…]]></description>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/daedf85d765bd6711e97112fae5b8226da1884ab-800x441.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Langflow Micro Tutorials — PDF Parser]]></title>
-      <link>https://langflow.org/blog/langflow-micro-tutorials-pdf-parser</link>
-      <guid isPermaLink="true">https://langflow.org/blog/langflow-micro-tutorials-pdf-parser</guid>
+      <title><![CDATA[FlowChat Micro Tutorials — PDF Parser]]></title>
+      <link>https://flowchat.org/blog/langflow-micro-tutorials-pdf-parser</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/langflow-micro-tutorials-pdf-parser</guid>
       <pubDate>Wed, 13 Sep 2023 18:19:34 GMT</pubDate>
-      <description><![CDATA[Welcome back to our Langflow micro tutorials series! We’re continuing with simple Langflow examples, showcasing custom component designs.]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <description><![CDATA[Welcome back to our FlowChat micro tutorials series! We’re continuing with simple FlowChat examples, showcasing custom component designs.]]></description>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/2a83aa0c6e6a67ff1a7c4d1ea3804d6b9f5693ed-800x439.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Langflow Micro Tutorials — Document Truncator]]></title>
-      <link>https://langflow.org/blog/langflow-micro-tutorials-document-truncator</link>
-      <guid isPermaLink="true">https://langflow.org/blog/langflow-micro-tutorials-document-truncator</guid>
+      <title><![CDATA[FlowChat Micro Tutorials — Document Truncator]]></title>
+      <link>https://flowchat.org/blog/langflow-micro-tutorials-document-truncator</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/langflow-micro-tutorials-document-truncator</guid>
       <pubDate>Tue, 12 Sep 2023 21:47:04 GMT</pubDate>
-      <description><![CDATA[Welcome back to our Langflow micro tutorials series! We’ll continue our journey into very simple Langflow examples, highlighting ideas and…]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <description><![CDATA[Welcome back to our FlowChat micro tutorials series! We’ll continue our journey into very simple FlowChat examples, highlighting ideas and…]]></description>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/3dec76c9edb56d4b70553e8bbde48dc0dcf0f27c-800x441.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Langflow Micro Tutorials — Multiple Sources]]></title>
-      <link>https://langflow.org/blog/langflow-micro-tutorials-multiple-sources</link>
-      <guid isPermaLink="true">https://langflow.org/blog/langflow-micro-tutorials-multiple-sources</guid>
+      <title><![CDATA[FlowChat Micro Tutorials — Multiple Sources]]></title>
+      <link>https://flowchat.org/blog/langflow-micro-tutorials-multiple-sources</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/langflow-micro-tutorials-multiple-sources</guid>
       <pubDate>Tue, 12 Sep 2023 17:28:46 GMT</pubDate>
-      <description><![CDATA[I’m launching a new series centered on super simple (micro) tutorials using Langflow. The goal is to quickly equip you with practical…]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <description><![CDATA[I’m launching a new series centered on super simple (micro) tutorials using FlowChat. The goal is to quickly equip you with practical…]]></description>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/4805d6c0840f322ed0737ff3fb9bec2cd2a2b086-800x441.png" length="0" type="image/jpeg" />
     </item>
     <item>
       <title><![CDATA[Introducing Custom Components]]></title>
-      <link>https://langflow.org/blog/introducing-custom-components</link>
-      <guid isPermaLink="true">https://langflow.org/blog/introducing-custom-components</guid>
+      <link>https://flowchat.org/blog/introducing-custom-components</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/introducing-custom-components</guid>
       <pubDate>Thu, 03 Aug 2023 16:48:33 GMT</pubDate>
-      <description><![CDATA[Meet the feature that brings Langflow’s flexibility to a new level]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <description><![CDATA[Meet the feature that brings FlowChat’s flexibility to a new level]]></description>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/048fb6ff8000f53ebba91b21855d1d8b1696a5fa-800x740.png" length="0" type="image/jpeg" />
     </item>
     <item>
-      <title><![CDATA[Presenting ⛓︎Langflow 0.3]]></title>
-      <link>https://langflow.org/blog/presenting-ef-b8-8elangflow-0-3</link>
-      <guid isPermaLink="true">https://langflow.org/blog/presenting-ef-b8-8elangflow-0-3</guid>
+      <title><![CDATA[Presenting ⛓︎FlowChat 0.3]]></title>
+      <link>https://flowchat.org/blog/presenting-ef-b8-8elangflow-0-3</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/presenting-ef-b8-8elangflow-0-3</guid>
       <pubDate>Thu, 13 Jul 2023 21:43:42 GMT</pubDate>
-      <description><![CDATA[⛓︎Langflow is a versatile tool for designing Language Model pipelines and has recently introduced a set of powerful new features that…]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <description><![CDATA[⛓︎FlowChat is a versatile tool for designing Language Model pipelines and has recently introduced a set of powerful new features that…]]></description>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/33bd33276407aa31418ca2f6d63f415d7fecd999-2288x1692.png" length="0" type="image/jpeg" />
     </item>
     <item>
       <title><![CDATA[Language Models On Steroids]]></title>
-      <link>https://langflow.org/blog/language-models-on-steroids</link>
-      <guid isPermaLink="true">https://langflow.org/blog/language-models-on-steroids</guid>
+      <link>https://flowchat.org/blog/language-models-on-steroids</link>
+      <guid isPermaLink="true">https://flowchat.org/blog/language-models-on-steroids</guid>
       <pubDate>Tue, 14 Mar 2023 17:21:20 GMT</pubDate>
       <description><![CDATA[⛓ LangFlow — An Open Source UI for LangChain]]></description>
-      <author>please-reply@langflow.org (Rodrigo Nader,Unknown)</author>
+      <author>please-reply@flowchat.org (Rodrigo Nader,Unknown)</author>
       <enclosure url="https://cdn.sanity.io/images/bbnkhnhl/langflow-staging/a2204395c82bf7637ed2c2ec58d06e3ec205c2e6-800x500.png" length="0" type="image/jpeg" />
     </item>
   </channel>

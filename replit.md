@@ -1,7 +1,7 @@
-# Langflow Website - Replit Setup
+# FlowChat Website - Replit Setup
 
 ## Project Overview
-This is a static website for Langflow (langflow.org) that was exported from a Next.js application. The project contains the complete marketing website with HTML, CSS, JavaScript, and media assets.
+This is a static website for FlowChat (langflow.org) that was exported from a Next.js application. The project contains the complete marketing website with HTML, CSS, JavaScript, and media assets.
 
 ## Project Structure
 - `index.html` - Main website homepage
