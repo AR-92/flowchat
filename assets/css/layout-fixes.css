@@ -1,0 +1,66 @@
+/* CSS fixes for layout and image alignment issues */
+
+/* Ensure images scale properly and maintain aspect ratio */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Fix container overflow issues */
+.styles_container__MgZK9,
+.styles_container__yup16 {
+    overflow: hidden;
+}
+
+/* Ensure proper flexbox alignment */
+.styles_social__r5XIR {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Fix image alignment in grid layouts */
+.styles_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+/* Ensure proper spacing and alignment for hero sections */
+.styles_hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Fix header alignment */
+.styles_header__A7wGU {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Ensure proper responsive behavior */
+@media (max-width: 768px) {
+    .styles_container__MgZK9 {
+        padding: 0 16px;
+    }
+    
+    .styles_grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Fix any layout shifts */
+* {
+    box-sizing: border-box;
+}
+
+/* Ensure SVG icons display properly */
+.svg-placeholder {
+    display: inline-block;
+    vertical-align: middle;
+}
