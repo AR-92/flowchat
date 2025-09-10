@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowChat — Intelligent Automation Solutions</title>
+    <meta name="description" content="Transform your business with AI-powered automation solutions. Streamline operations, boost efficiency, and drive growth with our intelligent automation platform.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <link rel="stylesheet" href="./assets/css/output.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000000; /* Pure jet black */
+            color: #f0f2f5;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-feature-settings: "cv05" on, "cv08" on, "cv09" on;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Symmetric Navbar Animations */
+        @keyframes subtleGlow {
+            0%, 100% { box-shadow: 0 0 10px rgba(155, 92, 255, 0.2); }
+            50% { box-shadow: 0 0 20px rgba(155, 92, 255, 0.3); }
+        }
+
+        .navbar-glow {
+            animation: subtleGlow 4s ease-in-out infinite;
+        }
+
+        .btn-primary {
+            background: linear-gradient(145deg, #9b5cff, #6b3cff);
+            border: none;
+            color: #ffffff;
+            font-weight: 700;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 4px 15px rgba(155, 92, 255, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            letter-spacing: 0.025em;
+            position: relative;
+            overflow: hidden;
+            transform: scale(1);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            clip-path: circle(0 at 50% 50%);
+            transition: clip-path 0.6s ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(155, 92, 255, 0.5);
+            background: linear-gradient(145deg, #a770ff, #7a4dff);
+        }
+
+        .btn-primary:hover::before {
+            clip-path: circle(100% at 50% 50%);
+        }
+
+        .btn-primary:active {
+            transform: scale(0.95);
+            transition: all 0.1s ease;
+        }
+
+        /* Premium Navigation Enhancements */
+        .nav-link-underline {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #9b5cff;
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .nav-link:hover .nav-link-underline {
+            width: 100%;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #9b5cff;
+            color: #9b5cff;
+            font-weight: 700;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            letter-spacing: 0.025em;
+            position: relative;
+            overflow: hidden;
+            transform: scale(1);
+        }
+
+        .btn-secondary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(155, 92, 255, 0.1);
+            clip-path: circle(0 at 50% 50%);
+            transition: clip-path 0.6s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(155, 92, 255, 0.1);
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(155, 92, 255, 0.3);
+            border: 2px solid #a770ff;
+            color: #a770ff;
+        }
+
+        .btn-secondary:hover::before {
+            clip-path: circle(100% at 50% 50%);
+        }
+
+        .btn-secondary:active {
+            transform: scale(0.95);
+            transition: all 0.1s ease;
+        }
+
+        /* Slime Glow Effect for Elements */
+        .slime-glow {
+            position: relative;
+        }
+
+        .slime-glow::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #9b5cff, #6b3cff, #9b5cff);
+            border-radius: 50px;
+            z-index: -1;
+            filter: blur(8px);
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .slime-glow:hover::before {
+            opacity: 1;
+        }
+
+        /* Enhanced Hover Glow Effect */
+        .hover-glow {
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hover-glow::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, 
+                rgba(155, 92, 255, 0) 0%, 
+                rgba(155, 92, 255, 0.1) 50%, 
+                rgba(155, 92, 255, 0) 100%);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .hover-glow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(155, 92, 255, 0.3);
+        }
+
+        .hover-glow:hover::after {
+            transform: translateX(100%);
+        }
+
+        /* Pulsing Animation for Orbs */
+        @keyframes pulseGlow {
+            0% {
+                transform: scale(1);
+                opacity: 0.3;
+                box-shadow: 0 0 20px rgba(155, 92, 255, 0.2);
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.5;
+                box-shadow: 0 0 40px rgba(155, 92, 255, 0.4);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.3;
+                box-shadow: 0 0 20px rgba(155, 92, 255, 0.2);
+            }
+        }
+
+        .pulse-glow {
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Slime Bounce Effect */
+        @keyframes slimeBounce {
+            0%, 100% {
+                transform: scale(1);
+            }
+            25% {
+                transform: scale(1.05, 0.95);
+            }
+            50% {
+                transform: scale(0.95, 1.05);
+            }
+            75% {
+                transform: scale(1.02, 0.98);
+            }
+        }
+
+        .slime-bounce {
+            animation: slimeBounce 2s ease-in-out infinite;
+        }
+
+        /* HTMX Loading Indicator */
+        .htmx-indicator {
+            display: none;
+        }
+
+        .htmx-request .htmx-indicator {
+            display: inline-block;
+        }
+
+        .htmx-request.htmx-indicator {
+            display: inline-block;
+        }
+
+        /* Loading Spinner */
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(155, 92, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #9b5cff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Pure Jet Black Hero Background */
+        .hero-container {
+            position: relative;
+            overflow: hidden;
+            background: #000000; /* Pure jet black */
+            padding-top: 8rem;
+            padding-bottom: 5rem;
+        }
+
+        /* Gradient overlay for smooth transition to main content */
+
+        /* Subtle animated elements */
+        .hero-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle,
+                rgba(155, 92, 255, 0.15) 0%,
+                rgba(107, 60, 255, 0.1) 40%,
+                transparent 70%);
+            filter: blur(50px);
+            opacity: 0.4;
+            z-index: -1;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: float 12s ease-in-out infinite;
+        }
+
+        .hero-glow-2 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle,
+                rgba(155, 92, 255, 0.1) 0%,
+                rgba(107, 60, 255, 0.08) 40%,
+                transparent 70%);
+            filter: blur(40px);
+            opacity: 0.3;
+            z-index: -1;
+            bottom: -100px;
+            right: 10%;
+            animation: float-slow 15s ease-in-out infinite;
+        }
+
+        /* Professional Footer Styling */
+        .footer-container {
+            background: #000000; /* Pure jet black */
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Section Orb Gradients */
+        .section-orb {
+            background: radial-gradient(circle, var(--orb-color, rgba(155, 92, 255, 0.2)) 0%, transparent 70%);
+            filter: blur(50px);
+            animation: float 12s ease-in-out infinite;
+            transform-origin: center;
+        }
+        
+        /* Hero Section Orb Gradient */
+        .hero-orb {
+            background: radial-gradient(circle, rgba(155, 92, 255, 0.25) 0%, rgba(107, 60, 255, 0.15) 50%, transparent 70%);
+            filter: blur(60px);
+            animation: float 15s ease-in-out infinite;
+            transform-origin: center;
+        }
+        
+        /* Orb Animation Keyframes */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0) scale(1);
+            }
+            25% {
+                transform: translateY(-10px) translateX(5px) scale(1.02);
+            }
+            50% {
+                transform: translateY(0) translateX(10px) scale(0.98);
+            }
+            75% {
+                transform: translateY(10px) translateX(5px) scale(1.03);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: var(--orb-opacity, 0.2);
+                transform: scale(1);
+            }
+            50% {
+                opacity: calc(var(--orb-opacity, 0.2) + 0.1);
+                transform: scale(1.05);
+            }
+        }
+        
+        @keyframes float-slow {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+            }
+            25% {
+                transform: translateY(-15px) translateX(10px);
+            }
+            50% {
+                transform: translateY(0) translateX(20px);
+            }
+            75% {
+                transform: translateY(15px) translateX(10px);
+            }
+        }
+
+        /* Other styles remain the same */
+        .floating-orb-1 {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: #000000; /* Pure jet black */
+            filter: blur(30px);
+            opacity: 0.2;
+            top: 20%;
+            left: 5%;
+            animation: float-slow 15s ease-in-out infinite;
+        }
+
+        .floating-orb-2 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: #000000; /* Pure jet black */
+            filter: blur(25px);
+            opacity: 0.15;
+            top: 60%;
+            right: 10%;
+            animation: float 12s ease-in-out infinite;
+        }
+
+        .floating-orb-3 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #000000; /* Pure jet black */
+            filter: blur(20px);
+            opacity: 0.25;
+            bottom: 10%;
+            left: 20%;
+            animation: float-fast 8s ease-in-out infinite;
+        }
+
+        .grid-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000000; /* Pure jet black */
+            opacity: 0.3;
+            z-index: -2;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(155, 92, 255, 0.6);
+            border-radius: 50%;
+            animation: twinkle 5s ease-in-out infinite;
+        }
+
+        .particle-1 { top: 15%; left: 10%; animation-delay: 0s; }
+        .particle-2 { top: 25%; left: 80%; animation-delay: 1s; }
+        .particle-3 { top: 70%; left: 15%; animation-delay: 2s; }
+        .particle-4 { top: 40%; left: 90%; animation-delay: 3s; }
+        .particle-5 { top: 85%; left: 75%; animation-delay: 4s; }
+
+        .section-divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.05);
+            margin: 5rem 0;
+        }
+
+        .feature-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(0);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(155, 92, 255, 0.3);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .pricing-card.popular {
+            transform: scale(1.05);
+            border-color: rgba(155, 92, 255, 0.3);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            animation: pulse-glow 4s ease-in-out infinite;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+        }
+
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: #c9cccf;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #9b5cff;
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 2px;
+        }
+
+        .nav-link:hover {
+            color: #f0f2f5;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .process-step {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
+        }
+
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 60px;
+            left: 30px;
+            width: 2px;
+            height: calc(100% - 40px);
+            background: rgba(155, 92, 255, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .process-step:not(:last-child)::after {
+                display: none;
+            }
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #9b5cff;
+            color: #050308;
+            padding: 8px;
+            z-index: 1000;
+            border-radius: 0 0 4px 4px;
+            transition: top 0.3s ease;
+            font-weight: 600;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Premium Navigation Enhancements */
+
+        /* Enhanced animations for interactive elements */
+        .hover-glow {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hover-glow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hover-glow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(155, 92, 255, 0.25);
+        }
+
+        .hover-glow:hover::before {
+            left: 100%;
+        }
+
+        /* Scroll animation trigger */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Include background elements partial -->
+    <!-- Background elements -->
+    <div class="grid-pattern"></div>
+    <div class="floating-orb-1"></div>
+    <div class="floating-orb-2"></div>
+    <div class="floating-orb-3"></div>
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+    <div class="particle particle-5"></div>
+
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Include header partial -->
+    <!-- Enhanced Professional Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-900/90 backdrop-blur-xl py-3 px-6">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Brand Identity -->
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-black border border-accent-500/30 shadow-lg transform transition-transform duration-300 hover:scale-105">
+                    <span class="font-black text-white text-lg">F</span>
+                </div>
+                <a href="/" class="font-black text-xl tracking-tight text-light-900 transition-colors duration-300 hover:text-accent-400">FlowChat</a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex items-center space-x-10">
+                <a href="/pages/services.html" class="text-light-500 hover:text-light-900 text-base font-medium transition-all duration-300 transform hover:-translate-y-0.5">Solutions</a>
+                <a href="#features" class="text-light-500 hover:text-light-900 text-base font-medium transition-all duration-300 transform hover:-translate-y-0.5">Features</a>
+                <a href="/pages/pricing.html" class="text-light-500 hover:text-light-900 text-base font-medium transition-all duration-300 transform hover:-translate-y-0.5">Pricing</a>
+                <a href="#testimonials" class="text-light-500 hover:text-light-900 text-base font-medium transition-all duration-300 transform hover:-translate-y-0.5">Testimonials</a>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="/pages/contact.html" class="text-light-700 hover:text-light-900 text-base font-medium transition-all duration-300 px-5 py-2 rounded-lg hover:bg-dark-800/50 transform hover:-translate-y-0.5">
+                    Contact
+                </a>
+                <a href="/pages/contact.html" class="btn-primary slime-glow navbar-glow">
+                    <span class="flex items-center">
+                        <i class="fas fa-calendar-check mr-2"></i>
+                        Book a Demo
+                    </span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-button" class="lg:hidden text-light-700 hover:text-light-900 focus:outline-none p-2 rounded-lg hover:bg-dark-800/50 transition-all duration-300 transform hover:scale-110">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 right-0 bg-dark-900/95 backdrop-blur-xl shadow-2xl">
+            <div class="flex flex-col py-6 px-8 space-y-5">
+                <a href="/pages/services.html" class="text-light-500 hover:text-light-900 py-4 text-lg font-medium transition-all duration-300 border-b border-dark-700/30 transform hover:translate-x-2">Solutions</a>
+                <a href="#features" class="text-light-500 hover:text-light-900 py-4 text-lg font-medium transition-all duration-300 border-b border-dark-700/30 transform hover:translate-x-2">Features</a>
+                <a href="/pages/pricing.html" class="text-light-500 hover:text-light-900 py-4 text-lg font-medium transition-all duration-300 border-b border-dark-700/30 transform hover:translate-x-2">Pricing</a>
+                <a href="#testimonials" class="text-light-500 hover:text-light-900 py-4 text-lg font-medium transition-all duration-300 border-b border-dark-700/30 transform hover:translate-x-2">Testimonials</a>
+                <a href="/pages/contact.html" class="text-light-500 hover:text-light-900 py-4 text-lg font-medium transition-all duration-300 border-b border-dark-700/30 transform hover:translate-x-2">Contact</a>
+                <a href="/pages/contact.html" class="btn-primary slime-glow w-full mt-4 text-center navbar-glow">
+                    <span class="flex items-center justify-center">
+                        <i class="fas fa-calendar-check mr-3"></i>
+                        Book a Demo
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Fashion-Style Hero Section with Smooth Gradient -->
+    <header class="hero-container relative px-6 overflow-hidden">
+        <!-- Large Orb Gradient in Hero Section -->
+        <div class="absolute top-1/2 left-2/5 w-[400px] h-[400px] hero-orb transform -translate-x-1/2 -translate-y-1/2 animate-float float"></div>
+        <!-- Secondary Orb on Right Side -->
+        <div class="absolute top-1/3 right-1/4 w-[300px] h-[300px] hero-orb transform -translate-y-1/2 opacity-70 animate-pulse float"></div>
+
+                    <div class="max-w-7xl mx-auto relative z-10 text-center pt-12 pb-8 px-4">
+            <div class="inline-flex items-center gap-3 glass px-4 py-2 rounded-full mb-6 border border-dark-600 animate-on-scroll">
+                <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
+                <span class="text-xs font-black tracking-widest text-accent-500">NEW FEATURE</span>
+                <span class="text-xs font-medium text-light-900">AUTOMATED LEAD GENERATION</span>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-black tracking-tight max-w-4xl mx-auto leading-tight animate-on-scroll">
+                Automate the Busywork. <span class="text-accent-500">Accelerate Your Growth.</span>
+            </h1>
+
+            <p class="mt-4 text-xl text-light-700 max-w-2xl mx-auto leading-relaxed animate-on-scroll">
+                AI-powered automations that save time, cut costs, and scale with you — from startup to enterprise.
+            </p>
+
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 animate-on-scroll">
+                <a href="/pages/contact.html" class="btn-primary slime-glow text-center hover-glow">
+                    Schedule a Demo
+                </a>
+                <a href="/pages/services.html" class="btn-secondary slime-glow text-center hover-glow">
+                    Explore Solutions
+                </a>
+            </div>
+
+            <div class="mt-16 flex flex-wrap items-center justify-center gap-8 opacity-70 animate-on-scroll">
+                <div class="flex items-center gap-2 text-light-500">
+                    <i class="fas fa-check-circle text-accent-500"></i>
+                    <span class="text-sm font-bold">500+ Companies Trust Us</span>
+                </div>
+                <div class="flex items-center gap-2 text-light-500">
+                    <i class="fas fa-check-circle text-accent-500"></i>
+                    <span class="text-sm font-bold">99.9% Uptime</span>
+                </div>
+                <div class="flex items-center gap-2 text-light-500">
+                    <i class="fas fa-check-circle text-accent-500"></i>
+                    <span class="text-sm font-bold">24/7 Support</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Services Section -->
+        <section id="services" class="py-24 px-4 sm:px-6 md:px-8 mx-4 sm:mx-8 md:mx-16 lg:mx-32 relative">
+            <!-- Orb in Services Section -->
+            <div class="absolute top-1/4 right-10 w-64 h-64 section-orb animate-float pulse-glow" style="--orb-color: rgba(107, 60, 255, 0.2);"></div>
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-black tracking-tight animate-on-scroll">
+                        AI Solutions That Transform Your Business
+                    </h2>
+                    <p class="mt-4 text-xl text-light-700 max-w-2xl mx-auto animate-on-scroll">
+                        We design and implement cutting-edge automation solutions tailored to your unique business needs.
+                    </p>
+                </div>
+
+                <div class="mt-20 space-y-20">
+                    <!-- Service 1 with Orb -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center animate-on-scroll relative">
+                        <div class="absolute -top-10 -left-10 w-32 h-32 section-orb opacity-20 animate-pulse pulse-glow" style="--orb-color: rgba(155, 92, 255, 0.08);"></div>
+                        <div class="relative glass rounded-2xl p-1 hover-glow">
+                            <div class="w-full h-64 rounded-xl overflow-hidden bg-black flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fas fa-robot text-4xl text-accent-500 mb-4"></i>
+                                    <p class="text-light-500">Workflow Automation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="inline-flex items-center gap-2 glass px-3 py-1 rounded-full mb-6 border border-dark-600">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span>
+                                <span class="text-xs font-black tracking-widest text-accent-500">AUTOMATION</span>
+                            </div>
+                            <h3 class="text-2xl font-black tracking-tight">
+                                Workflow Automation
+                            </h3>
+                            <p class="mt-4 text-lg text-light-700 leading-relaxed">
+                                Automate repetitive tasks like data entry, reporting, and approval routing — saving hours of manual work and eliminating human errors.
+                            </p>
+                            <div class="mt-6 flex flex-wrap gap-3">
+                                <span class="px-4 py-2 rounded-lg bg-dark-700 text-light-900 text-sm font-bold">
+                                    <i class="fas fa-bolt mr-2 text-xs"></i>Task Bots
+                                </span>
+                                <span class="px-4 py-2 rounded-lg bg-dark-700 text-light-900 text-sm font-bold">
+                                    <i class="fas fa-sync-alt mr-2 text-xs"></i>Co-Automation
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 with Orb -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center animate-on-scroll relative">
+                        <div class="absolute -bottom-10 -right-10 w-36 h-36 section-orb opacity-25 animate-float" style="--orb-color: rgba(107, 60, 255, 0.09);"></div>
+                        <div class="order-2 md:order-1">
+                            <div class="inline-flex items-center gap-2 glass px-3 py-1 rounded-full mb-6 border border-dark-600">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span>
+                                <span class="text-xs font-black tracking-widest text-accent-500">AI ASSISTANT</span>
+                            </div>
+                            <h3 class="text-2xl font-black tracking-tight">
+                                AI Assistant
+                            </h3>
+                            <p class="mt-4 text-lg text-light-700 leading-relaxed">
+                                A digital employee who works 24/7, never forgets, and costs 90% less than hiring someone. Handle calendars, emails, and meetings automatically.
+                            </p>
+                            <div class="mt-6 flex flex-wrap gap-3">
+                                <span class="px-4 py-2 rounded-lg bg-dark-700 text-light-900 text-sm font-bold">
+                                    <i class="fas fa-envelope mr-2 text-xs"></i>Summaries
+                                </span>
+                                <span class="px-4 py-2 rounded-lg bg-dark-700 text-light-900 text-sm font-bold">
+                                    <i class="fas fa-calendar mr-2 text-xs"></i>Scheduling
+                                </span>
+                            </div>
+                        </div>
+                        <div class="order-1 md:order-2 relative glass rounded-2xl p-1 hover-glow">
+                            <div class="w-full h-64 rounded-xl overflow-hidden bg-black flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fas fa-headset text-4xl text-accent-500 mb-4"></i>
+                                    <p class="text-light-500">AI Assistant</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center animate-on-scroll">
+                        <div class="relative glass rounded-2xl p-1 hover-glow">
+                            <div class="w-full h-64 rounded-xl overflow-hidden bg-black flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fas fa-chart-line text-4xl text-accent-500 mb-4"></i>
+                                    <p class="text-light-500">Sales & Marketing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="inline-flex items-center gap-2 glass px-3 py-1 rounded-full mb-6 border border-dark-600">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span>
+                                <span class="text-xs font-black tracking-widest text-accent-500">SALES</span>
+                            </div>
+                            <h3 class="text-2xl font-black tracking-tight">
+                                Sales & Marketing Automation
+                            </h3>
+                            <p class="mt-4 text-lg text-light-700 leading-relaxed">
+                                Faster lead responses mean more closed deals. Automate outreach, follow-ups, and content creation to boost sales efficiency.
+                            </p>
+                            <div class="mt-6 flex flex-wrap gap-3">
+                                <span class="px-4 py-2 rounded-lg bg-dark-700 text-light-900 text-sm font-bold">
+                                    <i class="fas fa-user-friends mr-2 text-xs"></i>Leads
+                                </span>
+                                <span class="px-4 py-2 rounded-lg bg-dark-700 text-light-900 text-sm font-bold">
+                                    <i class="fas fa-file-alt mr-2 text-xs"></i>Content
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center animate-on-scroll">
+                        <div class="order-2 md:order-1">
+                            <div class="inline-flex items-center gap-2 glass px-3 py-1 rounded-full mb-6 border border-dark-600">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span>
+                                <span class="text-xs font-black tracking-widest text-accent-500">CUSTOM</span>
+                            </div>
+                            <h3 class="text-2xl font-black tracking-tight">
+                                Custom AI Projects
+                            </h3>
+                            <p class="mt-4 text-lg text-light-700 leading-relaxed">
+                                Need something specific? Our DevOps + AI engineers build custom automations that integrate with your apps, sites, and APIs.
+                            </p>
+                            <div class="mt-6 flex flex-wrap gap-3">
+                                <span class="px-4 py-2 rounded-lg bg-dark-700 text-light-900 text-sm font-bold">
+                                    <i class="fas fa-lightbulb mr-2 text-xs"></i>Strategy
+                                </span>
+                                <span class="px-4 py-2 rounded-lg bg-dark-700 text-light-900 text-sm font-bold">
+                                    <i class="fas fa-cogs mr-2 text-xs"></i>Custom AI
+                                </span>
+                            </div>
+                        </div>
+                        <div class="order-1 md:order-2 relative glass rounded-2xl p-1 hover-glow">
+                            <div class="w-full h-64 rounded-xl overflow-hidden bg-black flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fas fa-project-diagram text-4xl text-accent-500 mb-4"></i>
+                                    <p class="text-light-500">Custom Projects</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-7xl mx-auto"></div>
+
+        <!-- Process Section -->
+        <section id="process" class="py-24 px-4 sm:px-6 relative">
+            <!-- Orb in Process Section -->
+            <div class="absolute bottom-20 left-10 w-72 h-72 section-orb animate-pulse pulse-glow" style="--orb-color: rgba(155, 92, 255, 0.15);"></div>
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-black tracking-tight animate-on-scroll">
+                        Our Simple, Smart, and Scalable Process
+                    </h2>
+                    <p class="mt-4 text-xl text-light-700 max-w-2xl mx-auto animate-on-scroll">
+                        We follow a proven methodology to ensure successful implementation and long-term value.
+                    </p>
+                </div>
+
+                <div class="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+                    <div class="process-step text-center p-6 glass rounded-2xl animate-on-scroll hover-glow relative">
+                        <div class="absolute -top-6 -left-6 w-24 h-24 section-orb opacity-15" style="--orb-color: rgba(155, 92, 255, 0.07);"></div>
+                        <div class="w-16 h-16 rounded-xl bg-black flex items-center justify-center mx-auto mb-6">
+                            <span class="text-xl font-black text-dark-900">1</span>
+                        </div>
+                        <h3 class="text-xl font-black mb-3">Discovery Call</h3>
+                        <p class="text-light-700">
+                            We identify your repetitive tasks and growth goals.
+                        </p>
+                    </div>
+
+                    <div class="process-step text-center p-6 glass rounded-2xl animate-on-scroll hover-glow relative">
+                        <div class="absolute -top-6 -left-6 w-24 h-24 section-orb opacity-15 animate-pulse" style="--orb-color: rgba(155, 92, 255, 0.07);"></div>
+                        <div class="w-16 h-16 rounded-xl bg-black flex items-center justify-center mx-auto mb-6">
+                            <span class="text-xl font-black text-dark-900">2</span>
+                        </div>
+                        <h3 class="text-xl font-black mb-3">Proposal & Plan</h3>
+                        <p class="text-light-700">
+                            We outline timeline, scope, and cost for your automation project.
+                        </p>
+                    </div>
+
+                    <div class="process-step text-center p-6 glass rounded-2xl animate-on-scroll hover-glow relative">
+                        <div class="absolute -top-6 -left-6 w-24 h-24 section-orb opacity-15" style="--orb-color: rgba(155, 92, 255, 0.07);"></div>
+                        <div class="w-16 h-16 rounded-xl bg-black flex items-center justify-center mx-auto mb-6">
+                            <span class="text-xl font-black text-dark-900">3</span>
+                        </div>
+                        <h3 class="text-xl font-black mb-3">Implementation</h3>
+                        <p class="text-light-700">
+                            Our DevOps + AI engineers build your custom automations.
+                        </p>
+                    </div>
+
+                    <div class="process-step text-center p-6 glass rounded-2xl animate-on-scroll hover-glow relative">
+                        <div class="absolute -top-6 -left-6 w-24 h-24 section-orb opacity-15 animate-pulse" style="--orb-color: rgba(155, 92, 255, 0.07);"></div>
+                        <div class="w-16 h-16 rounded-xl bg-black flex items-center justify-center mx-auto mb-6">
+                            <span class="text-xl font-black text-dark-900">4</span>
+                        </div>
+                        <h3 class="text-xl font-black mb-3">Testing & Training</h3>
+                        <p class="text-light-700">
+                            We ensure everything works perfectly and train your team.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-7xl mx-auto"></div>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-24 px-4 sm:px-6 relative">
+            <!-- Orb in Testimonials Section -->
+            <div class="absolute top-1/3 left-1/4 w-60 h-60 section-orb animate-float" style="--orb-color: rgba(107, 60, 255, 0.2);"></div>
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-black tracking-tight animate-on-scroll">
+                        Trusted by Industry Leaders
+                    </h2>
+                    <p class="mt-4 text-xl text-light-700 max-w-2xl mx-auto animate-on-scroll">
+                        See how AI automation streamlines operations, boosts revenue, and drives growth.
+                    </p>
+                </div>
+
+                <div class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <div class="glass rounded-2xl p-8 animate-on-scroll hover-glow relative">
+                        <div class="absolute -top-3 -left-3 w-16 h-16 section-orb opacity-15" style="--orb-color: rgba(155, 92, 255, 0.05);"></div>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center">
+                                <span class="font-black text-dark-900">TF</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-black">TrailForge</h4>
+                                <p class="text-light-500 text-sm">Suitcase Manufacturing</p>
+                            </div>
+                        </div>
+                        <p class="text-lg italic mb-6">
+                            "AI-driven forecasting cut inventory waste by 40% and improved our production efficiency significantly. The Xtract team delivered beyond our expectations."
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-2xl font-black text-accent-500">40%</p>
+                                <p class="text-sm text-light-500">Less Waste</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-black text-accent-500">25%</p>
+                                <p class="text-sm text-light-500">Faster Production</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass rounded-2xl p-8 animate-on-scroll hover-glow relative">
+                        <div class="absolute -top-3 -left-3 w-16 h-16 section-orb opacity-15" style="--orb-color: rgba(155, 92, 255, 0.05);"></div>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center">
+                                <span class="font-black text-dark-900">NR</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-black">Nexus Retail</h4>
+                                <p class="text-light-500 text-sm">E-commerce Platform</p>
+                            </div>
+                        </div>
+                        <p class="text-lg italic mb-6">
+                            "The AI assistant has transformed our customer service operations. Response times improved by 60% and customer satisfaction scores are at an all-time high."
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-2xl font-black text-accent-500">60%</p>
+                                <p class="text-sm text-light-500">Faster Responses</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-black text-accent-500">92%</p>
+                                <p class="text-sm text-light-500">Satisfaction Rate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-7xl mx-auto"></div>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="py-24 px-4 sm:px-6 relative">
+            <!-- Orb in Benefits Section -->
+            <div class="absolute bottom-10 right-1/3 w-68 h-68 section-orb" style="--orb-color: rgba(107, 60, 255, 0.15);"></div>
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-black tracking-tight animate-on-scroll">
+                        The Key Benefits of AI Automation
+                    </h2>
+                    <p class="mt-4 text-xl text-light-700 max-w-2xl mx-auto animate-on-scroll">
+                        Discover how AI automation enhances efficiency, reduces costs, and drives business growth.
+                    </p>
+                </div>
+
+                <div class="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto relative">
+                    <!-- Orbs in Benefits Section -->
+                    <div class="absolute top-0 left-0 w-40 h-40 section-orb opacity-30 animate-float" style="--orb-color: rgba(155, 92, 255, 0.1);"></div>
+                    <div class="absolute bottom-0 right-0 w-36 h-36 section-orb opacity-25 animate-pulse" style="--orb-color: rgba(107, 60, 255, 0.12);"></div>
+                    <div class="feature-card glass p-8 rounded-2xl animate-on-scroll">
+                        <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center mb-6">
+                            <i class="fas fa-bolt text-xl text-accent-500"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-3">Save Time</h3>
+                        <p class="text-light-700">
+                            Hours of repetitive work done in seconds with 24/7 digital systems.
+                        </p>
+                    </div>
+
+                    <div class="feature-card glass p-8 rounded-2xl animate-on-scroll">
+                        <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center mb-6">
+                            <i class="fas fa-smile text-xl text-accent-500"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-3">Save Money</h3>
+                        <p class="text-light-700">
+                            One automation can replace a full-time hire at 10% of the cost.
+                        </p>
+                    </div>
+
+                    <div class="feature-card glass p-8 rounded-2xl animate-on-scroll">
+                        <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center mb-6">
+                            <i class="fas fa-clock text-xl text-accent-500"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-3">Boost Sales</h3>
+                        <p class="text-light-700">
+                            Faster responses and follow-ups close more deals and grow revenue.
+                        </p>
+                    </div>
+
+                    <div class="feature-card glass p-8 rounded-2xl animate-on-scroll">
+                        <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center mb-6">
+                            <i class="fas fa-dollar-sign text-xl text-accent-500"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-3">Error-Free</h3>
+                        <p class="text-light-700">
+                            Automation doesn't forget, misplace data, or make calculation errors.
+                        </p>
+                    </div>
+
+                    <div class="feature-card glass p-8 rounded-2xl animate-on-scroll">
+                        <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center mb-6">
+                            <i class="fas fa-chart-bar text-xl text-accent-500"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-3">Enterprise Ready</h3>
+                        <p class="text-light-700">
+                            Built with DevOps principles to scale from startup to enterprise level.
+                        </p>
+                    </div>
+
+                    <div class="feature-card glass p-8 rounded-2xl animate-on-scroll">
+                        <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center mb-6">
+                            <i class="fas fa-expand-alt text-xl text-accent-500"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-3">Custom Integration</h3>
+                        <p class="text-light-700">
+                            Connects with your existing apps, websites, and APIs for seamless workflow.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-7xl mx-auto"></div>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-24 px-4 sm:px-6 relative">
+            <!-- Orb in Pricing Section -->
+            <div class="absolute top-20 left-1/3 w-72 h-72 section-orb animate-float" style="--orb-color: rgba(155, 92, 255, 0.2);"></div>
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-black tracking-tight animate-on-scroll">
+                        The Best AI Automation, at the Right Price
+                    </h2>
+                    <p class="mt-4 text-xl text-light-700 max-w-2xl mx-auto animate-on-scroll">
+                        Choose a plan that fits your business needs and start automating with AI.
+                    </p>
+
+                    <div class="mt-8 inline-flex items-center glass rounded-full p-1 border border-dark-600 animate-on-scroll">
+                        <button class="px-6 py-2 rounded-full text-sm font-black bg-black text-accent-500">
+                            Monthly
+                        </button>
+                        <button class="px-6 py-2 rounded-full text-sm font-black text-light-900">
+                            Annual <span class="text-xs bg-dark-700 text-light-900 px-2 py-1 rounded ml-2">Save 20%</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto relative">
+                    <!-- Orbs in Pricing Section -->
+                    <div class="absolute -top-10 -left-10 w-44 h-44 section-orb opacity-35" style="--orb-color: rgba(107, 60, 255, 0.15);"></div>
+                    <div class="absolute -bottom-10 -right-10 w-38 h-38 section-orb opacity-30" style="--orb-color: rgba(155, 92, 255, 0.12);"></div>
+                    <!-- Starter Plan -->
+                    <div class="glass p-8 rounded-2xl animate-on-scroll hover-glow">
+                        <h3 class="text-2xl font-black">Starter</h3>
+                        <div class="mt-4">
+                            <span class="text-4xl font-black">$37</span>
+                            <span class="text-light-500">/month</span>
+                        </div>
+                        <p class="mt-4 text-light-700">
+                            Perfect for small businesses starting with AI automation
+                        </p>
+                        <a href="#contact" class="btn-secondary slime-glow w-full mt-6 text-center block hover-glow">
+                            Choose this plan
+                        </a>
+                        <ul class="mt-8 space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                <span>Basic workflow automation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                <span>AI-powered personal assistant</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                <span>Standard analytics & reporting</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                <span>Email & chat support</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Professional Plan (Popular) -->
+                    <div class="pricing-card popular glass p-8 rounded-2xl relative border-2 border-accent-500/30 animate-on-scroll">
+                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-black text-dark-900 px-4 py-1 rounded-full text-sm font-black">
+                            POPULAR
+                        </div>
+                        <h3 class="text-2xl font-black">Professional</h3>
+                        <div class="mt-4">
+                            <span class="text-4xl font-black">$75</span>
+                            <span class="text-light-500">/month</span>
+                        </div>
+                        <p class="mt-4 text-light-700">
+                            Perfect for growing teams and advanced automation needs
+                        </p>
+                        <a href="#contact" class="btn-primary slime-glow w-full mt-6 text-center block hover-glow">
+                            Choose this plan
+                        </a>
+                        <ul class="mt-8 space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                <span>Advanced workflow automation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                <span>All-in-one sales & marketing tools</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                <span>Enhanced data analytics & insights</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                <span>Priority customer support</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                <span>Custom AI model training</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Enterprise Plan -->
+                    <div class="glass p-8 rounded-2xl animate-on-scroll hover-glow">
+                        <h3 class="text-2xl font-black">Enterprise</h3>
+                        <div class="mt-4">
+                            <span class="text-4xl font-black">Custom</span>
+                        </div>
+                        <p class="mt-4 text-light-700">
+                            Perfect for large organizations with complex needs
+                        </p>
+                        <a href="#contact" class="btn-secondary slime-glow w-full mt-6 text-center block hover-glow">
+                            Schedule a call
+                        </a>
+                        <ul class="mt-8 space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                <span>Fully customizable AI automation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                <span>Dedicated AI business consultant</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                <span>Enterprise-grade compliance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                <span>24/7 VIP support</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-7xl mx-auto"></div>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-24 px-4 sm:px-6 relative">
+            <!-- Orb in FAQ Section -->
+            <div class="absolute bottom-16 right-1/4 w-64 h-64 section-orb animate-pulse" style="--orb-color: rgba(107, 60, 255, 0.15);"></div>
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-black tracking-tight animate-on-scroll">
+                        Frequently Asked Questions
+                    </h2>
+                    <p class="mt-4 text-xl text-light-700 max-w-2xl mx-auto animate-on-scroll">
+                        Everything you need to know about our AI automation solutions.
+                    </p>
+                </div>
+
+                <div class="mt-20 max-w-3xl mx-auto space-y-6 relative">
+                    <!-- Orbs in FAQ Section -->
+                    <div class="absolute top-10 -left-8 w-28 h-28 section-orb opacity-25" style="--orb-color: rgba(155, 92, 255, 0.1);"></div>
+                    <div class="absolute bottom-10 -right-8 w-32 h-32 section-orb opacity-20" style="--orb-color: rgba(107, 60, 255, 0.08);"></div>
+                    <div class="faq-item glass rounded-2xl p-6 animate-on-scroll">
+                        <button class="flex justify-between items-center w-full text-left">
+                            <h3 class="text-lg font-black">How quickly can I implement Xtract's AI solutions?</h3>
+                            <i class="fas fa-chevron-down text-light-500"></i>
+                        </button>
+                        <div class="mt-4 text-light-700 hidden">
+                            <p>Implementation time varies based on your specific needs, but most clients see initial results within 2-4 weeks. Our streamlined onboarding process ensures minimal disruption to your operations.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass rounded-2xl p-6 animate-on-scroll">
+                        <button class="flex justify-between items-center w-full text-left">
+                            <h3 class="text-lg font-black">Do I need technical expertise to use Xtract?</h3>
+                            <i class="fas fa-chevron-down text-light-500"></i>
+                        </button>
+                        <div class="mt-4 text-light-700 hidden">
+                            <p>No technical expertise is required. Our platform is designed with intuitive interfaces that anyone can use. We also provide comprehensive training and 24/7 support to ensure your success.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass rounded-2xl p-6 animate-on-scroll">
+                        <button class="flex justify-between items-center w-full text-left">
+                            <h3 class="text-lg font-black">How does Xtract ensure data security and privacy?</h3>
+                            <i class="fas fa-chevron-down text-light-500"></i>
+                        </button>
+                        <div class="mt-4 text-light-700 hidden">
+                            <p>We employ enterprise-grade security measures including end-to-end encryption, regular security audits, and strict access controls. We're compliant with GDPR, CCPA, and other major data protection regulations.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass rounded-2xl p-6 animate-on-scroll">
+                        <button class="flex justify-between items-center w-full text-left">
+                            <h3 class="text-lg font-black">Can Xtract integrate with my existing tools?</h3>
+                            <i class="fas fa-chevron-down text-light-500"></i>
+                        </button>
+                        <div class="mt-4 text-light-700 hidden">
+                            <p>Yes, Xtract integrates with over 200 popular business tools including Salesforce, Slack, Microsoft Office, Google Workspace, and more. We also offer custom API integrations for specialized needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced CTA Section with Contact Form -->
+        <section class="py-24 px-4 sm:px-6 relative">
+            <!-- Orb in CTA Section -->
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 section-orb animate-pulse" style="--orb-color: rgba(107, 60, 255, 0.25);"></div>
+            <div class="max-w-7xl mx-auto">
+                <div class="glass rounded-2xl p-12 max-w-5xl mx-auto animate-on-scroll hover-glow">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="text-3xl font-black tracking-tight mb-4">
+                                Ready to Save <span class="text-accent-500">20+ Hours</span> Weekly?
+                            </h2>
+                            <p class="text-xl text-light-700 mb-6">
+                                Book a free 15-minute demo to see how AI automation can transform your business.
+                            </p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                    <span>See real-time workflow automation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                    <span>Get personalized recommendations</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                    <span>Receive immediate ROI estimate</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <form id="cta-contact-form" hx-post="/api/cta-contact.html" hx-target="#cta-contact-form" hx-swap="outerHTML" class="glass rounded-xl p-6">
+                                <div class="mb-4">
+                                    <label for="cta-name" class="block text-sm font-bold mb-2">Full Name</label>
+                                    <input type="text" id="cta-name" name="name" class="form-input w-full px-4 py-2.5 rounded-lg border border-dark-600 focus:border-accent-500 focus:ring-0" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="cta-email" class="block text-sm font-bold mb-2">Work Email</label>
+                                    <input type="email" id="cta-email" name="email" class="form-input w-full px-4 py-2.5 rounded-lg border border-dark-600 focus:border-accent-500 focus:ring-0" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="cta-company" class="block text-sm font-bold mb-2">Company</label>
+                                    <input type="text" id="cta-company" name="company" class="form-input w-full px-4 py-2.5 rounded-lg border border-dark-600 focus:border-accent-500 focus:ring-0">
+                                </div>
+                                <div class="mb-6">
+                                    <label for="cta-message" class="block text-sm font-bold mb-2">What would you like to automate?</label>
+                                    <textarea id="cta-message" name="message" class="form-input w-full px-4 py-2.5 rounded-lg border border-dark-600 focus:border-accent-500 focus:ring-0" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="btn-primary slime-glow w-full px-5 py-2.5 rounded-lg hover-glow">
+                                    <span class="htmx-indicator">
+                                        <span class="loading-spinner mr-2"></span> Scheduling...
+                                    </span>
+                                    <span class="htmx-request:hidden">
+                                        Schedule My Free Demo
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include footer partial -->
+    <!-- Professional Footer -->
+    <footer id="contact" class="footer-container py-12 px-4 sm:px-6 relative">
+        <!-- Orb in Footer Section -->
+        <div class="absolute top-10 left-1/4 w-60 h-60 section-orb animate-float" style="--orb-color: rgba(155, 92, 255, 0.15);"></div>
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="animate-on-scroll">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center bg-black">
+                            <span class="font-black text-accent-500 text-sm">F</span>
+                        </div>
+                        <span class="font-black text-lg text-light-900">FlowChat</span>
+                    </div>
+                    <p class="text-light-700 text-sm max-w-xs">
+                        Intelligent automation solutions for modern businesses.
+                    </p>
+                </div>
+
+                <div class="animate-on-scroll">
+                    <h4 class="font-bold text-base mb-4 text-light-900">Solutions</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/pages/services.html#workflow" class="text-light-500 hover:text-accent-500 transition-colors text-sm">Workflow Automation</a></li>
+                        <li><a href="/pages/services.html#assistant" class="text-light-500 hover:text-accent-500 transition-colors text-sm">AI Assistants</a></li>
+                        <li><a href="/pages/services.html#sales" class="text-light-500 hover:text-accent-500 transition-colors text-sm">Sales Automation</a></li>
+                        <li><a href="/pages/services.html#custom" class="text-light-500 hover:text-accent-500 transition-colors text-sm">Custom AI</a></li>
+                    </ul>
+                </div>
+
+                <div class="animate-on-scroll">
+                    <h4 class="font-bold text-base mb-4 text-light-900">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/pages/about.html" class="text-light-500 hover:text-accent-500 transition-colors text-sm">About Us</a></li>
+                        <li><a href="/pages/careers.html" class="text-light-500 hover:text-accent-500 transition-colors text-sm">Careers</a></li>
+                        <li><a href="/pages/blogs/" class="text-light-500 hover:text-accent-500 transition-colors text-sm">Blog</a></li>
+                        <li><a href="/pages/contact.html" class="text-light-500 hover:text-accent-500 transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="animate-on-scroll">
+                    <h4 class="font-bold text-base mb-4 text-light-900">Contact</h4>
+                    <ul class="space-y-2 text-light-500 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-xs"></i>
+                            <span>hello@flowchat.ai</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-2 text-xs"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-xs"></i>
+                            <span>San Francisco, CA</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-6 text-left text-light-500 text-sm">
+                <p>© 2025 FlowChat. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Include scripts partial -->
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-item button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    content.classList.add('hidden');
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Simple animation on scroll for other elements
+        const featureObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.feature-card, .process-step, .pricing-card').forEach(el => {
+            featureObserver.observe(el);
+        });
+    </script>
+</body>
+</html>

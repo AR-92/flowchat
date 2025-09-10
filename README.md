@@ -1,0 +1,153 @@
+# FlowChat Website
+
+This is the official website for FlowChat, an AI automation solutions company.
+
+## Project Structure
+
+```
+.
+├── index.html                 # Main landing page
+├── 404.html                   # Error page
+├── sitemap.xml                # SEO sitemap
+├── robots.txt                 # Search engine crawler instructions
+├── README.md                  # This file
+├── package.json               # Node.js dependencies and scripts
+├── tailwind.config.js         # Tailwind CSS configuration
+├── postcss.config.js          # PostCSS configuration
+├── vite.config.js             # Vite configuration
+├── dev-server.js              # Simple Express server
+├── assets/                    # Static assets
+│   ├── css/                   # Stylesheets
+│   │   ├── input.css          # Tailwind CSS input file
+│   │   └── output.css         # Generated Tailwind CSS file
+│   ├── js/                    # JavaScript files
+│   ├── images/                # Image assets
+│   └── fonts/                 # Web fonts
+├── pages/                     # Additional pages
+│   ├── about.html             # Company information
+│   ├── services.html          # Services overview
+│   ├── pricing.html           # Pricing information
+│   ├── contact.html           # Contact page
+│   ├── careers.html           # Careers page
+│   └── blog/                  # Blog section
+│       ├── index.html         # Blog listing
+│       └── post.html          # Blog post template
+└── partials/                  # Reusable HTML partials
+    ├── header.html            # Navigation bar
+    ├── footer.html            # Footer with company info
+    ├── scripts.html           # Common JavaScript code
+    ├── background.html        # Background elements
+    └── README.md              # Partials documentation
+```
+
+## Pages
+
+1. **Home** (`index.html`) - Main landing page showcasing FlowChat's AI automation solutions
+2. **About** (`pages/about.html`) - Company story, mission, values, and team
+3. **Services** (`pages/services.html`) - Detailed overview of AI automation services
+4. **Pricing** (`pages/pricing.html`) - Pricing plans and FAQ
+5. **Contact** (`pages/contact.html`) - Contact form and company information
+6. **Careers** (`pages/careers.html`) - Career opportunities and company culture
+7. **Blog** (`pages/blog/index.html`) - Blog listing page
+8. **Blog Post** (`pages/blog/post.html`) - Sample blog post
+9. **404** (`404.html`) - Error page for missing content
+
+## Features
+
+- Responsive design that works on all device sizes
+- Dark theme aesthetic with glass-morphism UI elements
+- Animated background elements for visual interest
+- Consistent navigation across all pages
+- SEO-optimized with sitemap and meta tags
+- Mobile-friendly navigation with hamburger menu
+- HTMX integration for dynamic interactions
+- Partials system for consistent design and reduced code duplication
+- Tailwind CSS for styling
+
+## Technologies Used
+
+- HTML5
+- CSS3 with Tailwind CSS
+- JavaScript
+- HTMX for dynamic interactions
+- Font Awesome icons
+- Google Fonts
+- Vite for development server
+- Express.js for production server
+
+## Development Setup
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Build the Tailwind CSS:
+```bash
+npm run tailwind
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+This will start a development server at `http://localhost:3000` with hot reloading.
+
+## Alternative Development Setup
+
+You can also use the simple Express server:
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Build the Tailwind CSS:
+```bash
+npm run tailwind
+```
+
+3. Start the Express server:
+```bash
+npm run server
+```
+
+This will start a server at `http://localhost:3000`.
+
+## Production Build
+
+To create a production build:
+```bash
+npm run build
+```
+
+This will generate optimized files in the `dist/` directory.
+
+To preview the production build:
+```bash
+npm run preview
+```
+
+## Partials System
+
+This project uses a partials system to ensure consistency across all pages and reduce code duplication. The partials are located in the `partials/` directory and include:
+
+- **header.html** - Navigation bar and brand identity
+- **footer.html** - Footer with company information, links, and copyright
+- **scripts.html** - Common JavaScript code used across all pages
+- **background.html** - Background elements and accessibility skip link
+
+Each page includes these partials to maintain a consistent look and feel throughout the site.
+
+## HTMX Integration
+
+All pages include the HTMX library for dynamic interactions without writing custom JavaScript. This enables features like form submissions, content loading, and UI updates with minimal code.
+
+## SEO Optimization
+
+The site includes proper meta tags, a sitemap.xml file, and a robots.txt file to help search engines index the content effectively.
+
+## Tailwind CSS
+
+This project uses Tailwind CSS for styling. The configuration is in `tailwind.config.js` and the input file is `assets/css/input.css`. The output file `assets/css/output.css` is generated by Tailwind and included in all HTML files.
