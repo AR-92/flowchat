@@ -4,10 +4,11 @@
   "description": "FlowChat - AI Automation Solutions Website",
   "main": "index.js",
   "scripts": {
-    "dev": "kill-port 5173 && vite",
-    "build": "vite build",
+    "dev": "kill-port 3000 && concurrently \"vite --port 3000\" \"npm run tailwind\"",
+    "build": "npm run tailwind-build && vite build",
     "preview": "vite preview",
-    "tailwind": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch"
+    "tailwind": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch",
+    "tailwind-build": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css"
   },
   "keywords": [
     "website",
@@ -20,6 +21,7 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.4.14",
+    "concurrently": "^9.2.1",
     "express": "^4.18.2",
     "kill-port": "^2.0.1",
     "postcss": "^8.4.24",

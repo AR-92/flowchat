@@ -7,434 +7,52 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../../assets/css/output.css">
-    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <link rel="stylesheet" href="../../assets/css/shared.css">
     
-    <style>
-
-
-        /* Symmetric Navbar Animations */
-        @keyframes subtleGlow {
-            0%, 100% { box-shadow: 0 0 10px rgba(155, 92, 255, 0.2); }
-            50% { box-shadow: 0 0 20px rgba(155, 92, 255, 0.3); }
-        }
-
-        .navbar-glow {
-            animation: subtleGlow 4s ease-in-out infinite;
-        }
-
-        /* Slime Glow Effect for Elements */
-        .slime-glow {
-            position: relative;
-        }
-
-        .slime-glow::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, #9b5cff, #6b3cff, #9b5cff);
-            border-radius: 50px;
-            z-index: -1;
-            filter: blur(8px);
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
-        }
-
-        .slime-glow:hover::before {
-            opacity: 1;
-        }
-
-        .btn-primary {
-            background: linear-gradient(145deg, #9b5cff, #6b3cff);
-            border: none;
-            color: #ffffff;
-            font-weight: 700;
-            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            box-shadow: 0 4px 15px rgba(155, 92, 255, 0.3);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            letter-spacing: 0.025em;
-            position: relative;
-            overflow: hidden;
-            transform: scale(1);
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            clip-path: circle(0 at 50% 50%);
-            transition: clip-path 0.6s ease;
-        }
-
-        .btn-primary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(155, 92, 255, 0.5);
-            background: linear-gradient(145deg, #a770ff, #7a4dff);
-        }
-
-        .btn-primary:hover::before {
-            clip-path: circle(100% at 50% 50%);
-        }
-
-        .btn-primary:active {
-            transform: scale(0.95);
-            transition: all 0.1s ease;
-        }
-
-        /* Premium Navigation Enhancements */
-        .nav-link-underline {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #9b5cff;
-            transition: width 0.3s ease;
-            border-radius: 2px;
-        }
-
-        .nav-link:hover .nav-link-underline {
-            width: 100%;
-        }
-
-        .btn-secondary {
-            background: transparent;
-            border: 2px solid #9b5cff;
-            color: #9b5cff;
-            font-weight: 700;
-            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            letter-spacing: 0.025em;
-            position: relative;
-            overflow: hidden;
-            transform: scale(1);
-        }
-
-        .btn-secondary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(155, 92, 255, 0.1);
-            clip-path: circle(0 at 50% 50%);
-            transition: clip-path 0.6s ease;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(155, 92, 255, 0.1);
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(155, 92, 255, 0.3);
-            border: 2px solid #a770ff;
-            color: #a770ff;
-        }
-
-        .btn-secondary:hover::before {
-            clip-path: circle(100% at 50% 50%);
-        }
-
-        .btn-secondary:active {
-            transform: scale(0.95);
-            transition: all 0.1s ease;
-        }
-
-        /* Enhanced Hover Glow Effect */
-        .hover-glow {
-            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hover-glow::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(120deg, 
-                rgba(155, 92, 255, 0) 0%, 
-                rgba(155, 92, 255, 0.1) 50%, 
-                rgba(155, 92, 255, 0) 100%);
-            transform: translateX(-100%);
-            transition: transform 0.6s ease;
-        }
-
-        .hover-glow:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(155, 92, 255, 0.3);
-        }
-
-        .hover-glow:hover::after {
-            transform: translateX(100%);
-        }
-
-        /* Pulsing Animation for Orbs */
-        @keyframes pulseGlow {
-            0% {
-                transform: scale(1);
-                opacity: 0.3;
-                box-shadow: 0 0 20px rgba(155, 92, 255, 0.2);
-            }
-            50% {
-                transform: scale(1.05);
-                opacity: 0.5;
-                box-shadow: 0 0 40px rgba(155, 92, 255, 0.4);
-            }
-            100% {
-                transform: scale(1);
-                opacity: 0.3;
-                box-shadow: 0 0 20px rgba(155, 92, 255, 0.2);
-            }
-        }
-
-        .pulse-glow {
-            animation: pulseGlow 3s ease-in-out infinite;
-        }
-
-        /* Floating Animation */
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-15px);
-            }
-            100% {
-                transform: translateY(0px);
-            }
-        }
-
-        .float {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        /* Slime Bounce Effect */
-        @keyframes slimeBounce {
-            0%, 100% {
-                transform: scale(1);
-            }
-            25% {
-                transform: scale(1.05, 0.95);
-            }
-            50% {
-                transform: scale(0.95, 1.05);
-            }
-            75% {
-                transform: scale(1.02, 0.98);
-            }
-        }
-
-        .slime-bounce {
-            animation: slimeBounce 2s ease-in-out infinite;
-        }
-
-        /* Scroll animation trigger */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .animate-on-scroll.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Hero Orb Styles */
-        .hero-orb {
-            background: radial-gradient(circle, 
-                rgba(155, 92, 255, 0.15) 0%, 
-                rgba(107, 60, 255, 0.1) 40%, 
-                transparent 70%);
-            filter: blur(50px);
-            opacity: 0.4;
-            z-index: -1;
-        }
-
-        .section-orb {
-            background: var(--orb-color);
-            border-radius: 50%;
-            filter: blur(40px);
-        }
-
-        /* FAQ Accordion */
-        .faq-item button {
-            background: transparent;
-            border: none;
-            width: 100%;
-            text-align: left;
-            padding: 0;
-            cursor: pointer;
-        }
-
-        .faq-item .faq-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-
-        .faq-item.open .faq-content {
-            max-height: 500px;
-        }
-
-        .rotate-180 {
-            transform: rotate(180deg);
-        }
-
-        /* Article Styles */
-        .article-content h2 {
-            font-size: 1.5rem;
-            font-weight: 800;
-            margin: 1.5rem 0 1rem;
-            color: #f0f2f5;
-        }
-
-        .article-content h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin: 1.25rem 0 0.75rem;
-            color: #f0f2f5;
-        }
-
-        .article-content p {
-            margin: 1rem 0;
-            line-height: 1.75;
-            color: #c9cccf;
-        }
-
-        .article-content ul, .article-content ol {
-            margin: 1rem 0;
-            padding-left: 1.5rem;
-        }
-
-        .article-content li {
-            margin: 0.5rem 0;
-            line-height: 1.75;
-            color: #c9cccf;
-        }
-
-        .article-content blockquote {
-            border-left: 4px solid #9b5cff;
-            padding-left: 1.5rem;
-            margin: 1.5rem 0;
-            color: #a0a5aa;
-            font-style: italic;
-        }
-
-        .article-content code {
-            background: rgba(155, 92, 255, 0.1);
-            padding: 0.25rem 0.5rem;
-            border-radius: 0.25rem;
-            font-family: monospace;
-        }
-
-        .article-content pre {
-            background: rgba(10, 10, 15, 0.9);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 0.5rem;
-            padding: 1rem;
-            overflow-x: auto;
-            margin: 1.5rem 0;
-        }
-
-        .article-content pre code {
-            background: none;
-            padding: 0;
-        }
-
-        /* Skip to content link for accessibility */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: #9b5cff;
-            color: #050308;
-            padding: 8px;
-            z-index: 1000;
-            border-radius: 0 0 4px 4px;
-            transition: top 0.3s ease;
-            font-weight: 600;
-        }
-
-        .skip-link:focus {
-            top: 0;
-        }
-    </style>
+    
 </head>
 <body class="bg-dark-950 text-light-900 font-sans">
     <!-- Skip to content link for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Enhanced Professional Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-900/90 backdrop-blur-xl py-3 px-6">
-        <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <!-- Brand Identity -->
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-black border border-accent-500/30 shadow-lg transform transition-transform duration-300 hover:scale-105">
-                    <span class="font-black text-white text-lg">F</span>
-                </div>
-                <a href="/" class="font-black text-xl tracking-tight text-light-900 transition-colors duration-300 hover:text-accent-400">FlowChat</a>
-            </div>
+    <!-- Load header component -->
+    <div id="header-container"></div>
 
-            <!-- Desktop Navigation -->
-            <div class="hidden lg:flex items-center space-x-10">
-                <a href="/pages/services.html" class="text-light-500 hover:text-light-900 text-base font-medium transition-all duration-300 transform hover:-translate-y-0.5">Solutions</a>
-                <a href="/#features" class="text-light-500 hover:text-light-900 text-base font-medium transition-all duration-300 transform hover:-translate-y-0.5">Features</a>
-                <a href="/pages/pricing.html" class="text-light-500 hover:text-light-900 text-base font-medium transition-all duration-300 transform hover:-translate-y-0.5">Pricing</a>
-                <a href="/#testimonials" class="text-light-500 hover:text-light-900 text-base font-medium transition-all duration-300 transform hover:-translate-y-0.5">Testimonials</a>
-                <a href="/pages/blogs/" class="text-light-500 hover:text-light-900 text-base font-medium transition-all duration-300 transform hover:-translate-y-0.5 border-b-2 border-accent-500">Blog</a>
-            </div>
+    <!-- Load navigation component -->
+    <div id="nav-container"></div>
 
-            <!-- Action Buttons -->
-            <div class="hidden lg:flex items-center space-x-4">
-                <a href="/pages/contact.html" class="text-light-700 hover:text-light-900 text-base font-medium transition-all duration-300 px-5 py-2 rounded-lg hover:bg-dark-800/50 transform hover:-translate-y-0.5">
-                    Contact
-                </a>
-                <a href="/pages/contact.html" class="btn-primary slime-glow navbar-glow">
-                    <span class="flex items-center">
-                        <i class="fas fa-calendar-check mr-2"></i>
-                        Book a Demo
-                    </span>
-                </a>
-            </div>
-
-            <!-- Mobile Menu Toggle -->
-            <button id="mobile-menu-button" class="lg:hidden text-light-700 hover:text-light-900 focus:outline-none p-2 rounded-lg hover:bg-dark-800/50 transition-all duration-300 transform hover:scale-110">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 right-0 bg-dark-900/95 backdrop-blur-xl shadow-2xl">
-            <div class="flex flex-col py-6 px-8 space-y-5">
-                <a href="/pages/services.html" class="text-light-500 hover:text-light-900 py-4 text-lg font-medium transition-all duration-300 border-b border-dark-700/30 transform hover:translate-x-2">Solutions</a>
-                <a href="/#features" class="text-light-500 hover:text-light-900 py-4 text-lg font-medium transition-all duration-300 border-b border-dark-700/30 transform hover:translate-x-2">Features</a>
-                <a href="/pages/pricing.html" class="text-light-500 hover:text-light-900 py-4 text-lg font-medium transition-all duration-300 border-b border-dark-700/30 transform hover:translate-x-2">Pricing</a>
-                <a href="/#testimonials" class="text-light-500 hover:text-light-900 py-4 text-lg font-medium transition-all duration-300 border-b border-dark-700/30 transform hover:translate-x-2">Testimonials</a>
-                <a href="/pages/blogs/" class="text-light-500 hover:text-light-900 py-4 text-lg font-medium transition-all duration-300 border-b border-dark-700/30 transform hover:translate-x-2">Blog</a>
-                <a href="/pages/contact.html" class="text-light-500 hover:text-light-900 py-4 text-lg font-medium transition-all duration-300 border-b border-dark-700/30 transform hover:translate-x-2">Contact</a>
-                <a href="/pages/contact.html" class="btn-primary slime-glow w-full mt-4 text-center navbar-glow">
-                    <span class="flex items-center justify-center">
-                        <i class="fas fa-calendar-check mr-3"></i>
-                        Book a Demo
-                    </span>
-                </a>
-            </div>
-        </div>
-    </nav>
+    <!-- Load components after page load -->
+    <script>
+        // Function to load component and strip Vite client script
+        function loadComponent(url, targetId) {
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    // Remove Vite client script if present
+                    const cleanedHtml = html.replace(/<script[^>]*@vite\/client[^>]*><\/script>/g, '');
+                    document.getElementById(targetId).innerHTML = cleanedHtml;
+                    
+                    // Initialize components if this is the nav component
+                    if (targetId === 'nav-container') {
+                        // Small delay to ensure DOM is updated
+                        setTimeout(() => {
+                            if (typeof initMobileMenu === 'function') {
+                                initMobileMenu();
+                            }
+                        }, 100);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading component:', url, error);
+                });
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load components
+            loadComponent('/components/header.html', 'header-container');
+            loadComponent('/components/nav.html', 'nav-container');
+        });
+    </script>
 
     <!-- Fashion-Style Hero Section with Smooth Gradient -->
     <header class="hero-container relative px-6 overflow-hidden pt-24">
@@ -550,118 +168,33 @@
         </section>
     </main>
 
-    <!-- Include footer partial -->
-    <!-- Professional Footer -->
-    <footer class="bg-dark-900 border-t border-dark-800 pt-16 pb-8 px-4 sm:px-6 relative">
-        <!-- Orb in Footer Section -->
-        <div class="absolute top-10 right-10 w-64 h-64 section-orb animate-float" style="--orb-color: rgba(107, 60, 255, 0.15);"></div>
-        
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                <!-- Company Info -->
-                <div class="lg:col-span-1">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-black border border-accent-500/30 shadow-lg">
-                            <span class="font-black text-white text-lg">F</span>
-                        </div>
-                        <span class="font-black text-xl tracking-tight text-light-900">FlowChat</span>
-                    </div>
-                    <p class="text-light-700 mb-6 max-w-xs">
-                        Transforming businesses with intelligent AI automation solutions that save time, reduce costs, and accelerate growth.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-light-500 hover:text-accent-500 transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="#" class="text-light-500 hover:text-accent-500 transition-colors">
-                            <i class="fab fa-linkedin-in text-xl"></i>
-                        </a>
-                        <a href="#" class="text-light-500 hover:text-accent-500 transition-colors">
-                            <i class="fab fa-facebook-f text-xl"></i>
-                        </a>
-                    </div>
-                </div>
+    <!-- Load footer component -->
+    <div id="footer-container"></div>
 
-                <!-- Solutions -->
-                <div>
-                    <h3 class="font-black text-lg mb-6">Solutions</h3>
-                    <ul class="space-y-4">
-                        <li><a href="/pages/services.html#workflow" class="text-light-700 hover:text-accent-500 transition-colors">Workflow Automation</a></li>
-                        <li><a href="/pages/services.html#assistant" class="text-light-700 hover:text-accent-500 transition-colors">AI Assistant</a></li>
-                        <li><a href="/pages/services.html#sales" class="text-light-700 hover:text-accent-500 transition-colors">Sales & Marketing</a></li>
-                        <li><a href="/pages/services.html#custom" class="text-light-700 hover:text-accent-500 transition-colors">Custom Projects</a></li>
-                    </ul>
-                </div>
-
-                <!-- Company -->
-                <div>
-                    <h3 class="font-black text-lg mb-6">Company</h3>
-                    <ul class="space-y-4">
-                        <li><a href="/pages/about.html" class="text-light-700 hover:text-accent-500 transition-colors">About Us</a></li>
-                        <li><a href="/pages/careers.html" class="text-light-700 hover:text-accent-500 transition-colors">Careers</a></li>
-                        <li><a href="/pages/blogs/" class="text-light-700 hover:text-accent-500 transition-colors">Blog</a></li>
-                        <li><a href="/pages/contact.html" class="text-light-700 hover:text-accent-500 transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Legal -->
-                <div>
-                    <h3 class="font-black text-lg mb-6">Legal</h3>
-                    <ul class="space-y-4">
-                        <li><a href="#" class="text-light-700 hover:text-accent-500 transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="text-light-700 hover:text-accent-500 transition-colors">Terms of Service</a></li>
-                        <li><a href="#" class="text-light-700 hover:text-accent-500 transition-colors">Security</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="pt-8 border-t border-dark-800 text-center text-light-700 text-sm">
-                <p>&copy; 2025 FlowChat. All rights reserved. Transforming businesses with AI automation.</p>
-            </div>
-        </div>
-    </footer>
-
+    <!-- Load components after page load -->
     <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-
-        // FAQ accordion
-        document.querySelectorAll('.faq-item button').forEach(button => {
-            button.addEventListener('click', () => {
-                const item = button.parentElement;
-                item.classList.toggle('open');
-                const icon = button.querySelector('i');
-                icon.classList.toggle('rotate-180');
-            });
-        });
-
-        // Scroll animations
-        function animateOnScroll() {
-            const elements = document.querySelectorAll('.animate-on-scroll');
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('visible');
-                }
-            });
+        // Function to load component and strip Vite client script
+        function loadComponent(url, targetId) {
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    // Remove Vite client script if present
+                    const cleanedHtml = html.replace(/<script[^>]*@vite\/client[^>]*><\/script>/g, '');
+                    document.getElementById(targetId).innerHTML = cleanedHtml;
+                })
+                .catch(error => {
+                    console.error('Error loading component:', url, error);
+                });
         }
-
-        // Run on scroll and initially
-        window.addEventListener('scroll', animateOnScroll);
-        window.addEventListener('load', animateOnScroll);
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const menu = document.getElementById('mobile-menu');
-            const button = document.getElementById('mobile-menu-button');
-            if (!menu.contains(event.target) && !button.contains(event.target) && !menu.classList.contains('hidden')) {
-                menu.classList.add('hidden');
-            }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load components
+            loadComponent('/components/header.html', 'header-container');
+            loadComponent('/components/simple-nav.html', 'nav-container');
+            loadComponent('/components/footer.html', 'footer-container');
         });
     </script>
+
+    <script src="../../assets/js/main.js"></script>
 </body>
 </html>
