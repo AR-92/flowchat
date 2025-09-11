@@ -7,6 +7,7 @@ document.addEventListener('htmx:afterOnLoad', function() {
         initFAQAccordions();
         initSmoothScrolling();
         initScrollAnimations();
+        initIconColors(); // Initialize icon color fixes
         // Only initialize orb animations on the index page
         if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
             initOrbAnimations();
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initFAQAccordions();
     initSmoothScrolling();
     initScrollAnimations();
+    initIconColors(); // Initialize icon color fixes
     // Only initialize orb animations on the index page
     if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
         initOrbAnimations();
@@ -33,6 +35,7 @@ document.addEventListener('htmx:load', function() {
         initFAQAccordions();
         initSmoothScrolling();
         initScrollAnimations();
+        initIconColors(); // Initialize icon color fixes
         // Only initialize orb animations on the index page
         if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
             initOrbAnimations();
@@ -54,6 +57,7 @@ function initAllComponents() {
     initFAQAccordions();
     initSmoothScrolling();
     initScrollAnimations();
+    initIconColors(); // Initialize icon color fixes
     // Only initialize orb animations on the index page
     if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
         initOrbAnimations();
@@ -252,6 +256,27 @@ function getElements(selector) {
     return document.querySelectorAll(selector);
 }
 
+/**
+ * Fix icon colors that might be appearing black
+ * This ensures icons with text-accent-500 class display correctly
+ */
+function initIconColors() {
+    // Fix icons with text-accent-500 class
+    const accentIcons = document.querySelectorAll('i[class*="fa-"].text-accent-500');
+    accentIcons.forEach(icon => {
+        icon.style.color = '#9b5cff'; // accent-500 color
+    });
+    
+    // Fix icons in black backgrounds specifically
+    const blackBgIcons = document.querySelectorAll('.bg-black i[class*="fa-"], div.bg-black i[class*="fa-"]');
+    blackBgIcons.forEach(icon => {
+        // If the icon has text-accent-500, make sure it's the right color
+        if (icon.classList.contains('text-accent-500')) {
+            icon.style.color = '#9b5cff';
+        }
+    });
+}
+
 // Export functions for potential use in other scripts
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
@@ -259,6 +284,7 @@ if (typeof module !== 'undefined' && module.exports) {
         initSmoothScrolling,
         initScrollAnimations,
         initOrbAnimations,
+        initIconColors, // Export the new function
         elementExists,
         getElements
     };
