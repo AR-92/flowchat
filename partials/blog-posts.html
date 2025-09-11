@@ -213,3 +213,25 @@
         </div>
     </div>
 </section>
+
+<script>
+    // Add search result handling
+    document.addEventListener('htmx:afterSettle', function(evt) {
+        // Check if we're on a search results page
+        if (document.getElementById('search-results-container')) {
+            const container = document.getElementById('search-results-container');
+            const noResults = document.getElementById('no-results-message');
+            
+            // If container has no children (or only whitespace), show no results
+            if (container && container.children.length === 0) {
+                if (noResults) {
+                    noResults.classList.remove('hidden');
+                }
+            } else if (container && container.children.length > 0) {
+                if (noResults) {
+                    noResults.classList.add('hidden');
+                }
+            }
+        }
+    });
+</script>
