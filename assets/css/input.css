@@ -37,6 +37,11 @@ strong {
   color: #f0f2f5; /* light-900 */
 }
 
+/* Consistent border radius utility */
+.rounded {
+  border-radius: 0.25rem;
+}
+
 /* Glass Effect (Frosted Glass) */
 .glass {
   background: rgba(10, 10, 15, 0.7);
