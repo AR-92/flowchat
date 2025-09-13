@@ -144,7 +144,6 @@ button:focus {
 .form-input:focus {
   outline: none;
   border-color: #9b5cff;
-  box-shadow: 0 0 0 3px rgba(155, 92, 255, 0.1);
 }
 
 .form-input::placeholder {
@@ -188,32 +187,7 @@ select.form-input {
   background-color: rgba(10, 10, 15, 0.7);
 }
 
-/* Form validation states */
-.form-input:valid {
-  border-color: #10b981; /* green-500 */
-}
 
-.form-input:invalid:not(:focus):not(:placeholder-shown) {
-  border-color: #ef4444; /* red-500 */
-}
-
-/* Validation message styling */
-.form-input:invalid:not(:focus):not(:placeholder-shown) + .error-message,
-.form-input:invalid:not(:focus):not(:placeholder-shown) ~ .error-message {
-  display: block;
-}
-
-.error-message {
-  display: none;
-  color: #ef4444; /* red-500 */
-  font-size: 0.875rem;
-  margin-top: 0.25rem;
-}
-
-/* Required field indicator */
-.required-indicator {
-  color: #ef4444; /* red-500 */
-}
 
 /* Loading Spinner */
 .loading-spinner {
