@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,9 +19,11 @@
         <link rel="preload" href="/assets/css/output.css" as="style">
         <link rel="prefetch" href="/assets/js/main.js" as="script">
         <!-- HTMX loaded without type="module" as we're not using ES modules -->
-        <!-- HTMX loaded without type="module" as we're not using ES modules -->
         <script src="/assets/js/htmx.min.js"></script>
         <link rel="stylesheet" href="/assets/css/output.css" />
+        <script>
+            document.documentElement.classList.remove('no-js');
+        </script>
     </head>
     <body class="index-page">
         <!-- Skip to main content link for accessibility -->

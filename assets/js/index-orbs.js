@@ -45,16 +45,21 @@ function initIndexOrbAnimations() {
     return;
   }
 
+  // Limit orbs on mobile devices for performance
+  const maxOrbs =
+    window.innerWidth < 768 ? Math.min(3, allOrbs.length) : Math.min(10, allOrbs.length);
+
   // Clear any existing animations to prevent duplicates
   allOrbs.forEach(orb => {
     // Remove any existing animation data
     delete orb.animationData;
   });
 
-  // Initialize animation for each orb
-  allOrbs.forEach(orb => {
+  // Initialize animation for each orb (limited for performance)
+  for (let i = 0; i < maxOrbs; i++) {
+    const orb = allOrbs[i];
     // Skip orbs that already have animation data
-    if (orb.animationData) return;
+    if (orb.animationData) continue;
 
     // Store animation data directly on the element
     orb.animationData = {
@@ -82,7 +87,7 @@ function initIndexOrbAnimations() {
 
     // Start animation
     animateOrb(orb);
-  });
+  }
 
   // Add mouse move listener for cursor-following orbs
   document.addEventListener('mousemove', function (e) {
@@ -101,8 +106,8 @@ function animateOrb(orb) {
   const data = orb.animationData;
   const now = performance.now();
 
-  // Throttle animation to 60fps (16.67ms)
-  if (now - data.lastUpdate < 16.67) {
+  // Throttle animation to 30fps (33.33ms) for better performance
+  if (now - data.lastUpdate < 33.33) {
     requestAnimationFrame(() => animateOrb(orb));
     return;
   }
@@ -121,15 +126,19 @@ function animateOrb(orb) {
     data.scaleDirection = -data.scaleDirection;
   }
 
+  // Pre-calculate boundary values to avoid repeated DOM access
+  const maxX = data.maxX - orb.offsetWidth;
+  const maxY = data.maxY - orb.offsetHeight;
+
   // Boundary checks - bounce off edges
-  if (data.x <= 0 || data.x >= data.maxX - orb.offsetWidth) {
+  if (data.x <= 0 || data.x >= maxX) {
     data.vx = -data.vx;
-    data.x = Math.max(0, Math.min(data.x, data.maxX - orb.offsetWidth));
+    data.x = Math.max(0, Math.min(data.x, maxX));
   }
 
-  if (data.y <= 0 || data.y >= data.maxY - orb.offsetHeight) {
+  if (data.y <= 0 || data.y >= maxY) {
     data.vy = -data.vy;
-    data.y = Math.max(0, Math.min(data.y, data.maxY - orb.offsetHeight));
+    data.y = Math.max(0, Math.min(data.y, maxY));
   }
 
   // Apply new position and scale

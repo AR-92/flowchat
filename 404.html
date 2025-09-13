@@ -17,7 +17,10 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
-        <!-- HTMX loaded without type="module" as we're not using ES modules -->
+        <!-- Resource hints for critical assets -->
+        <link rel="preload" href="/assets/js/htmx.min.js" as="script">
+        <link rel="preload" href="/assets/css/output.css" as="style">
+        <link rel="prefetch" href="/assets/js/main.js" as="script">
         <!-- HTMX loaded without type="module" as we're not using ES modules -->
         <script src="/assets/js/htmx.min.js"></script>
         <link rel="stylesheet" href="/assets/css/output.css" />
@@ -58,10 +61,10 @@
                         Sorry, the page you're looking for doesn't exist or has been moved. Let's get you back on track.
                     </p>
                     <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
-                        <a href="/" class="btn-primary slime-glow px-8 py-3 rounded-lg hover-glow">
+                        <a href="/" class="btn-primary slime-glow px-8 py-3 rounded-lg hover-glow" aria-label="Return to homepage">
                             <i class="fas fa-home mr-2"></i>Back to Home
                         </a>
-                        <a href="/pages/services.html" class="btn-secondary slime-glow px-8 py-3 rounded-lg hover-glow">
+                        <a href="/pages/services.html" class="btn-secondary slime-glow px-8 py-3 rounded-lg hover-glow" aria-label="View our automation services">
                             <i class="fas fa-robot mr-2"></i>Our Services
                         </a>
                     </div>
@@ -84,7 +87,7 @@
                     </div>
 
                     <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <a href="/pages/workflow-automation.html" class="glass rounded-xl p-6 hover-glow block transition-all animate-on-scroll">
+                        <a href="/pages/workflow-automation.html" class="glass rounded-xl p-6 hover-glow block transition-all animate-on-scroll" aria-label="Learn about workflow automation solutions">
                             <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center mb-4">
                                 <i class="fas fa-robot text-xl text-accent-500"></i>
                             </div>
@@ -92,7 +95,7 @@
                             <p class="text-light-700 text-sm">Automate repetitive tasks and processes</p>
                         </a>
 
-                        <a href="/pages/ai-assistant.html" class="glass rounded-xl p-6 hover-glow block transition-all animate-on-scroll">
+                        <a href="/pages/ai-assistant.html" class="glass rounded-xl p-6 hover-glow block transition-all animate-on-scroll" aria-label="Learn about AI assistant solutions">
                             <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center mb-4">
                                 <i class="fas fa-headset text-xl text-accent-500"></i>
                             </div>
@@ -100,7 +103,7 @@
                             <p class="text-light-700 text-sm">A digital employee that works 24/7</p>
                         </a>
 
-                        <a href="/pages/sales-marketing-automation.html" class="glass rounded-xl p-6 hover-glow block transition-all animate-on-scroll">
+                        <a href="/pages/sales-marketing-automation.html" class="glass rounded-xl p-6 hover-glow block transition-all animate-on-scroll" aria-label="Learn about sales and marketing automation solutions">
                             <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center mb-4">
                                 <i class="fas fa-chart-line text-xl text-accent-500"></i>
                             </div>
@@ -108,7 +111,7 @@
                             <p class="text-light-700 text-sm">Boost sales efficiency and lead conversion</p>
                         </a>
 
-                        <a href="/pages/custom-ai-projects.html" class="glass rounded-xl p-6 hover-glow block transition-all animate-on-scroll">
+                        <a href="/pages/custom-ai-projects.html" class="glass rounded-xl p-6 hover-glow block transition-all animate-on-scroll" aria-label="Learn about custom AI project solutions">
                             <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center mb-4">
                                 <i class="fas fa-project-diagram text-xl text-accent-500"></i>
                             </div>

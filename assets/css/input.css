@@ -343,6 +343,12 @@ select.form-input {
   transform: translateY(0);
 }
 
+/* Fallback to ensure content is visible if JavaScript fails */
+.no-js .animate-on-scroll {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Futuristic Entrance Animation */
 .animate-futuristic-enter {
   opacity: 0;
@@ -351,6 +357,12 @@ select.form-input {
 }
 
 .animate-futuristic-enter.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Fallback to ensure content is visible if JavaScript fails */
+.no-js .animate-futuristic-enter {
   opacity: 1;
   transform: translateY(0) scale(1);
 }

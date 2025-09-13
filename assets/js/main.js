@@ -156,6 +156,23 @@ function initScrollAnimations() {
   featureElements.forEach(el => {
     featureObserver.observe(el);
   });
+
+  // Fallback timeout to ensure content is visible if Intersection Observer fails
+  setTimeout(() => {
+    animateElements.forEach(el => {
+      if (!el.classList.contains('visible')) {
+        el.classList.add('visible');
+      }
+    });
+    
+    // Also make sure futuristic enter elements are visible
+    const futuristicElements = document.querySelectorAll('.animate-futuristic-enter');
+    futuristicElements.forEach(el => {
+      if (!el.classList.contains('visible')) {
+        el.classList.add('visible');
+      }
+    });
+  }, 3000); // 3 second fallback
 }
 
 /**
@@ -174,8 +191,7 @@ function initOrbAnimations() {
   });
 
   // Limit orbs on mobile devices for performance
-  const maxOrbs =
-    window.innerWidth < 768 ? Math.min(5, orbs.length) : orbs.length;
+  const maxOrbs = window.innerWidth < 768 ? Math.min(3, orbs.length) : Math.min(10, orbs.length);
 
   // Initialize animation for each orb
   for (let i = 0; i < maxOrbs; i++) {
@@ -206,8 +222,8 @@ function animateOrb(orb) {
   const data = orb.animationData;
   const now = performance.now();
 
-  // Throttle animation to 60fps (16.67ms)
-  if (now - data.lastUpdate < 16.67) {
+  // Throttle animation to 30fps (33.33ms) for better performance
+  if (now - data.lastUpdate < 33.33) {
     requestAnimationFrame(() => animateOrb(orb));
     return;
   }
@@ -218,15 +234,19 @@ function animateOrb(orb) {
   data.x += data.vx;
   data.y += data.vy;
 
+  // Pre-calculate boundary values to avoid repeated DOM access
+  const maxX = data.maxX - orb.offsetWidth;
+  const maxY = data.maxY - orb.offsetHeight;
+
   // Boundary checks - bounce off edges
-  if (data.x <= 0 || data.x >= data.maxX - orb.offsetWidth) {
+  if (data.x <= 0 || data.x >= maxX) {
     data.vx = -data.vx;
-    data.x = Math.max(0, Math.min(data.x, data.maxX - orb.offsetWidth));
+    data.x = Math.max(0, Math.min(data.x, maxX));
   }
 
-  if (data.y <= 0 || data.y >= data.maxY - orb.offsetHeight) {
+  if (data.y <= 0 || data.y >= maxY) {
     data.vy = -data.vy;
-    data.y = Math.max(0, Math.min(data.y, data.maxY - orb.offsetHeight));
+    data.y = Math.max(0, Math.min(data.y, maxY));
   }
 
   // Apply new position
