@@ -1451,9 +1451,9 @@ video {
   padding-bottom: 0.75rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .py-8 {
@@ -1475,6 +1475,10 @@ video {
 
 .pt-12 {
   padding-top: 3rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
 }
 
 .pt-20 {
@@ -1811,10 +1815,10 @@ button:focus {
   border: 2px solid #9b5cff;
   color: #9b5cff;
   font-weight: 600;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
-  font-size: 0.875rem;
-  min-height: 36px;
+  font-size: 1rem;
+  min-height: 44px;
 }
 
 .btn-secondary {
@@ -1822,10 +1826,10 @@ button:focus {
   border: 2px solid #c9cccf;
   color: #c9cccf;
   font-weight: 600;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
-  font-size: 0.875rem;
-  min-height: 36px;
+  font-size: 1rem;
+  min-height: 44px;
 }
 
 .btn-primary:hover {
@@ -1858,9 +1862,9 @@ button:focus {
   background: rgba(10, 10, 15, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #f0f2f5;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.875rem;
-  min-height: 36px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  min-height: 44px;
   border-radius: 0.5rem;
 }
 
@@ -2034,13 +2038,13 @@ select.form-input {
 @media (max-width: 768px) {
   .btn-primary,
   .btn-secondary {
-    padding: 0.875rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     font-size: 1rem;
   }
 
   .form-input {
     font-size: 1rem;
-    padding: 0.875rem 1rem;
+    padding: 0.75rem 1rem;
   }
 
   h1 {
