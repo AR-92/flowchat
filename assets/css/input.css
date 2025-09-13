@@ -39,7 +39,7 @@ strong {
 
 /* Consistent border radius utility */
 .rounded {
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 /* Glass Effect (Frosted Glass) */
@@ -99,25 +99,36 @@ button:focus {
 }
 
 .btn-primary {
-  background: #9b5cff;
-  border: none;
-  color: #ffffff;
+  background: transparent;
+  border: 2px solid #9b5cff;
+  color: #9b5cff;
   font-weight: 600;
   padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   font-size: 0.875rem;
   min-height: 36px;
 }
 
 .btn-secondary {
   background: transparent;
-  border: 1px solid #9b5cff;
-  color: #9b5cff;
+  border: 2px solid #c9cccf;
+  color: #c9cccf;
   font-weight: 600;
   padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   font-size: 0.875rem;
   min-height: 36px;
+}
+
+.btn-primary:hover {
+  background: #9b5cff;
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background: #c9cccf;
+  color: #030204;
+  border-color: #c9cccf;
 }
 
 
@@ -143,7 +154,7 @@ button:focus {
   padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
   min-height: 36px;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .form-input:focus {
