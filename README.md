@@ -26,18 +26,34 @@ This is the official website for FlowChat, an AI automation solutions company.
 ├── pages/                     # Additional pages
 │   ├── about.html             # Company information
 │   ├── services.html          # Services overview
+│   ├── workflow-automation.html # Workflow Automation details
+│   ├── ai-assistant.html      # AI Assistant details
+│   ├── sales-marketing-automation.html # Sales & Marketing Automation details
+│   ├── custom-ai-projects.html # Custom AI Projects details
 │   ├── pricing.html           # Pricing information
+│   ├── resources.html         # Resources and guides
 │   ├── contact.html           # Contact page
 │   ├── careers.html           # Careers page
 │   └── blog/                  # Blog section
 │       ├── index.html         # Blog listing
 │       └── post.html          # Blog post template
-└── partials/                  # Reusable HTML partials
-    ├── header.html            # Navigation bar
+└── components/                # Reusable HTML components
+    ├── header.html            # Background elements
     ├── footer.html            # Footer with company info
+    ├── nav.html               # Navigation bar
+    ├── simple-nav.html        # Simple navigation bar
     ├── scripts.html           # Common JavaScript code
-    ├── background.html        # Background elements
-    └── README.md              # Partials documentation
+    ├── hero.html              # Hero section
+    ├── services.html          # Services section
+    ├── process.html           # Process section
+    ├── testimonials.html      # Testimonials section
+    ├── benefits.html          # Benefits section
+    ├── pricing.html           # Pricing section
+    ├── faq.html               # FAQ section
+    ├── cta.html               # Call to action section
+    ├── blog-hero.html         # Blog hero section
+    ├── blog-posts.html        # Blog posts listing
+    └── README.md              # Components documentation
 ```
 
 ## Pages
@@ -45,12 +61,17 @@ This is the official website for FlowChat, an AI automation solutions company.
 1. **Home** (`index.html`) - Main landing page showcasing FlowChat's AI automation solutions
 2. **About** (`pages/about.html`) - Company story, mission, values, and team
 3. **Services** (`pages/services.html`) - Detailed overview of AI automation services
-4. **Pricing** (`pages/pricing.html`) - Pricing plans and FAQ
-5. **Contact** (`pages/contact.html`) - Contact form and company information
-6. **Careers** (`pages/careers.html`) - Career opportunities and company culture
-7. **Blog** (`pages/blog/index.html`) - Blog listing page
-8. **Blog Post** (`pages/blog/post.html`) - Sample blog post
-9. **404** (`404.html`) - Error page for missing content
+4. **Workflow Automation** (`pages/workflow-automation.html`) - Detailed information about workflow automation
+5. **AI Assistant** (`pages/ai-assistant.html`) - Detailed information about AI assistants
+6. **Sales & Marketing Automation** (`pages/sales-marketing-automation.html`) - Detailed information about sales automation
+7. **Custom AI Projects** (`pages/custom-ai-projects.html`) - Detailed information about custom AI solutions
+8. **Pricing** (`pages/pricing.html`) - Pricing plans and FAQ
+9. **Resources** (`pages/resources.html`) - Collection of guides and resources
+10. **Contact** (`pages/contact.html`) - Contact form and company information
+11. **Careers** (`pages/careers.html`) - Career opportunities and company culture
+12. **Blog** (`pages/blog/index.html`) - Blog listing page
+13. **Blog Post** (`pages/blog/post.html`) - Sample blog post
+14. **404** (`404.html`) - Error page for missing content
 
 ## Features
 
@@ -129,16 +150,27 @@ To preview the production build:
 npm run preview
 ```
 
-## Partials System
+## Components System
 
-This project uses a partials system to ensure consistency across all pages and reduce code duplication. The partials are located in the `partials/` directory and include:
+This project uses a components system to ensure consistency across all pages and reduce code duplication. The components are located in the `components/` directory and include:
 
-- **header.html** - Navigation bar and brand identity
+- **header.html** - Background elements
 - **footer.html** - Footer with company information, links, and copyright
+- **nav.html** - Navigation bar
+- **simple-nav.html** - Simple navigation bar
 - **scripts.html** - Common JavaScript code used across all pages
-- **background.html** - Background elements and accessibility skip link
+- **hero.html** - Hero section
+- **services.html** - Services section
+- **process.html** - Process section
+- **testimonials.html** - Testimonials section
+- **benefits.html** - Benefits section
+- **pricing.html** - Pricing section with comparison chart
+- **faq.html** - FAQ section
+- **cta.html** - Call to action section
+- **blog-hero.html** - Blog hero section
+- **blog-posts.html** - Blog posts listing organized by content clusters
 
-Each page includes these partials to maintain a consistent look and feel throughout the site.
+Each page includes these components to maintain a consistent look and feel throughout the site.
 
 ## HTMX Integration
 
@@ -147,6 +179,33 @@ All pages include the HTMX library for dynamic interactions without writing cust
 ## SEO Optimization
 
 The site includes proper meta tags, a sitemap.xml file, and a robots.txt file to help search engines index the content effectively.
+
+## Content Organization
+
+Blog posts are organized into content clusters:
+- Automation Cluster
+- Business Growth Cluster
+- Case Studies Cluster
+- Future Trends Cluster
+
+This organization helps users find relevant content more easily and improves SEO.
+
+## Accessibility Features
+
+The site includes several accessibility features:
+- Skip to content links
+- Proper ARIA labels
+- Keyboard navigation support
+- Sufficient color contrast
+- Minimum touch target sizes for mobile devices
+
+## Mobile Responsiveness
+
+The site is optimized for mobile devices with:
+- Responsive design that works on all device sizes
+- Mobile-specific CSS improvements
+- Properly sized touch targets
+- Optimized font sizes for mobile screens
 
 ## Tailwind CSS
 

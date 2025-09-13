@@ -17,13 +17,13 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
+        <!-- HTMX loaded without type="module" as we're not using ES modules -->
         <script src="/assets/js/htmx.min.js"></script>
         <link rel="stylesheet" href="/assets/css/output.css" />
-        <link rel="stylesheet" href="/assets/css/shared.css" />
-        <link rel="stylesheet" href="/assets/css/htmx.css" />
-        <link rel="stylesheet" href="/assets/css/fix-footer.css" />
     </head>
     <body>
+        <!-- Skip to main content link for accessibility -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
         <!-- Load header component -->
         <div
             hx-get="/components/header.html"
@@ -40,7 +40,7 @@
 
         <!-- Load hero section -->
         <div
-            hx-get="/partials/contact-hero.html"
+            hx-get="/components/contact-hero.html"
             hx-trigger="load"
             hx-swap="innerHTML"
         ></div>
@@ -49,21 +49,21 @@
         <main id="main-content">
             <!-- Load Contact Info Section -->
             <div
-                hx-get="/partials/contact-info.html"
+                hx-get="/components/contact-info.html"
                 hx-trigger="load"
                 hx-swap="innerHTML"
             ></div>
 
             <!-- Load Offices Section -->
             <div
-                hx-get="/partials/contact-offices.html"
+                hx-get="/components/contact-offices.html"
                 hx-trigger="load"
                 hx-swap="innerHTML"
             ></div>
 
             <!-- Load CTA Section -->
             <div
-                hx-get="/partials/contact-cta.html"
+                hx-get="/components/contact-cta.html"
                 hx-trigger="load"
                 hx-swap="innerHTML"
             ></div>
@@ -78,7 +78,7 @@
 
         <!-- Load scripts partial -->
         <div
-            hx-get="/partials/scripts.html"
+            hx-get="/components/scripts.html"
             hx-trigger="load"
             hx-swap="innerHTML"
         ></div>

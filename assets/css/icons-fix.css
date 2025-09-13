@@ -10,77 +10,15 @@ i[class*="fa-"].text-accent-500 {
   color: #9b5cff !important;
 }
 
-/* More specific fix for icons in black backgrounds */
+/* Fix for icons in black backgrounds */
 .bg-black i[class*="fa-"],
 div.bg-black i[class*="fa-"] {
   color: inherit !important;
 }
 
-/* Most specific fix for icons in black backgrounds with accent color */
+/* Fix for icons in black backgrounds with accent color */
 .bg-black i[class*="fa-"].text-accent-500,
 div.bg-black i[class*="fa-"].text-accent-500 {
-  color: #9b5cff !important;
-}
-
-/* Override any potential conflicting styles */
-.bg-black i.fas,
-.bg-black i.far,
-.bg-black i.fal,
-.bg-black i.fab,
-div.bg-black i.fas,
-div.bg-black i.far,
-div.bg-black i.fal,
-div.bg-black i.fab {
-  color: inherit !important;
-}
-
-div.bg-black i.fas.text-accent-500,
-div.bg-black i.far.text-accent-500,
-div.bg-black i.fal.text-accent-500,
-div.bg-black i.fab.text-accent-500 {
-  color: #9b5cff !important;
-}
-
-/* Ultra-specific selector for the exact pattern in benefits.html */
-div.w-12.h-12.rounded-xl.bg-black.flex.items-center.justify-center.mb-6 i.fas.fa-bolt.text-xl.text-accent-500 {
-  color: #9b5cff !important;
-}
-
-div.w-12.h-12.rounded-xl.bg-black.flex.items-center.justify-center.mb-6 i.fas.fa-smile.text-xl.text-accent-500 {
-  color: #9b5cff !important;
-}
-
-div.w-12.h-12.rounded-xl.bg-black.flex.items-center.justify-center.mb-6 i.fas.fa-clock.text-xl.text-accent-500 {
-  color: #9b5cff !important;
-}
-
-div.w-12.h-12.rounded-xl.bg-black.flex.items-center.justify-center.mb-6 i.fas.fa-dollar-sign.text-xl.text-accent-500 {
-  color: #9b5cff !important;
-}
-
-div.w-12.h-12.rounded-xl.bg-black.flex.items-center.justify-center.mb-6 i.fas.fa-chart-bar.text-xl.text-accent-500 {
-  color: #9b5cff !important;
-}
-
-div.w-12.h-12.rounded-xl.bg-black.flex.items-center.justify-center.mb-6 i.fas.fa-expand-alt.text-xl.text-accent-500 {
-  color: #9b5cff !important;
-}
-
-/* Ultra-specific selector for the exact pattern in careers-values.html */
-div.w-12.h-12.rounded-xl.bg-black.flex.items-center.justify-center.mb-6 i.fas.fa-lightbulb.text-xl.text-accent-500 {
-  color: #9b5cff !important;
-}
-
-div.w-12.h-12.rounded-xl.bg-black.flex.items-center.justify-center.mb-6 i.fas.fa-user-friends.text-xl.text-accent-500 {
-  color: #9b5cff !important;
-}
-
-div.w-12.h-12.rounded-xl.bg-black.flex.items-center.justify-center.mb-6 i.fas.fa-graduation-cap.text-xl.text-accent-500 {
-  color: #9b5cff !important;
-}
-
-/* Ultra-specific selector for the exact pattern in about-values.html */
-div.w-12.h-12.rounded-xl.bg-black.flex.items-center.justify-center.mb-6 i.fas.fa-shield-alt.text-xl.text-accent-500 {
   color: #9b5cff !important;
 }
 

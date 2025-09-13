@@ -1,265 +1,259 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastering the AI Automation Sales Pitch | FlowChat Blog</title>
-    <link rel="icon" type="image/png" href="../../assets/images/ico.png" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mastering the AI Automation Sales Pitch | FlowChat Blog</title>
+        <link rel="icon" type="image/png" href="/assets/images/ico.png" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <!-- HTMX loaded without type="module" as we're not using ES modules -->
+        <script src="/assets/js/htmx.min.js"></script>
+        <link rel="stylesheet" href="/assets/css/output.css" />
+        <link rel="stylesheet" href="/assets/css/htmx.css" />
+        <link rel="stylesheet" href="/assets/css/fix-footer.css" />
+    </head>
+    <body class="bg-dark-950 text-light-900 font-sans">
+        <!-- Skip to content link for accessibility -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../../assets/css/output.css">
-    <link rel="stylesheet" href="../../assets/css/shared.css">
-    
-    
-</head>
-<body class="bg-dark-950 text-light-900 font-sans">
-    <!-- Load header component -->
-    <div id="header-container"></div>
+        <!-- Load header component -->
+        <div
+            hx-get="/components/header.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
 
-    <!-- Load navigation component -->
-    <div id="nav-container"></div>
+        <!-- Load navigation component -->
+        <div
+            hx-get="/components/simple-nav.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
 
-    <!-- Skip to content link for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+        <!-- Fashion-Style Hero Section with Smooth Gradient -->
+        <header class="hero-container relative px-6 overflow-hidden pt-24">
+            <!-- Large Orb Gradient in Hero Section -->
+            <div class="absolute top-1/2 left-2/5 w-[400px] h-[400px] hero-orb transform -translate-x-1/2 -translate-y-1/2 animate-float float"></div>
+            <!-- Secondary Orb on Right Side -->
+            <div class="absolute top-1/3 right-1/4 w-[300px] h-[300px] hero-orb transform -translate-y-1/2 opacity-70 animate-pulse float"></div>
 
-    
+            <div class="max-w-7xl mx-auto relative z-10 text-center pt-12 pb-8 px-4">
+                <div class="inline-flex items-center gap-3 glass px-4 py-2 rounded-full mb-6 border border-dark-600 animate-on-scroll">
+                    <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
+                    <span class="text-xs font-black tracking-widest text-accent-500">SALES</span>
+                    <span class="text-xs font-medium text-light-900">PITCH TECHNIQUES</span>
+                </div>
 
-    <!-- Fashion-Style Hero Section with Smooth Gradient -->
-    <header class="hero-container relative px-6 overflow-hidden pt-24">
-        <!-- Large Orb Gradient in Hero Section -->
-        <div class="absolute top-1/2 left-2/5 w-[400px] h-[400px] hero-orb transform -translate-x-1/2 -translate-y-1/2 animate-float float"></div>
-        <!-- Secondary Orb on Right Side -->
-        <div class="absolute top-1/3 right-1/4 w-[300px] h-[300px] hero-orb transform -translate-y-1/2 opacity-70 animate-pulse float"></div>
+                <h1 class="text-4xl md:text-5xl font-black tracking-tight max-w-4xl mx-auto leading-tight animate-on-scroll">
+                    Mastering the AI Automation Sales Pitch
+                </h1>
 
-        <div class="max-w-7xl mx-auto relative z-10 text-center pt-12 pb-8 px-4">
-            <div class="inline-flex items-center gap-3 glass px-4 py-2 rounded-full mb-6 border border-dark-600 animate-on-scroll">
-                <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
-                <span class="text-xs font-black tracking-widest text-accent-500">SALES</span>
-                <span class="text-xs font-medium text-light-900">PITCH TECHNIQUES</span>
+                <p class="mt-4 text-xl text-light-700 max-w-2xl mx-auto leading-relaxed animate-on-scroll">
+                    Learn proven techniques to effectively communicate the value of AI automation to potential clients.
+                </p>
+
+                <div class="mt-6 flex items-center justify-center text-light-500 animate-on-scroll">
+                    <span>By FlowChat Team</span>
+                    <span class="mx-3">•</span>
+                    <span>May 5, 2025</span>
+                    <span class="mx-3">•</span>
+                    <span>6 min read</span>
+                </div>
             </div>
+        </header>
 
-            <h1 class="text-4xl md:text-5xl font-black tracking-tight max-w-4xl mx-auto leading-tight animate-on-scroll">
-                Mastering the AI Automation Sales Pitch
-            </h1>
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Article Content -->
+            <section class="py-16 px-4 sm:px-6">
+                <div class="max-w-3xl mx-auto">
+                    <div class="glass rounded-2xl p-8 animate-on-scroll">
+                        <div class="article-content">
+                            <p>Selling AI automation solutions requires a different approach than traditional software sales. Clients need to understand not just the features, but the transformative business impact. Here's how to master the art of the AI automation sales pitch.</p>
 
-            <p class="mt-4 text-xl text-light-700 max-w-2xl mx-auto leading-relaxed animate-on-scroll">
-                Learn proven techniques to effectively communicate the value of AI automation to potential clients.
-            </p>
+                            <h2>The Legendary Elevator Pitch</h2>
+                            <p>Every sales conversation should start with a compelling opening that immediately captures attention and demonstrates value:</p>
+                            
+                            <div class="pitch-example">
+                                <div class="pitch-label">Powerful Opening</div>
+                                <p>"Imagine if you had a digital employee who works 24/7, never forgets, never complains, and costs 90% less than hiring someone. That's what we deliver: AI automation that saves time, cuts costs, and accelerates growth."</p>
+                            </div>
 
-            <div class="mt-6 flex items-center justify-center text-light-500 animate-on-scroll">
-                <span>By FlowChat Team</span>
-                <span class="mx-3">•</span>
-                <span>May 5, 2025</span>
-                <span class="mx-3">•</span>
-                <span>6 min read</span>
-            </div>
-        </div>
-    </header>
+                            <p>This opening works because it:</p>
+                            <ul>
+                                <li>Creates a vivid mental image</li>
+                                <li>Highlights key benefits (24/7, reliability, cost savings)</li>
+                                <li>Connects to business outcomes (time, cost, growth)</li>
+                                <li>Makes the value proposition immediately clear</li>
+                            </ul>
 
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Article Content -->
-        <section class="py-16 px-4 sm:px-6">
-            <div class="max-w-3xl mx-auto">
-                <div class="glass rounded-2xl p-8 animate-on-scroll">
-                    <div class="article-content">
-                        <p>Selling AI automation solutions requires a different approach than traditional software sales. Clients need to understand not just the features, but the transformative business impact. Here's how to master the art of the AI automation sales pitch.</p>
+                            <h2>The 3-Step Client Engagement Formula</h2>
+                            <p>Structure your conversations around this proven framework:</p>
 
-                        <h2>The Legendary Elevator Pitch</h2>
-                        <p>Every sales conversation should start with a compelling opening that immediately captures attention and demonstrates value:</p>
-                        
-                        <div class="pitch-example">
-                            <div class="pitch-label">Powerful Opening</div>
-                            <p>"Imagine if you had a digital employee who works 24/7, never forgets, never complains, and costs 90% less than hiring someone. That's what we deliver: AI automation that saves time, cuts costs, and accelerates growth."</p>
-                        </div>
+                            <h3>1. Identify Pain Points</h3>
+                            <p>Start by asking questions that reveal the challenges your prospect faces:</p>
+                            <ul>
+                                <li>"What tasks are taking up too much of your team's time?"</li>
+                                <li>"Where do you experience the most bottlenecks in your workflow?"</li>
+                                <li>"What repetitive tasks could be handled more efficiently?"</li>
+                                <li>"How much time do you spend on administrative work each week?"</li>
+                            </ul>
 
-                        <p>This opening works because it:</p>
-                        <ul>
-                            <li>Creates a vivid mental image</li>
-                            <li>Highlights key benefits (24/7, reliability, cost savings)</li>
-                            <li>Connects to business outcomes (time, cost, growth)</li>
-                            <li>Makes the value proposition immediately clear</li>
-                        </ul>
+                            <h3>2. Present the Solution</h3>
+                            <p>Once you've identified pain points, explain how AI automation addresses them:</p>
+                            <ul>
+                                <li>"We can automate those tasks so they run automatically without human intervention"</li>
+                                <li>"Our systems work 24/7, ensuring nothing falls through the cracks"</li>
+                                <li>"This solution scales with your business, handling increased volume without additional staff"</li>
+                            </ul>
 
-                        <h2>The 3-Step Client Engagement Formula</h2>
-                        <p>Structure your conversations around this proven framework:</p>
+                            <h3>3. Highlight the Benefits</h3>
+                            <p>Connect your solution to measurable business outcomes:</p>
+                            <ul>
+                                <li>"Your team can focus on high-value work that drives revenue"</li>
+                                <li>"You'll save 20+ hours per week per automated process"</li>
+                                <li>"Costs drop significantly since one automation can replace a full-time hire"</li>
+                                <li>"Faster response times lead to higher customer satisfaction and more closed deals"</li>
+                            </ul>
 
-                        <h3>1. Identify Pain Points</h3>
-                        <p>Start by asking questions that reveal the challenges your prospect faces:</p>
-                        <ul>
-                            <li>"What tasks are taking up too much of your team's time?"</li>
-                            <li>"Where do you experience the most bottlenecks in your workflow?"</li>
-                            <li>"What repetitive tasks could be handled more efficiently?"</li>
-                            <li>"How much time do you spend on administrative work each week?"</li>
-                        </ul>
+                            <h2>Industry-Specific Pitch Approaches</h2>
+                            <p>Tailor your message to resonate with different industries:</p>
 
-                        <h3>2. Present the Solution</h3>
-                        <p>Once you've identified pain points, explain how AI automation addresses them:</p>
-                        <ul>
-                            <li>"We can automate those tasks so they run automatically without human intervention"</li>
-                            <li>"Our systems work 24/7, ensuring nothing falls through the cracks"</li>
-                            <li>"This solution scales with your business, handling increased volume without additional staff"</li>
-                        </ul>
+                            <h3>Real Estate</h3>
+                            <div class="pitch-example">
+                                <div class="pitch-label">Industry-Specific Pitch</div>
+                                <p>"In real estate, every lead is valuable. Our automation ensures that when someone inquires about a property, they instantly receive detailed information, photos, and a personalized follow-up sequence. This means you never miss a client, your team has more time for deals, and you save money on administrative staff."</p>
+                            </div>
 
-                        <h3>3. Highlight the Benefits</h3>
-                        <p>Connect your solution to measurable business outcomes:</p>
-                        <ul>
-                            <li>"Your team can focus on high-value work that drives revenue"</li>
-                            <li>"You'll save 20+ hours per week per automated process"</li>
-                            <li>"Costs drop significantly since one automation can replace a full-time hire"</li>
-                            <li>"Faster response times lead to higher customer satisfaction and more closed deals"</li>
-                        </ul>
+                            <h3>E-Commerce</h3>
+                            <div class="pitch-example">
+                                <div class="pitch-label">Industry-Specific Pitch</div>
+                                <p>"Online stores generate hundreds of orders daily. Our automation handles order confirmations, inventory updates, tracking notifications, and customer follow-ups automatically. This reduces your operational workload while improving customer experience through faster, more accurate service."</p>
+                            </div>
 
-                        <h2>Industry-Specific Pitch Approaches</h2>
-                        <p>Tailor your message to resonate with different industries:</p>
+                            <h3>Healthcare</h3>
+                            <div class="pitch-example">
+                                <div class="pitch-label">Industry-Specific Pitch</div>
+                                <p>"Healthcare providers juggle appointments, billing, and patient follow-ups. Our automation handles appointment reminders, insurance claims processing, and wellness check notifications, allowing your staff to focus on patient care while ensuring compliance and reducing no-shows."</p>
+                            </div>
 
-                        <h3>Real Estate</h3>
-                        <div class="pitch-example">
-                            <div class="pitch-label">Industry-Specific Pitch</div>
-                            <p>"In real estate, every lead is valuable. Our automation ensures that when someone inquires about a property, they instantly receive detailed information, photos, and a personalized follow-up sequence. This means you never miss a client, your team has more time for deals, and you save money on administrative staff."</p>
-                        </div>
+                            <h3>Restaurants</h3>
+                            <div class="pitch-example">
+                                <div class="pitch-label">Industry-Specific Pitch</div>
+                                <p>"Restaurants thrive on efficiency. Our automation manages reservations, sends confirmation reminders, processes orders, and collects customer feedback automatically. This reduces no-shows, speeds up table turnover, and helps you gather insights to improve service."</p>
+                            </div>
 
-                        <h3>E-Commerce</h3>
-                        <div class="pitch-example">
-                            <div class="pitch-label">Industry-Specific Pitch</div>
-                            <p>"Online stores generate hundreds of orders daily. Our automation handles order confirmations, inventory updates, tracking notifications, and customer follow-ups automatically. This reduces your operational workload while improving customer experience through faster, more accurate service."</p>
-                        </div>
+                            <h3>Marketing Agencies</h3>
+                            <div class="pitch-example">
+                                <div class="pitch-label">Industry-Specific Pitch</div>
+                                <p>"Marketing agencies handle multiple clients with diverse needs. Our automation streamlines client onboarding, generates monthly reports automatically, and manages follow-up communications. This increases your client capacity by 40% while reducing administrative time by 60%."</p>
+                            </div>
 
-                        <h3>Healthcare</h3>
-                        <div class="pitch-example">
-                            <div class="pitch-label">Industry-Specific Pitch</div>
-                            <p>"Healthcare providers juggle appointments, billing, and patient follow-ups. Our automation handles appointment reminders, insurance claims processing, and wellness check notifications, allowing your staff to focus on patient care while ensuring compliance and reducing no-shows."</p>
-                        </div>
+                            <h2>Essential Benefits to Emphasize</h2>
+                            <p>Always focus on business outcomes rather than technical features:</p>
+                            <ul>
+                                <li><strong>Save Time:</strong> "Free your team from repetitive tasks"</li>
+                                <li><strong>Save Money:</strong> "Replace costly hires with automation"</li>
+                                <li><strong>Boost Sales:</strong> "Faster responses close more deals"</li>
+                                <li><strong>Error-Free:</strong> "No mistakes, no missed leads"</li>
+                                <li><strong>Scalability:</strong> "Works for startups and enterprises"</li>
+                                <li><strong>Custom Integration:</strong> "Connects with your existing systems"</li>
+                            </ul>
 
-                        <h3>Restaurants</h3>
-                        <div class="pitch-example">
-                            <div class="pitch-label">Industry-Specific Pitch</div>
-                            <p>"Restaurants thrive on efficiency. Our automation manages reservations, sends confirmation reminders, processes orders, and collects customer feedback automatically. This reduces no-shows, speeds up table turnover, and helps you gather insights to improve service."</p>
-                        </div>
+                            <h2>Handling Common Objections</h2>
+                            <p>Be prepared with responses to typical concerns:</p>
 
-                        <h3>Marketing Agencies</h3>
-                        <div class="pitch-example">
-                            <div class="pitch-label">Industry-Specific Pitch</div>
-                            <p>"Marketing agencies handle multiple clients with diverse needs. Our automation streamlines client onboarding, generates monthly reports automatically, and manages follow-up communications. This increases your client capacity by 40% while reducing administrative time by 60%."</p>
-                        </div>
+                            <h3>"We already have staff"</h3>
+                            <p><strong>Response:</strong> "Our automation doesn't replace your team—it makes them more productive. When routine tasks are handled automatically, your staff can focus on strategic work that drives growth and revenue."</p>
 
-                        <h2>Essential Benefits to Emphasize</h2>
-                        <p>Always focus on business outcomes rather than technical features:</p>
-                        <ul>
-                            <li><strong>Save Time:</strong> "Free your team from repetitive tasks"</li>
-                            <li><strong>Save Money:</strong> "Replace costly hires with automation"</li>
-                            <li><strong>Boost Sales:</strong> "Faster responses close more deals"</li>
-                            <li><strong>Error-Free:</strong> "No mistakes, no missed leads"</li>
-                            <li><strong>Scalability:</strong> "Works for startups and enterprises"</li>
-                            <li><strong>Custom Integration:</strong> "Connects with your existing systems"</li>
-                        </ul>
+                            <h3>"This sounds expensive"</h3>
+                            <p><strong>Response:</strong> "AI automation costs less than hiring one employee and works 24/7. Consider the ROI: if this saves your business 20 hours a week, how much is that worth annually?"</p>
 
-                        <h2>Handling Common Objections</h2>
-                        <p>Be prepared with responses to typical concerns:</p>
+                            <h3>"I don't get the tech"</h3>
+                            <p><strong>Response:</strong> "You don't need to understand the technology. Our team handles everything from implementation to maintenance. You simply experience the benefits of increased efficiency and reduced costs."</p>
 
-                        <h3>"We already have staff"</h3>
-                        <p><strong>Response:</strong> "Our automation doesn't replace your team—it makes them more productive. When routine tasks are handled automatically, your staff can focus on strategic work that drives growth and revenue."</p>
+                            <h3>"Is it secure?"</h3>
+                            <p><strong>Response:</strong> "Yes, we use enterprise-grade security with encryption, strict access controls, and compliance-ready infrastructure. Your data stays safe while delivering maximum business value."</p>
 
-                        <h3>"This sounds expensive"</h3>
-                        <p><strong>Response:</strong> "AI automation costs less than hiring one employee and works 24/7. Consider the ROI: if this saves your business 20 hours a week, how much is that worth annually?"</p>
+                            <h2>Powerful Closing Techniques</h2>
+                            <p>End your conversations with compelling calls to action:</p>
 
-                        <h3>"I don't get the tech"</h3>
-                        <p><strong>Response:</strong> "You don't need to understand the technology. Our team handles everything from implementation to maintenance. You simply experience the benefits of increased efficiency and reduced costs."</p>
+                            <h3>ROI Close</h3>
+                            <p>"If this saves you 20 hours a week, how much is that worth to your business? Would you be open to a 30-minute demo to see exactly how we can implement this for your specific needs?"</p>
 
-                        <h3>"Is it secure?"</h3>
-                        <p><strong>Response:</strong> "Yes, we use enterprise-grade security with encryption, strict access controls, and compliance-ready infrastructure. Your data stays safe while delivering maximum business value."</p>
+                            <h3>Future Vision Close</h3>
+                            <p>"While your competitors chase administrative tasks, you could be focusing on closing deals and growing your business. Ready to see how this works for your organization?"</p>
 
-                        <h2>Powerful Closing Techniques</h2>
-                        <p>End your conversations with compelling calls to action:</p>
+                            <h3>Soft Close</h3>
+                            <p>"Would you be open to a 30-minute demo to see how this could work for you?"</p>
 
-                        <h3>ROI Close</h3>
-                        <p>"If this saves you 20 hours a week, how much is that worth to your business? Would you be open to a 15-minute demo to see exactly how we can implement this for your specific needs?"</p>
+                            <h2>Sample Word-for-Word Pitch</h2>
+                            <div class="pitch-example">
+                                <div class="pitch-label">Complete Sales Pitch</div>
+                                <p>"Hi [Client], we help businesses save time and grow faster by automating repetitive tasks. Think of it as a digital assistant that works 24/7. For example, in real estate, we ensure every lead gets property details, reminders, and follow-ups—automatically. That means you never miss a client, your team has more time for deals, and you save money. Would you like me to show how this could work for you?"</p>
+                            </div>
 
-                        <h3>Future Vision Close</h3>
-                        <p>"While your competitors chase administrative tasks, you could be focusing on closing deals and growing your business. Ready to see how this works for your organization?"</p>
+                            <h2>Salesperson Mindset</h2>
+                            <p>Remember to always focus on business outcomes rather than technical features:</p>
+                            <ul>
+                                <li>Talk in terms of ROI, not technology</li>
+                                <li>Focus on growth, time savings, and cost reduction</li>
+                                <li>Use specific numbers and measurable results</li>
+                                <li>Connect solutions to the client's unique challenges</li>
+                                <li>Emphasize the results that matter most to their business</li>
+                            </ul>
 
-                        <h3>Soft Close</h3>
-                        <p>"Would you be open to a 15-minute demo to see how this could work for you?"</p>
+                            <blockquote>
+                                "Mastering the AI automation sales pitch transformed our conversion rates. By focusing on business outcomes rather than technical features, we increased our close rate by 45% and shortened our sales cycle by an average of 10 days."
+                                <cite class="block mt-2">— Jennifer Lee, Sales Director at TechFlow Solutions</cite>
+                            </blockquote>
 
-                        <h2>Sample Word-for-Word Pitch</h2>
-                        <div class="pitch-example">
-                            <div class="pitch-label">Complete Sales Pitch</div>
-                            <p>"Hi [Client], we help businesses save time and grow faster by automating repetitive tasks. Think of it as a digital assistant that works 24/7. For example, in real estate, we ensure every lead gets property details, reminders, and follow-ups—automatically. That means you never miss a client, your team has more time for deals, and you save money. Would you like me to show how this could work for you?"</p>
-                        </div>
+                            <p>The key to successful AI automation sales is demonstrating clear business value. When you focus on time saved, costs reduced, and growth accelerated, clients understand the investment and are eager to move forward.</p>
 
-                        <h2>Salesperson Mindset</h2>
-                        <p>Remember to always focus on business outcomes rather than technical features:</p>
-                        <ul>
-                            <li>Talk in terms of ROI, not technology</li>
-                            <li>Focus on growth, time savings, and cost reduction</li>
-                            <li>Use specific numbers and measurable results</li>
-                            <li>Connect solutions to the client's unique challenges</li>
-                            <li>Emphasize the results that matter most to their business</li>
-                        </ul>
-
-                        <blockquote>
-                            "Mastering the AI automation sales pitch transformed our conversion rates. By focusing on business outcomes rather than technical features, we increased our close rate by 45% and shortened our sales cycle by an average of 10 days."
-                            <cite class="block mt-2">— Jennifer Lee, Sales Director at TechFlow Solutions</cite>
-                        </blockquote>
-
-                        <p>The key to successful AI automation sales is demonstrating clear business value. When you focus on time saved, costs reduced, and growth accelerated, clients understand the investment and are eager to move forward.</p>
-
-                        <div class="mt-10 pt-6 border-t border-dark-700">
-                            <h3 class="text-xl font-black mb-4">Related Articles</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <a href="/pages/blogs/objection-handling.html" class="glass rounded-lg p-4 hover-glow block transition-all">
-                                    <h4 class="font-bold mb-2">Handling Common Objections</h4>
-                                    <p class="text-sm text-light-700">Address client concerns with confidence</p>
-                                </a>
-                                <a href="/pages/blogs/business-automation-benefits.html" class="glass rounded-lg p-4 hover-glow block transition-all">
-                                    <h4 class="font-bold mb-2">Top 6 Benefits of AI Automation</h4>
-                                    <p class="text-sm text-light-700">Discover the core advantages</p>
-                                </a>
+                            <div class="mt-10 pt-6 border-t border-dark-700">
+                                <h3 class="text-xl font-black mb-4">Related Articles</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <a href="/pages/blogs/objection-handling.html" class="glass rounded-lg p-4 hover-glow block transition-all">
+                                        <h4 class="font-bold mb-2">Handling Common Objections</h4>
+                                        <p class="text-sm text-light-700">Address client concerns with confidence</p>
+                                    </a>
+                                    <a href="/pages/blogs/business-automation-benefits.html" class="glass rounded-lg p-4 hover-glow block transition-all">
+                                        <h4 class="font-bold mb-2">Top 6 Benefits of AI Automation</h4>
+                                        <p class="text-sm text-light-700">Discover the core advantages</p>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="mt-12 text-center">
+                        <a href="/pages/blogs/" class="btn-secondary slime-glow">
+                            <i class="fas fa-arrow-left mr-2"></i> Back to Blog
+                        </a>
+                    </div>
                 </div>
-
-                <div class="mt-12 text-center">
-                    <a href="/pages/blogs/" class="btn-secondary slime-glow">
-                        <i class="fas fa-arrow-left mr-2"></i> Back to Blog
-                    </a>
-                </div>
-            </div>
-        </section>
-
-    <!-- Load footer component -->
-    <div id="footer-container"></div>
-
+            </section>
+        </main>
 
         <!-- Load footer component -->
-    <div id="footer-container"></div>
+        <div
+            hx-get="/components/footer.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
 
-    <!-- Load components after page load -->
-    <script>
-        // Function to load component and strip Vite client script
-        function loadComponent(url, targetId) {
-            fetch(url)
-                .then(response => response.text())
-                .then(html => {
-                    // Remove Vite client script if present
-                    const cleanedHtml = html.replace(/<script[^>]*@vite\/client[^>]*><\/script>/g, '');
-                    document.getElementById(targetId).innerHTML = cleanedHtml;
-                })
-                .catch(error => {
-                    console.error('Error loading component:', url, error);
-                });
-        }
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            // Load components
-            loadComponent('/components/header.html', 'header-container');
-            loadComponent('/components/nav.html', 'nav-container');
-            loadComponent('/components/footer.html', 'footer-container');
-        });
-    </script>
-
-    <script src="../../assets/js/main.js"></script>
-</body>
+        <!-- Load scripts partial -->
+        <div
+            hx-get="/components/scripts.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+    </body>
 </html>

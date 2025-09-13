@@ -13,18 +13,19 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
             rel="stylesheet"
         />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        />
+        <link rel="stylesheet" href="/assets/css/fontawesome.min.css" />
+        <!-- Resource hints for critical assets -->
+        <link rel="preload" href="/assets/js/htmx.min.js" as="script">
+        <link rel="preload" href="/assets/css/output.css" as="style">
+        <link rel="prefetch" href="/assets/js/main.js" as="script">
+        <!-- HTMX loaded without type="module" as we're not using ES modules -->
+        <!-- HTMX loaded without type="module" as we're not using ES modules -->
         <script src="/assets/js/htmx.min.js"></script>
         <link rel="stylesheet" href="/assets/css/output.css" />
-        <link rel="stylesheet" href="/assets/css/shared.css" />
-        <link rel="stylesheet" href="/assets/css/htmx.css" />
-        <link rel="stylesheet" href="/assets/css/fix-footer.css" />
-        <link rel="stylesheet" href="/assets/css/icons-fix.css" />
     </head>
     <body class="index-page">
+        <!-- Skip to main content link for accessibility -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
         <!-- Load header component -->
         <div
             hx-get="/components/header.html"
@@ -41,7 +42,7 @@
 
         <!-- Load hero section -->
         <div
-            hx-get="/partials/hero.html"
+            hx-get="/components/hero.html"
             hx-trigger="load"
             hx-swap="innerHTML"
         ></div>
@@ -50,50 +51,50 @@
         <main id="main-content">
             <!-- Load Services Section -->
             <div
-                hx-get="/partials/services.html"
-                hx-trigger="load"
+                hx-get="/components/services.html"
+                hx-trigger="revealed"
                 hx-swap="innerHTML"
             ></div>
 
             <!-- Load Process Section -->
             <div
-                hx-get="/partials/process.html"
-                hx-trigger="load"
+                hx-get="/components/process.html"
+                hx-trigger="revealed"
                 hx-swap="innerHTML"
             ></div>
 
             <!-- Load Testimonials Section -->
             <div
-                hx-get="/partials/testimonials.html"
-                hx-trigger="load"
+                hx-get="/components/testimonials.html"
+                hx-trigger="revealed"
                 hx-swap="innerHTML"
             ></div>
 
             <!-- Load Benefits Section -->
             <div
-                hx-get="/partials/benefits.html"
-                hx-trigger="load"
+                hx-get="/components/benefits.html"
+                hx-trigger="revealed"
                 hx-swap="innerHTML"
             ></div>
 
             <!-- Load Pricing Section -->
             <div
-                hx-get="/partials/pricing.html"
-                hx-trigger="load"
+                hx-get="/components/pricing.html"
+                hx-trigger="revealed"
                 hx-swap="innerHTML"
             ></div>
 
             <!-- Load FAQ Section -->
             <div
-                hx-get="/partials/faq.html"
-                hx-trigger="load"
+                hx-get="/components/faq.html"
+                hx-trigger="revealed"
                 hx-swap="innerHTML"
             ></div>
 
             <!-- Load CTA Section -->
             <div
-                hx-get="/partials/cta.html"
-                hx-trigger="load"
+                hx-get="/components/cta.html"
+                hx-trigger="revealed"
                 hx-swap="innerHTML"
             ></div>
         </main>
@@ -107,7 +108,7 @@
 
         <!-- Load scripts partial -->
         <div
-            hx-get="/partials/scripts.html"
+            hx-get="/components/scripts.html"
             hx-trigger="load"
             hx-swap="innerHTML"
         ></div>

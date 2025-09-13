@@ -13,9 +13,9 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
+        <!-- HTMX loaded without type="module" as we're not using ES modules -->
         <script src="/assets/js/htmx.min.js"></script>
         <link rel="stylesheet" href="/assets/css/output.css" />
-        <link rel="stylesheet" href="/assets/css/shared.css" />
         <link rel="stylesheet" href="/assets/css/htmx.css" />
         <link rel="stylesheet" href="/assets/css/fix-footer.css" />
     </head>
@@ -39,7 +39,7 @@
 
         <!-- Load hero section -->
         <div
-            hx-get="/partials/blog-hero.html"
+            hx-get="/components/blog-hero.html"
             hx-trigger="load"
             hx-swap="innerHTML"
         ></div>
@@ -48,7 +48,7 @@
         <main id="main-content">
             <!-- Load Blog Posts Section -->
             <div
-                hx-get="/partials/blog-posts.html"
+                hx-get="/components/blog-posts.html"
                 hx-trigger="load"
                 hx-swap="innerHTML"
             ></div>
@@ -63,7 +63,7 @@
 
         <!-- Load scripts partial -->
         <div
-            hx-get="/partials/scripts.html"
+            hx-get="/components/scripts.html"
             hx-trigger="load"
             hx-swap="innerHTML"
         ></div>

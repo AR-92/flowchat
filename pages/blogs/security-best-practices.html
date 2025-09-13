@@ -1,440 +1,385 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security Best Practices for AI Automation | FlowChat Blog</title>
-    <link rel="icon" type="image/png" href="../../assets/images/ico.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../../assets/css/output.css">
-    <link rel="stylesheet" href="../../assets/css/shared.css">
-    
-    
-</head>
-<body class="bg-dark-950 text-light-900 font-sans">
-    <!-- Load header component -->
-    <div id="header-container"></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Security Best Practices for AI Automation | FlowChat Blog</title>
+        <link rel="icon" type="image/png" href="/assets/images/ico.png" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <!-- HTMX loaded without type="module" as we're not using ES modules -->
+        <script src="/assets/js/htmx.min.js"></script>
+        <link rel="stylesheet" href="/assets/css/output.css" />
+        <link rel="stylesheet" href="/assets/css/htmx.css" />
+        <link rel="stylesheet" href="/assets/css/fix-footer.css" />
+    </head>
+    <body class="bg-dark-950 text-light-900 font-sans">
+        <!-- Skip to content link for accessibility -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Load navigation component -->
-    <div id="nav-container"></div>
+        <!-- Load header component -->
+        <div
+            hx-get="/components/header.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
 
-    <!-- Load components after page load -->
-    <script>
-        // Function to load component and strip Vite client script
-        function loadComponent(url, targetId) {
-            fetch(url)
-                .then(response => response.text())
-                .then(html => {
-                    // Remove Vite client script if present
-                    const cleanedHtml = html.replace(/<script[^>]*@vite\/client[^>]*><\/script>/g, '');
-                    document.getElementById(targetId).innerHTML = cleanedHtml;
-                    
-                    // Initialize components if this is the nav component
-                    if (targetId === 'nav-container') {
-                        // Small delay to ensure DOM is updated
-                        setTimeout(() => {
-                            if (typeof initMobileMenu === 'function') {
-                                initMobileMenu();
-                            }
-                        }, 100);
-                    }
-                })
-                .catch(error => {
-                    console.error('Error loading component:', url, error);
-                });
-        }
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            // Load components
-            loadComponent('/components/header.html', 'header-container');
-            loadComponent('/components/nav.html', 'nav-container');
-        });
-    </script>
-    <!-- Skip to content link for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+        <!-- Load navigation component -->
+        <div
+            hx-get="/components/simple-nav.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
 
-    
+        <!-- Fashion-Style Hero Section with Smooth Gradient -->
+        <header class="hero-container relative px-6 overflow-hidden pt-24">
+            <!-- Large Orb Gradient in Hero Section -->
+            <div class="absolute top-1/2 left-2/5 w-[400px] h-[400px] hero-orb transform -translate-x-1/2 -translate-y-1/2 animate-float float"></div>
+            <!-- Secondary Orb on Right Side -->
+            <div class="absolute top-1/3 right-1/4 w-[300px] h-[300px] hero-orb transform -translate-y-1/2 opacity-70 animate-pulse float"></div>
 
-    <!-- Fashion-Style Hero Section with Smooth Gradient -->
-    <header class="hero-container relative px-6 overflow-hidden pt-24">
-        <!-- Large Orb Gradient in Hero Section -->
-        <div class="absolute top-1/2 left-2/5 w-[400px] h-[400px] hero-orb transform -translate-x-1/2 -translate-y-1/2 animate-float float"></div>
-        <!-- Secondary Orb on Right Side -->
-        <div class="absolute top-1/3 right-1/4 w-[300px] h-[300px] hero-orb transform -translate-y-1/2 opacity-70 animate-pulse float"></div>
+            <div class="max-w-7xl mx-auto relative z-10 text-center pt-12 pb-8 px-4">
+                <div class="inline-flex items-center gap-3 glass px-4 py-2 rounded-full mb-6 border border-dark-600 animate-on-scroll">
+                    <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
+                    <span class="text-xs font-black tracking-widest text-accent-500">SECURITY</span>
+                    <span class="text-xs font-medium text-light-900">BEST PRACTICES</span>
+                </div>
 
-        <div class="max-w-7xl mx-auto relative z-10 text-center pt-12 pb-8 px-4">
-            <div class="inline-flex items-center gap-3 glass px-4 py-2 rounded-full mb-6 border border-dark-600 animate-on-scroll">
-                <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
-                <span class="text-xs font-black tracking-widest text-accent-500">SECURITY</span>
-                <span class="text-xs font-medium text-light-900">BEST PRACTICES</span>
+                <h1 class="text-4xl md:text-5xl font-black tracking-tight max-w-4xl mx-auto leading-tight animate-on-scroll">
+                    Security Best Practices for AI Automation
+                </h1>
+
+                <p class="mt-4 text-xl text-light-700 max-w-2xl mx-auto leading-relaxed animate-on-scroll">
+                    Protect your data and systems while implementing powerful AI automation solutions.
+                </p>
+
+                <div class="mt-6 flex items-center justify-center text-light-500 animate-on-scroll">
+                    <span>By FlowChat Team</span>
+                    <span class="mx-3">•</span>
+                    <span>April 18, 2025</span>
+                    <span class="mx-3">•</span>
+                    <span>6 min read</span>
+                </div>
             </div>
+        </header>
 
-            <h1 class="text-4xl md:text-5xl font-black tracking-tight max-w-4xl mx-auto leading-tight animate-on-scroll">
-                Security Best Practices for AI Automation
-            </h1>
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Article Content -->
+            <section class="py-16 px-4 sm:px-6">
+                <div class="max-w-3xl mx-auto">
+                    <div class="glass rounded-2xl p-8 animate-on-scroll">
+                        <div class="article-content">
+                            <p>In an era where data breaches can cost millions and damage reputations irreparably, security must be at the forefront of any AI automation implementation. While the benefits of automation are substantial, they must be achieved without compromising the integrity, confidentiality, and availability of your critical business data. This comprehensive guide outlines the essential security best practices for implementing AI automation safely and effectively.</p>
 
-            <p class="mt-4 text-xl text-light-700 max-w-2xl mx-auto leading-relaxed animate-on-scroll">
-                Protect your data and systems while implementing powerful AI automation solutions.
-            </p>
+                            <h2>The Security Foundation: Zero Trust Architecture</h2>
+                            <p>Modern AI automation security begins with a Zero Trust approach, where no user or system is inherently trusted, regardless of their location or previous authentication status. This principle ensures that every access request is verified and validated before granting permissions.</p>
 
-            <div class="mt-6 flex items-center justify-center text-light-500 animate-on-scroll">
-                <span>By FlowChat Team</span>
-                <span class="mx-3">•</span>
-                <span>April 18, 2025</span>
-                <span class="mx-3">•</span>
-                <span>6 min read</span>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Article Content -->
-        <section class="py-16 px-4 sm:px-6">
-            <div class="max-w-3xl mx-auto">
-                <div class="glass rounded-2xl p-8 animate-on-scroll">
-                    <div class="article-content">
-                        <p>In an era where data breaches can cost millions and damage reputations irreparably, security must be at the forefront of any AI automation implementation. While the benefits of automation are substantial, they must be achieved without compromising the integrity, confidentiality, and availability of your critical business data. This comprehensive guide outlines the essential security best practices for implementing AI automation safely and effectively.</p>
-
-                        <h2>The Security Foundation: Zero Trust Architecture</h2>
-                        <p>Modern AI automation security begins with a Zero Trust approach, where no user or system is inherently trusted, regardless of their location or previous authentication status. This principle ensures that every access request is verified and validated before granting permissions.</p>
-
-                        <div class="security-practice">
-                            <div class="practice-title">Implement Multi-Factor Authentication (MFA)</div>
-                            <div class="practice-description">
-                                Require multiple forms of verification for all system access, including something you know (password), something you have (token), and something you are (biometric).
+                            <div class="security-practice">
+                                <div class="practice-title">Implement Multi-Factor Authentication (MFA)</div>
+                                <div class="practice-description">
+                                    Require multiple forms of verification for all system access, including something you know (password), something you have (token), and something you are (biometric).
+                                </div>
+                                <div class="practice-benefits">
+                                    <strong>Benefits:</strong>
+                                    <ul class="benefit-list">
+                                        <li>Reduces unauthorized access by up to 99.9%</li>
+                                        <li>Protects against credential theft and phishing attacks</li>
+                                        <li>Meets compliance requirements for many industries</li>
+                                        <li>Provides audit trail for security monitoring</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="practice-benefits">
-                                <strong>Benefits:</strong>
-                                <ul class="benefit-list">
-                                    <li>Reduces unauthorized access by up to 99.9%</li>
-                                    <li>Protects against credential theft and phishing attacks</li>
-                                    <li>Meets compliance requirements for many industries</li>
-                                    <li>Provides audit trail for security monitoring</li>
+
+                            <div class="security-practice">
+                                <div class="practice-title">Enforce Principle of Least Privilege</div>
+                                <div class="practice-description">
+                                    Grant users and systems only the minimum permissions necessary to perform their functions, and regularly review and adjust access rights.
+                                </div>
+                                <div class="practice-benefits">
+                                    <strong>Benefits:</strong>
+                                    <ul class="benefit-list">
+                                        <li>Limits potential damage from compromised accounts</li>
+                                        <li>Reduces attack surface for malicious actors</li>
+                                        <li>Simplifies compliance auditing processes</li>
+                                        <li>Improves overall system security posture</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>Data Protection and Encryption</h2>
+                            <p>Protecting data both in transit and at rest is fundamental to secure AI automation. Encryption ensures that even if data is intercepted or accessed without authorization, it remains unreadable and useless to unauthorized parties.</p>
+
+                            <div class="security-practice">
+                                <div class="practice-title">End-to-End Encryption</div>
+                                <div class="practice-description">
+                                    Implement strong encryption for all data transmission between systems, using industry-standard protocols such as TLS 1.3 and AES-256 for data at rest.
+                                </div>
+                                <div class="practice-benefits">
+                                    <strong>Benefits:</strong>
+                                    <ul class="benefit-list">
+                                        <li>Protects sensitive data from interception</li>
+                                        <li>Ensures compliance with data protection regulations</li>
+                                        <li>Provides secure communication between distributed systems</li>
+                                        <li>Maintains data integrity during transmission</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="security-practice">
+                                <div class="practice-title">Data Classification and Handling</div>
+                                <div class="practice-description">
+                                    Classify data according to sensitivity levels and implement appropriate handling procedures for each classification, from public information to highly confidential data.
+                                </div>
+                                <div class="practice-benefits">
+                                    <strong>Benefits:</strong>
+                                    <ul class="benefit-list">
+                                        <li>Ensures appropriate security controls for different data types</li>
+                                        <li>Streamlines compliance with privacy regulations</li>
+                                        <li>Reduces storage and processing costs for non-sensitive data</li>
+                                        <li>Improves incident response efficiency</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>API Security for Automation Integration</h2>
+                            <p>AI automation often involves integration with multiple systems through APIs, making API security critical to overall system protection.</p>
+
+                            <div class="security-practice">
+                                <div class="practice-title">Secure API Key Management</div>
+                                <div class="practice-description">
+                                    Use encrypted storage for API keys, implement key rotation policies, and apply the principle of least privilege to limit API access scopes.
+                                </div>
+                                <div class="practice-benefits">
+                                    <strong>Benefits:</strong>
+                                    <ul class="benefit-list">
+                                        <li>Prevents unauthorized system access through stolen keys</li>
+                                        <li>Reduces impact of key compromise through regular rotation</li>
+                                        <li>Limits potential damage from API abuse</li>
+                                        <li>Provides better auditability of system interactions</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="security-practice">
+                                <div class="practice-title">Rate Limiting and Throttling</div>
+                                <div class="practice-description">
+                                    Implement rate limiting to prevent API abuse and denial-of-service attacks, while ensuring legitimate automation workflows continue uninterrupted.
+                                </div>
+                                <div class="practice-benefits">
+                                    <strong>Benefits:</strong>
+                                    <ul class="benefit-list">
+                                        <li>Protects against API abuse and DoS attacks</li>
+                                        <li>Ensures fair resource allocation among users</li>
+                                        <li>Improves system stability and performance</li>
+                                        <li>Provides early detection of anomalous behavior</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>Monitoring and Incident Response</h2>
+                            <p>Continuous monitoring and rapid incident response are essential for maintaining secure AI automation environments.</p>
+
+                            <div class="security-practice">
+                                <div class="practice-title">Real-Time Security Monitoring</div>
+                                <div class="practice-description">
+                                    Deploy security information and event management (SIEM) solutions to monitor system activity, detect anomalies, and respond to potential threats in real-time.
+                                </div>
+                                <div class="practice-benefits">
+                                    <strong>Benefits:</strong>
+                                    <ul class="benefit-list">
+                                        <li>Provides early detection of security incidents</li>
+                                        <li>Enables rapid response to potential threats</li>
+                                        <li>Creates comprehensive audit trails for compliance</li>
+                                        <li>Improves overall security posture through analytics</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="security-practice">
+                                <div class="practice-title">Incident Response Planning</div>
+                                <div class="practice-description">
+                                    Develop and regularly test incident response procedures that include identification, containment, eradication, and recovery phases specific to AI automation environments.
+                                </div>
+                                <div class="practice-benefits">
+                                    <strong>Benefits:</strong>
+                                    <ul class="benefit-list">
+                                        <li>Reduces mean time to detection and response</li>
+                                        <li>Minimizes business impact of security incidents</li>
+                                        <li>Ensures regulatory compliance requirements</li>
+                                        <li>Improves organizational resilience</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>Compliance and Regulatory Considerations</h2>
+                            <p>Different industries and jurisdictions have specific security and privacy requirements that must be addressed in AI automation implementations.</p>
+
+                            <div class="framework-box">
+                                <div class="framework-title">Key Compliance Frameworks</div>
+                                <ul>
+                                    <li><strong>GDPR:</strong> European data protection regulation requiring consent, data portability, and breach notification</li>
+                                    <li><strong>CCPA:</strong> California Consumer Privacy Act providing rights to know, delete, and opt-out of data sales</li>
+                                    <li><strong>HIPAA:</strong> Healthcare privacy and security rules for protecting patient information</li>
+                                    <li><strong>SOX:</strong> Sarbanes-Oxley Act requiring financial data accuracy and internal controls</li>
+                                    <li><strong>PCI DSS:</strong> Payment Card Industry standards for securing credit card transactions</li>
                                 </ul>
                             </div>
-                        </div>
 
-                        <div class="security-practice">
-                            <div class="practice-title">Enforce Principle of Least Privilege</div>
-                            <div class="practice-description">
-                                Grant users and systems only the minimum permissions necessary to perform their functions, and regularly review and adjust access rights.
+                            <div class="security-practice">
+                                <div class="practice-title">Privacy by Design</div>
+                                <div class="practice-description">
+                                    Integrate privacy and security considerations into the design and development of AI automation systems from the beginning, rather than as an afterthought.
+                                </div>
+                                <div class="practice-benefits">
+                                    <strong>Benefits:</strong>
+                                    <ul class="benefit-list">
+                                        <li>Reduces compliance risks and potential fines</li>
+                                        <li>Builds customer trust through transparent practices</li>
+                                        <li>Lowers development and maintenance costs</li>
+                                        <li>Improves system security and reliability</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="practice-benefits">
-                                <strong>Benefits:</strong>
-                                <ul class="benefit-list">
-                                    <li>Limits potential damage from compromised accounts</li>
-                                    <li>Reduces attack surface for malicious actors</li>
-                                    <li>Simplifies compliance auditing processes</li>
-                                    <li>Improves overall system security posture</li>
-                                </ul>
-                            </div>
-                        </div>
 
-                        <h2>Data Protection and Encryption</h2>
-                        <p>Protecting data both in transit and at rest is fundamental to secure AI automation. Encryption ensures that even if data is intercepted or accessed without authorization, it remains unreadable and useless to unauthorized parties.</p>
+                            <h2>Vendor Security and Third-Party Risk Management</h2>
+                            <p>When implementing AI automation solutions, organizations often rely on third-party vendors, making vendor security assessment critical.</p>
 
-                        <div class="security-practice">
-                            <div class="practice-title">End-to-End Encryption</div>
-                            <div class="practice-description">
-                                Implement strong encryption for all data transmission between systems, using industry-standard protocols such as TLS 1.3 and AES-256 for data at rest.
+                            <div class="security-practice">
+                                <div class="practice-title">Vendor Security Assessment</div>
+                                <div class="practice-description">
+                                    Evaluate third-party vendors' security practices, certifications, and incident response capabilities before engagement, and maintain ongoing monitoring of vendor security posture.
+                                </div>
+                                <div class="practice-benefits">
+                                    <strong>Benefits:</strong>
+                                    <ul class="benefit-list">
+                                        <li>Reduces supply chain security risks</li>
+                                        <li>Ensures vendor alignment with organizational security standards</li>
+                                        <li>Provides visibility into third-party security practices</li>
+                                        <li>Supports compliance and audit requirements</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="practice-benefits">
-                                <strong>Benefits:</strong>
-                                <ul class="benefit-list">
-                                    <li>Protects sensitive data from interception</li>
-                                    <li>Ensures compliance with data protection regulations</li>
-                                    <li>Provides secure communication between distributed systems</li>
-                                    <li>Maintains data integrity during transmission</li>
-                                </ul>
-                            </div>
-                        </div>
 
-                        <div class="security-practice">
-                            <div class="practice-title">Data Classification and Handling</div>
-                            <div class="practice-description">
-                                Classify data according to sensitivity levels and implement appropriate handling procedures for each classification, from public information to highly confidential data.
+                            <div class="security-practice">
+                                <div class="practice-title">Contractual Security Requirements</div>
+                                <div class="practice-description">
+                                    Include specific security requirements, data handling obligations, and incident notification procedures in vendor contracts to ensure accountability.
+                                </div>
+                                <div class="practice-benefits">
+                                    <strong>Benefits:</strong>
+                                    <ul class="benefit-list">
+                                        <li>Establishes clear security expectations and responsibilities</li>
+                                        <li>Provides legal recourse in case of security failures</li>
+                                        <li>Ensures business continuity during security incidents</li>
+                                        <li>Supports compliance with regulatory requirements</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="practice-benefits">
-                                <strong>Benefits:</strong>
-                                <ul class="benefit-list">
-                                    <li>Ensures appropriate security controls for different data types</li>
-                                    <li>Streamlines compliance with privacy regulations</li>
-                                    <li>Reduces storage and processing costs for non-sensitive data</li>
-                                    <li>Improves incident response efficiency</li>
-                                </ul>
-                            </div>
-                        </div>
 
-                        <h2>API Security for Automation Integration</h2>
-                        <p>AI automation often involves integration with multiple systems through APIs, making API security critical to overall system protection.</p>
+                            <h2>Security Training and Awareness</h2>
+                            <p>Human factors remain a critical component of security, making ongoing education and awareness essential for AI automation security.</p>
 
-                        <div class="security-practice">
-                            <div class="practice-title">Secure API Key Management</div>
-                            <div class="practice-description">
-                                Use encrypted storage for API keys, implement key rotation policies, and apply the principle of least privilege to limit API access scopes.
+                            <div class="security-practice">
+                                <div class="practice-title">Role-Based Security Training</div>
+                                <div class="practice-description">
+                                    Provide tailored security training for different roles within the organization, from executives to developers to end users, focusing on AI automation-specific risks and best practices.
+                                </div>
+                                <div class="practice-benefits">
+                                    <strong>Benefits:</strong>
+                                    <ul class="benefit-list">
+                                        <li>Reduces human error-related security incidents</li>
+                                        <li>Improves recognition and reporting of potential threats</li>
+                                        <li>Ensures consistent security practices across the organization</li>
+                                        <li>Supports compliance with training requirements</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="practice-benefits">
-                                <strong>Benefits:</strong>
-                                <ul class="benefit-list">
-                                    <li>Prevents unauthorized system access through stolen keys</li>
-                                    <li>Reduces impact of key compromise through regular rotation</li>
-                                    <li>Limits potential damage from API abuse</li>
-                                    <li>Provides better auditability of system interactions</li>
-                                </ul>
-                            </div>
-                        </div>
 
-                        <div class="security-practice">
-                            <div class="practice-title">Rate Limiting and Throttling</div>
-                            <div class="practice-description">
-                                Implement rate limiting to prevent API abuse and denial-of-service attacks, while ensuring legitimate automation workflows continue uninterrupted.
-                            </div>
-                            <div class="practice-benefits">
-                                <strong>Benefits:</strong>
-                                <ul class="benefit-list">
-                                    <li>Protects against API abuse and DoS attacks</li>
-                                    <li>Ensures fair resource allocation among users</li>
-                                    <li>Improves system stability and performance</li>
-                                    <li>Provides early detection of anomalous behavior</li>
-                                </ul>
-                            </div>
-                        </div>
+                            <h2>Emerging Security Considerations for AI</h2>
+                            <p>AI-specific security challenges require specialized approaches to protect against unique threats such as adversarial attacks and model poisoning.</p>
 
-                        <h2>Monitoring and Incident Response</h2>
-                        <p>Continuous monitoring and rapid incident response are essential for maintaining secure AI automation environments.</p>
-
-                        <div class="security-practice">
-                            <div class="practice-title">Real-Time Security Monitoring</div>
-                            <div class="practice-description">
-                                Deploy security information and event management (SIEM) solutions to monitor system activity, detect anomalies, and respond to potential threats in real-time.
+                            <div class="security-practice">
+                                <div class="practice-title">Model Security and Integrity</div>
+                                <div class="practice-description">
+                                    Implement measures to protect AI models from tampering, ensure model integrity through version control, and monitor for adversarial attacks that attempt to manipulate AI behavior.
+                                </div>
+                                <div class="practice-benefits">
+                                    <strong>Benefits:</strong>
+                                    <ul class="benefit-list">
+                                        <li>Prevents manipulation of AI decision-making processes</li>
+                                        <li>Ensures consistent and reliable automation performance</li>
+                                        <li>Protects against data poisoning and model inversion attacks</li>
+                                        <li>Maintains trust in AI-driven business processes</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="practice-benefits">
-                                <strong>Benefits:</strong>
-                                <ul class="benefit-list">
-                                    <li>Provides early detection of security incidents</li>
-                                    <li>Enables rapid response to potential threats</li>
-                                    <li>Creates comprehensive audit trails for compliance</li>
-                                    <li>Improves overall security posture through analytics</li>
-                                </ul>
-                            </div>
-                        </div>
 
-                        <div class="security-practice">
-                            <div class="practice-title">Incident Response Planning</div>
-                            <div class="practice-description">
-                                Develop and regularly test incident response procedures that include identification, containment, eradication, and recovery phases specific to AI automation environments.
-                            </div>
-                            <div class="practice-benefits">
-                                <strong>Benefits:</strong>
-                                <ul class="benefit-list">
-                                    <li>Reduces mean time to detection and response</li>
-                                    <li>Minimizes business impact of security incidents</li>
-                                    <li>Ensures regulatory compliance requirements</li>
-                                    <li>Improves organizational resilience</li>
-                                </ul>
-                            </div>
-                        </div>
+                            <blockquote>
+                                "Implementing these security best practices transformed our approach to AI automation. We achieved full compliance with industry regulations while maintaining the agility and efficiency that automation provides. Most importantly, our customers trust us with their data because they know we take security seriously."
+                                <cite class="block mt-2">— Michael Rodriguez, CTO at SecureTech Solutions</cite>
+                            </blockquote>
 
-                        <h2>Compliance and Regulatory Considerations</h2>
-                        <p>Different industries and jurisdictions have specific security and privacy requirements that must be addressed in AI automation implementations.</p>
-
-                        <div class="framework-box">
-                            <div class="framework-title">Key Compliance Frameworks</div>
+                            <h2>Implementation Checklist</h2>
+                            <p>Use this checklist to ensure you've addressed key security considerations:</p>
                             <ul>
-                                <li><strong>GDPR:</strong> European data protection regulation requiring consent, data portability, and breach notification</li>
-                                <li><strong>CCPA:</strong> California Consumer Privacy Act providing rights to know, delete, and opt-out of data sales</li>
-                                <li><strong>HIPAA:</strong> Healthcare privacy and security rules for protecting patient information</li>
-                                <li><strong>SOX:</strong> Sarbanes-Oxley Act requiring financial data accuracy and internal controls</li>
-                                <li><strong>PCI DSS:</strong> Payment Card Industry standards for securing credit card transactions</li>
+                                <li>Conduct thorough risk assessment before implementation</li>
+                                <li>Implement end-to-end encryption for all data</li>
+                                <li>Deploy multi-factor authentication for all system access</li>
+                                <li>Establish API security controls and monitoring</li>
+                                <li>Set up continuous security monitoring and alerting</li>
+                                <li>Develop and test incident response procedures</li>
+                                <li>Assess and monitor third-party vendor security</li>
+                                <li>Provide role-based security training to all stakeholders</li>
+                                <li>Regularly audit and update security controls</li>
+                                <li>Maintain compliance with relevant regulations</li>
                             </ul>
-                        </div>
 
-                        <div class="security-practice">
-                            <div class="practice-title">Privacy by Design</div>
-                            <div class="practice-description">
-                                Integrate privacy and security considerations into the design and development of AI automation systems from the beginning, rather than as an afterthought.
-                            </div>
-                            <div class="practice-benefits">
-                                <strong>Benefits:</strong>
-                                <ul class="benefit-list">
-                                    <li>Reduces compliance risks and potential fines</li>
-                                    <li>Builds customer trust through transparent practices</li>
-                                    <li>Lowers development and maintenance costs</li>
-                                    <li>Improves system security and reliability</li>
-                                </ul>
-                            </div>
-                        </div>
+                            <p>Security in AI automation is not a destination but an ongoing journey. By implementing these best practices and maintaining vigilance, organizations can harness the power of AI automation while protecting their most valuable assets. Remember that security is not just about technology—it's about people, processes, and a culture of continuous improvement.</p>
 
-                        <h2>Vendor Security and Third-Party Risk Management</h2>
-                        <p>When implementing AI automation solutions, organizations often rely on third-party vendors, making vendor security assessment critical.</p>
-
-                        <div class="security-practice">
-                            <div class="practice-title">Vendor Security Assessment</div>
-                            <div class="practice-description">
-                                Evaluate third-party vendors' security practices, certifications, and incident response capabilities before engagement, and maintain ongoing monitoring of vendor security posture.
-                            </div>
-                            <div class="practice-benefits">
-                                <strong>Benefits:</strong>
-                                <ul class="benefit-list">
-                                    <li>Reduces supply chain security risks</li>
-                                    <li>Ensures vendor alignment with organizational security standards</li>
-                                    <li>Provides visibility into third-party security practices</li>
-                                    <li>Supports compliance and audit requirements</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="security-practice">
-                            <div class="practice-title">Contractual Security Requirements</div>
-                            <div class="practice-description">
-                                Include specific security requirements, data handling obligations, and incident notification procedures in vendor contracts to ensure accountability.
-                            </div>
-                            <div class="practice-benefits">
-                                <strong>Benefits:</strong>
-                                <ul class="benefit-list">
-                                    <li>Establishes clear security expectations and responsibilities</li>
-                                    <li>Provides legal recourse in case of security failures</li>
-                                    <li>Ensures business continuity during security incidents</li>
-                                    <li>Supports compliance with regulatory requirements</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <h2>Security Training and Awareness</h2>
-                        <p>Human factors remain a critical component of security, making ongoing education and awareness essential for AI automation security.</p>
-
-                        <div class="security-practice">
-                            <div class="practice-title">Role-Based Security Training</div>
-                            <div class="practice-description">
-                                Provide tailored security training for different roles within the organization, from executives to developers to end users, focusing on AI automation-specific risks and best practices.
-                            </div>
-                            <div class="practice-benefits">
-                                <strong>Benefits:</strong>
-                                <ul class="benefit-list">
-                                    <li>Reduces human error-related security incidents</li>
-                                    <li>Improves recognition and reporting of potential threats</li>
-                                    <li>Ensures consistent security practices across the organization</li>
-                                    <li>Supports compliance with training requirements</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <h2>Emerging Security Considerations for AI</h2>
-                        <p>AI-specific security challenges require specialized approaches to protect against unique threats such as adversarial attacks and model poisoning.</p>
-
-                        <div class="security-practice">
-                            <div class="practice-title">Model Security and Integrity</div>
-                            <div class="practice-description">
-                                Implement measures to protect AI models from tampering, ensure model integrity through version control, and monitor for adversarial attacks that attempt to manipulate AI behavior.
-                            </div>
-                            <div class="practice-benefits">
-                                <strong>Benefits:</strong>
-                                <ul class="benefit-list">
-                                    <li>Prevents manipulation of AI decision-making processes</li>
-                                    <li>Ensures consistent and reliable automation performance</li>
-                                    <li>Protects against data poisoning and model inversion attacks</li>
-                                    <li>Maintains trust in AI-driven business processes</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <blockquote>
-                            "Implementing these security best practices transformed our approach to AI automation. We achieved full compliance with industry regulations while maintaining the agility and efficiency that automation provides. Most importantly, our customers trust us with their data because they know we take security seriously."
-                            <cite class="block mt-2">— Michael Rodriguez, CTO at SecureTech Solutions</cite>
-                        </blockquote>
-
-                        <h2>Implementation Checklist</h2>
-                        <p>Use this checklist to ensure you've addressed key security considerations:</p>
-                        <ul>
-                            <li>Conduct thorough risk assessment before implementation</li>
-                            <li>Implement end-to-end encryption for all data</li>
-                            <li>Deploy multi-factor authentication for all system access</li>
-                            <li>Establish API security controls and monitoring</li>
-                            <li>Set up continuous security monitoring and alerting</li>
-                            <li>Develop and test incident response procedures</li>
-                            <li>Assess and monitor third-party vendor security</li>
-                            <li>Provide role-based security training to all stakeholders</li>
-                            <li>Regularly audit and update security controls</li>
-                            <li>Maintain compliance with relevant regulations</li>
-                        </ul>
-
-                        <p>Security in AI automation is not a destination but an ongoing journey. By implementing these best practices and maintaining vigilance, organizations can harness the power of AI automation while protecting their most valuable assets. Remember that security is not just about technology—it's about people, processes, and a culture of continuous improvement.</p>
-
-                        <div class="mt-10 pt-6 border-t border-dark-700">
-                            <h3 class="text-xl font-black mb-4">Related Articles</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <a href="/pages/blogs/objection-handling.html" class="glass rounded-lg p-4 hover-glow block transition-all">
-                                    <h4 class="font-bold mb-2">Handling Common Objections</h4>
-                                    <p class="text-sm text-light-700">Address client security concerns</p>
-                                </a>
-                                <a href="/pages/blogs/implementation-guide.html" class="glass rounded-lg p-4 hover-glow block transition-all">
-                                    <h4 class="font-bold mb-2">Complete Implementation Guide</h4>
-                                    <p class="text-sm text-light-700">Step-by-step deployment process</p>
-                                </a>
+                            <div class="mt-10 pt-6 border-t border-dark-700">
+                                <h3 class="text-xl font-black mb-4">Related Articles</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <a href="/pages/blogs/objection-handling.html" class="glass rounded-lg p-4 hover-glow block transition-all">
+                                        <h4 class="font-bold mb-2">Handling Common Objections</h4>
+                                        <p class="text-sm text-light-700">Address client security concerns</p>
+                                    </a>
+                                    <a href="/pages/blogs/implementation-guide.html" class="glass rounded-lg p-4 hover-glow block transition-all">
+                                        <h4 class="font-bold mb-2">Complete Implementation Guide</h4>
+                                        <p class="text-sm text-light-700">Step-by-step deployment process</p>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="mt-12 text-center">
+                        <a href="/pages/blogs/" class="btn-secondary slime-glow">
+                            <i class="fas fa-arrow-left mr-2"></i> Back to Blog
+                        </a>
+                    </div>
                 </div>
+            </section>
+        </main>
 
-                <div class="mt-12 text-center">
-                    <a href="/pages/blogs/" class="btn-secondary slime-glow">
-                        <i class="fas fa-arrow-left mr-2"></i> Back to Blog
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+        <!-- Load footer component -->
+        <div
+            hx-get="/components/footer.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
 
-    <!-- Load footer component -->
-    <div id="footer-container"></div>
-
-    <!-- Load components after page load -->
-    <script>
-        // Function to load component
-        function loadComponent(url, targetId) {
-            // Check if target element exists
-            const targetElement = document.getElementById(targetId);
-            if (!targetElement) {
-                return;
-            }
-            
-            fetch(url)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok: ' + response.status);
-                    }
-                    return response.text();
-                })
-                .then(html => {
-                    // Simple approach - just insert the HTML
-                    targetElement.innerHTML = html;
-                    
-                    // Initialize components if this is the nav component
-                    if (targetId === 'nav-container') {
-                        // Small delay to ensure DOM is updated
-                        setTimeout(() => {
-                            if (typeof initMobileMenu === 'function') {
-                                initMobileMenu();
-                            }
-                        }, 100);
-                    }
-                })
-                .catch(error => {
-                    // Display error in the container
-                    targetElement.innerHTML = '<p style="color: red;">Error loading component</p>';
-                });
-        }
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            // Load components
-            loadComponent('/components/header.html', 'header-container');
-            loadComponent('/components/nav.html', 'nav-container');
-            loadComponent('/components/footer.html', 'footer-container');
-        });
-    </script>
-
-    <script src="../../assets/js/main.js"></script>
-</body>
+        <!-- Load scripts partial -->
+        <div
+            hx-get="/components/scripts.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+    </body>
 </html>

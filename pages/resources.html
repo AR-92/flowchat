@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Resources & Guides - FlowChat</title>
+        <meta
+            name="description"
+            content="Access valuable resources, guides, and materials to help you implement and maximize AI automation solutions for your business."
+        />
+        <link rel="icon" type="image/png" href="/assets/images/ico.png" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <!-- HTMX loaded without type="module" as we're not using ES modules -->
+        <script src="/assets/js/htmx.min.js"></script>
+        <link rel="stylesheet" href="/assets/css/output.css" />
+    </head>
+    <body>
+        <!-- Load header component -->
+        <div
+            hx-get="/components/header.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Load simple navigation component -->
+        <div
+            hx-get="/components/simple-nav.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Resources Hero Section -->
+        <section class="py-24 px-4 sm:px-6 relative overflow-hidden">
+            <!-- Orb in Hero Section -->
+            <div class="absolute top-1/4 right-10 w-64 h-64 section-orb animate-float pulse-glow" style="--orb-color: rgba(107, 60, 255, 0.2);"></div>
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto">
+                    <div class="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-dark-600 animate-on-scroll mx-auto">
+                        <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
+                        <span class="text-xs font-black tracking-widest text-accent-500">RESOURCES</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-black tracking-tight animate-on-scroll leading-tight">
+                        AI Automation <span class="text-accent-500">Resources</span><br class="hidden sm:block"> & Guides
+                    </h1>
+                    <p class="mt-6 text-xl text-light-700 max-w-2xl mx-auto animate-on-scroll leading-relaxed">
+                        Access valuable resources to help you implement and maximize AI automation solutions. From implementation guides to ROI calculators.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Resources Section -->
+            <section class="py-24 px-4 sm:px-6 relative overflow-hidden">
+                <div class="max-w-7xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Implementation Guide -->
+                        <a href="/pages/blogs/implementation-guide.html" class="blog-card glass rounded-2xl p-6 hover-glow animate-on-scroll block">
+                            <div class="w-full h-48 rounded-xl overflow-hidden bg-black flex items-center justify-center mb-4">
+                                <i class="fas fa-book text-4xl text-accent-500"></i>
+                            </div>
+                            <div class="inline-flex items-center gap-2 glass px-3 py-1 rounded-full mb-4 border border-dark-600">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span>
+                                <span class="text-xs font-black tracking-widest text-accent-500">GUIDE</span>
+                            </div>
+                            <h3 class="text-xl font-black mb-2">Complete Implementation Guide</h3>
+                            <p class="text-light-700 mb-4">Step-by-step process to successfully implement AI automation in your organization.</p>
+                            <div class="flex items-center text-sm text-light-500">
+                                <span>8 min read</span>
+                            </div>
+                        </a>
+
+                        <!-- ROI Calculator -->
+                        <a href="/pages/blogs/roi-calculator.html" class="blog-card glass rounded-2xl p-6 hover-glow animate-on-scroll block">
+                            <div class="w-full h-48 rounded-xl overflow-hidden bg-black flex items-center justify-center mb-4">
+                                <i class="fas fa-calculator text-4xl text-accent-500"></i>
+                            </div>
+                            <div class="inline-flex items-center gap-2 glass px-3 py-1 rounded-full mb-4 border border-dark-600">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span>
+                                <span class="text-xs font-black tracking-widest text-accent-500">FINANCE</span>
+                            </div>
+                            <h3 class="text-xl font-black mb-2">ROI Calculator & Framework</h3>
+                            <p class="text-light-700 mb-4">Learn how to measure and communicate the financial benefits of AI automation.</p>
+                            <div class="flex items-center text-sm text-light-500">
+                                <span>7 min read</span>
+                            </div>
+                        </a>
+
+                        <!-- Sales Pitch Guide -->
+                        <a href="/pages/blogs/sales-pitch-techniques.html" class="blog-card glass rounded-2xl p-6 hover-glow animate-on-scroll block">
+                            <div class="w-full h-48 rounded-xl overflow-hidden bg-black flex items-center justify-center mb-4">
+                                <i class="fas fa-bullhorn text-4xl text-accent-500"></i>
+                            </div>
+                            <div class="inline-flex items-center gap-2 glass px-3 py-1 rounded-full mb-4 border border-dark-600">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span>
+                                <span class="text-xs font-black tracking-widest text-accent-500">SALES</span>
+                            </div>
+                            <h3 class="text-xl font-black mb-2">Sales Pitch Techniques</h3>
+                            <p class="text-light-700 mb-4">Learn proven techniques to effectively communicate the value of AI automation.</p>
+                            <div class="flex items-center text-sm text-light-500">
+                                <span>6 min read</span>
+                            </div>
+                        </a>
+
+                        <!-- Objection Handling -->
+                        <a href="/pages/blogs/objection-handling.html" class="blog-card glass rounded-2xl p-6 hover-glow animate-on-scroll block">
+                            <div class="w-full h-48 rounded-xl overflow-hidden bg-black flex items-center justify-center mb-4">
+                                <i class="fas fa-shield-alt text-4xl text-accent-500"></i>
+                            </div>
+                            <div class="inline-flex items-center gap-2 glass px-3 py-1 rounded-full mb-4 border border-dark-600">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span>
+                                <span class="text-xs font-black tracking-widest text-accent-500">SALES</span>
+                            </div>
+                            <h3 class="text-xl font-black mb-2">Handling Common Objections</h3>
+                            <p class="text-light-700 mb-4">Address client concerns with confidence using proven responses.</p>
+                            <div class="flex items-center text-sm text-light-500">
+                                <span>5 min read</span>
+                            </div>
+                        </a>
+
+                        <!-- Security Best Practices -->
+                        <a href="/pages/blogs/security-best-practices.html" class="blog-card glass rounded-2xl p-6 hover-glow animate-on-scroll block">
+                            <div class="w-full h-48 rounded-xl overflow-hidden bg-black flex items-center justify-center mb-4">
+                                <i class="fas fa-lock text-4xl text-accent-500"></i>
+                            </div>
+                            <div class="inline-flex items-center gap-2 glass px-3 py-1 rounded-full mb-4 border border-dark-600">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span>
+                                <span class="text-xs font-black tracking-widest text-accent-500">SECURITY</span>
+                            </div>
+                            <h3 class="text-xl font-black mb-2">Security Best Practices</h3>
+                            <p class="text-light-700 mb-4">Protect your data and systems while implementing powerful AI automation.</p>
+                            <div class="flex items-center text-sm text-light-500">
+                                <span>6 min read</span>
+                            </div>
+                        </a>
+
+                        <!-- Scaling Automation -->
+                        <a href="/pages/blogs/scaling-automation.html" class="blog-card glass rounded-2xl p-6 hover-glow animate-on-scroll block">
+                            <div class="w-full h-48 rounded-xl overflow-hidden bg-black flex items-center justify-center mb-4">
+                                <i class="fas fa-expand-arrows-alt text-4xl text-accent-500"></i>
+                            </div>
+                            <div class="inline-flex items-center gap-2 glass px-3 py-1 rounded-full mb-4 border border-dark-600">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span>
+                                <span class="text-xs font-black tracking-widest text-accent-500">SCALABILITY</span>
+                            </div>
+                            <h3 class="text-xl font-black mb-2">Scaling Automation Solutions</h3>
+                            <p class="text-light-700 mb-4">Strategies for growing your automation capabilities as your business expands.</p>
+                            <div class="flex items-center text-sm text-light-500">
+                                <span>6 min read</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- View All Blog Posts -->
+                    <div class="mt-12 text-center">
+                        <a href="/pages/blogs/" class="btn-secondary slime-glow px-6 py-3 rounded-lg hover-glow inline-block">
+                            View All Blog Posts
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter Signup -->
+            <div class="py-12 px-4 sm:px-6">
+                <div class="max-w-3xl mx-auto glass rounded-2xl p-8 hover-glow">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-black mb-2">Get Automation Resources Delivered</h3>
+                        <p class="text-light-700 mb-6">Subscribe to receive our latest guides, tips, and industry insights.</p>
+                        
+                        <form id="newsletter-form" hx-post="/components/newsletter-success.html" hx-target="#newsletter-form" hx-swap="outerHTML" class="max-w-md mx-auto">
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <input type="email" name="email" placeholder="Enter your email" class="form-input flex-grow px-4 py-2.5 rounded-lg border border-dark-600 focus:border-accent-500 focus:ring-0" required>
+                                <button type="submit" class="btn-primary slime-glow px-5 py-2.5 rounded-lg hover-glow whitespace-nowrap">
+                                    <span class="htmx-indicator">
+                                        <span class="loading-spinner mr-2"></span> Sending...
+                                    </span>
+                                    <span class="htmx-request:hidden">
+                                        Subscribe
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Load footer component -->
+        <div
+            hx-get="/components/footer.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Load scripts partial -->
+        <div
+            hx-get="/components/scripts.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+    </body>
+</html>

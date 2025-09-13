@@ -1,322 +1,316 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handling Common Objections to AI Automation | FlowChat Blog</title>
-    <link rel="icon" type="image/png" href="../../assets/images/ico.png" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Handling Common Objections to AI Automation | FlowChat Blog</title>
+        <link rel="icon" type="image/png" href="/assets/images/ico.png" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <!-- HTMX loaded without type="module" as we're not using ES modules -->
+        <script src="/assets/js/htmx.min.js"></script>
+        <link rel="stylesheet" href="/assets/css/output.css" />
+        <link rel="stylesheet" href="/assets/css/htmx.css" />
+        <link rel="stylesheet" href="/assets/css/fix-footer.css" />
+    </head>
+    <body class="bg-dark-950 text-light-900 font-sans">
+        <!-- Skip to content link for accessibility -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../../assets/css/output.css">
-    <link rel="stylesheet" href="../../assets/css/shared.css">
-    
-    
-</head>
-<body class="bg-dark-950 text-light-900 font-sans">
-    <!-- Load header component -->
-    <div id="header-container"></div>
+        <!-- Load header component -->
+        <div
+            hx-get="/components/header.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
 
-    <!-- Load navigation component -->
-    <div id="nav-container"></div>
+        <!-- Load navigation component -->
+        <div
+            hx-get="/components/simple-nav.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
 
-    <!-- Skip to content link for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+        <!-- Fashion-Style Hero Section with Smooth Gradient -->
+        <header class="hero-container relative px-6 overflow-hidden pt-24">
+            <!-- Large Orb Gradient in Hero Section -->
+            <div class="absolute top-1/2 left-2/5 w-[400px] h-[400px] hero-orb transform -translate-x-1/2 -translate-y-1/2 animate-float float"></div>
+            <!-- Secondary Orb on Right Side -->
+            <div class="absolute top-1/3 right-1/4 w-[300px] h-[300px] hero-orb transform -translate-y-1/2 opacity-70 animate-pulse float"></div>
 
-    
+            <div class="max-w-7xl mx-auto relative z-10 text-center pt-12 pb-8 px-4">
+                <div class="inline-flex items-center gap-3 glass px-4 py-2 rounded-full mb-6 border border-dark-600 animate-on-scroll">
+                    <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
+                    <span class="text-xs font-black tracking-widest text-accent-500">SALES</span>
+                    <span class="text-xs font-medium text-light-900">OBJECTION HANDLING</span>
+                </div>
 
-    <!-- Fashion-Style Hero Section with Smooth Gradient -->
-    <header class="hero-container relative px-6 overflow-hidden pt-24">
-        <!-- Large Orb Gradient in Hero Section -->
-        <div class="absolute top-1/2 left-2/5 w-[400px] h-[400px] hero-orb transform -translate-x-1/2 -translate-y-1/2 animate-float float"></div>
-        <!-- Secondary Orb on Right Side -->
-        <div class="absolute top-1/3 right-1/4 w-[300px] h-[300px] hero-orb transform -translate-y-1/2 opacity-70 animate-pulse float"></div>
+                <h1 class="text-4xl md:text-5xl font-black tracking-tight max-w-4xl mx-auto leading-tight animate-on-scroll">
+                    Handling Common Objections to AI Automation
+                </h1>
 
-        <div class="max-w-7xl mx-auto relative z-10 text-center pt-12 pb-8 px-4">
-            <div class="inline-flex items-center gap-3 glass px-4 py-2 rounded-full mb-6 border border-dark-600 animate-on-scroll">
-                <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
-                <span class="text-xs font-black tracking-widest text-accent-500">SALES</span>
-                <span class="text-xs font-medium text-light-900">OBJECTION HANDLING</span>
+                <p class="mt-4 text-xl text-light-700 max-w-2xl mx-auto leading-relaxed animate-on-scroll">
+                    Address client concerns with confidence using proven responses and explanations.
+                </p>
+
+                <div class="mt-6 flex items-center justify-center text-light-500 animate-on-scroll">
+                    <span>By FlowChat Team</span>
+                    <span class="mx-3">•</span>
+                    <span>April 22, 2025</span>
+                    <span class="mx-3">•</span>
+                    <span>5 min read</span>
+                </div>
             </div>
+        </header>
 
-            <h1 class="text-4xl md:text-5xl font-black tracking-tight max-w-4xl mx-auto leading-tight animate-on-scroll">
-                Handling Common Objections to AI Automation
-            </h1>
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Article Content -->
+            <section class="py-16 px-4 sm:px-6">
+                <div class="max-w-3xl mx-auto">
+                    <div class="glass rounded-2xl p-8 animate-on-scroll">
+                        <div class="article-content">
+                            <p>When selling AI automation solutions, prospects often raise objections based on misconceptions, fears, or lack of understanding. Being prepared with thoughtful, compelling responses can turn these objections into opportunities to demonstrate value. Here's how to handle the most common concerns with confidence.</p>
 
-            <p class="mt-4 text-xl text-light-700 max-w-2xl mx-auto leading-relaxed animate-on-scroll">
-                Address client concerns with confidence using proven responses and explanations.
-            </p>
-
-            <div class="mt-6 flex items-center justify-center text-light-500 animate-on-scroll">
-                <span>By FlowChat Team</span>
-                <span class="mx-3">•</span>
-                <span>April 22, 2025</span>
-                <span class="mx-3">•</span>
-                <span>5 min read</span>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Article Content -->
-        <section class="py-16 px-4 sm:px-6">
-            <div class="max-w-3xl mx-auto">
-                <div class="glass rounded-2xl p-8 animate-on-scroll">
-                    <div class="article-content">
-                        <p>When selling AI automation solutions, prospects often raise objections based on misconceptions, fears, or lack of understanding. Being prepared with thoughtful, compelling responses can turn these objections into opportunities to demonstrate value. Here's how to handle the most common concerns with confidence.</p>
-
-                        <h2>Objection 1: "We Already Have Staff"</h2>
-                        <div class="objection-card">
-                            <div class="objection-title">The Concern</div>
-                            <p>Prospects worry that implementing AI automation means laying off employees or making staff redundant.</p>
-                            
-                            <div class="objection-response">
-                                <div class="response-label">Powerful Response</div>
-                                <p>"Our automation doesn't replace your team—it makes them more productive. When routine tasks are handled automatically, your staff can focus on strategic work that drives growth and revenue. Think of it as giving your team a powerful assistant that handles the busywork while they concentrate on high-value activities."</p>
+                            <h2>Objection 1: "We Already Have Staff"</h2>
+                            <div class="objection-card">
+                                <div class="objection-title">The Concern</div>
+                                <p>Prospects worry that implementing AI automation means laying off employees or making staff redundant.</p>
+                                
+                                <div class="objection-response">
+                                    <div class="response-label">Powerful Response</div>
+                                    <p>"Our automation doesn't replace your team—it makes them more productive. When routine tasks are handled automatically, your staff can focus on strategic work that drives growth and revenue. Think of it as giving your team a powerful assistant that handles the busywork while they concentrate on high-value activities."</p>
+                                </div>
+                                
+                                <p>This response works because it:</p>
+                                <ul>
+                                    <li>Reframes automation as an enhancement, not a replacement</li>
+                                    <li>Focuses on empowerment rather than displacement</li>
+                                    <li>Connects to business outcomes (growth, revenue)</li>
+                                    <li>Makes the value proposition immediately clear</li>
+                                </ul>
                             </div>
-                            
-                            <p>This response works because it:</p>
-                            <ul>
-                                <li>Reframes automation as an enhancement, not a replacement</li>
-                                <li>Focuses on empowerment rather than displacement</li>
-                                <li>Connects to business outcomes (growth, revenue)</li>
-                                <li>Makes the value proposition immediately clear</li>
-                            </ul>
-                        </div>
 
-                        <h2>Objection 2: "This Sounds Expensive"</h2>
-                        <div class="objection-card">
-                            <div class="objection-title">The Concern</div>
-                            <p>Prospects perceive AI automation as a costly investment with uncertain returns.</p>
-                            
-                            <div class="objection-response">
-                                <div class="response-label">Powerful Response</div>
-                                <p>"AI automation costs less than hiring one employee and works 24/7. Consider the ROI: if this saves your business 20 hours a week, how much is that worth annually? Our clients typically see a 300-500% return on investment in the first year alone."</p>
+                            <h2>Objection 2: "This Sounds Expensive"</h2>
+                            <div class="objection-card">
+                                <div class="objection-title">The Concern</div>
+                                <p>Prospects perceive AI automation as a costly investment with uncertain returns.</p>
+                                
+                                <div class="objection-response">
+                                    <div class="response-label">Powerful Response</div>
+                                    <p>"AI automation costs less than hiring one employee and works 24/7. Consider the ROI: if this saves your business 20 hours a week, how much is that worth annually? Our clients typically see a 300-500% return on investment in the first year alone."</p>
+                                </div>
+                                
+                                <p>Key elements of this response:</p>
+                                <ul>
+                                    <li>Provides concrete cost comparison</li>
+                                    <li>Emphasizes 24/7 availability</li>
+                                    <li>Asks a compelling ROI question</li>
+                                    <li>Shares specific ROI statistics</li>
+                                </ul>
                             </div>
-                            
-                            <p>Key elements of this response:</p>
-                            <ul>
-                                <li>Provides concrete cost comparison</li>
-                                <li>Emphasizes 24/7 availability</li>
-                                <li>Asks a compelling ROI question</li>
-                                <li>Shares specific ROI statistics</li>
-                            </ul>
-                        </div>
 
-                        <h2>Objection 3: "I Don't Get the Tech"</h2>
-                        <div class="objection-card">
-                            <div class="objection-title">The Concern</div>
-                            <p>Prospects feel overwhelmed by technical complexity and worry about managing the solution.</p>
-                            
-                            <div class="objection-response">
-                                <div class="response-label">Powerful Response</div>
-                                <p>"You don't need to understand the technology. Our team handles everything from implementation to maintenance. You simply experience the benefits of increased efficiency and reduced costs. We provide training and ongoing support to ensure smooth adoption."</p>
+                            <h2>Objection 3: "I Don't Get the Tech"</h2>
+                            <div class="objection-card">
+                                <div class="objection-title">The Concern</div>
+                                <p>Prospects feel overwhelmed by technical complexity and worry about managing the solution.</p>
+                                
+                                <div class="objection-response">
+                                    <div class="response-label">Powerful Response</div>
+                                    <p>"You don't need to understand the technology. Our team handles everything from implementation to maintenance. You simply experience the benefits of increased efficiency and reduced costs. We provide training and ongoing support to ensure smooth adoption."</p>
+                                </div>
+                                
+                                <p>Why this response is effective:</p>
+                                <ul>
+                                    <li>Addresses the complexity concern directly</li>
+                                    <li>Emphasizes the service aspect</li>
+                                    <li>Focuses on benefits, not technical details</li>
+                                    <li>Reassures about support and training</li>
+                                </ul>
                             </div>
-                            
-                            <p>Why this response is effective:</p>
-                            <ul>
-                                <li>Addresses the complexity concern directly</li>
-                                <li>Emphasizes the service aspect</li>
-                                <li>Focuses on benefits, not technical details</li>
-                                <li>Reassures about support and training</li>
-                            </ul>
-                        </div>
 
-                        <h2>Objection 4: "Is It Secure?"</h2>
-                        <div class="objection-card">
-                            <div class="objection-title">The Concern</div>
-                            <p>Prospects worry about data security and privacy with automated systems.</p>
-                            
-                            <div class="objection-response">
-                                <div class="response-label">Powerful Response</div>
-                                <p>"Yes, we use enterprise-grade security with encryption, strict access controls, and compliance-ready infrastructure. Your data stays safe while delivering maximum business value. We're compliant with GDPR, CCPA, and other major data protection regulations, and we offer optional client-hosted deployment for sensitive workflows."</p>
+                            <h2>Objection 4: "Is It Secure?"</h2>
+                            <div class="objection-card">
+                                <div class="objection-title">The Concern</div>
+                                <p>Prospects worry about data security and privacy with automated systems.</p>
+                                
+                                <div class="objection-response">
+                                    <div class="response-label">Powerful Response</div>
+                                    <p>"Yes, we use enterprise-grade security with encryption, strict access controls, and compliance-ready infrastructure. Your data stays safe while delivering maximum business value. We're compliant with GDPR, CCPA, and other major data protection regulations, and we offer optional client-hosted deployment for sensitive workflows."</p>
+                                </div>
+                                
+                                <p>This response builds confidence by:</p>
+                                <ul>
+                                    <li>Providing specific security features</li>
+                                    <li>Mentioning compliance standards</li>
+                                    <li>Offering flexible deployment options</li>
+                                    <li>Balancing security with business benefits</li>
+                                </ul>
                             </div>
-                            
-                            <p>This response builds confidence by:</p>
-                            <ul>
-                                <li>Providing specific security features</li>
-                                <li>Mentioning compliance standards</li>
-                                <li>Offering flexible deployment options</li>
-                                <li>Balancing security with business benefits</li>
-                            </ul>
-                        </div>
 
-                        <h2>Objection 5: "What If Something Breaks?"</h2>
-                        <div class="objection-card">
-                            <div class="objection-title">The Concern</div>
-                            <p>Prospects worry about system reliability and support when things go wrong.</p>
-                            
-                            <div class="objection-response">
-                                <div class="response-label">Powerful Response</div>
-                                <p>"We provide 24/7 monitoring and instant fixes. Our DevOps team ensures 99.9% uptime with automatic failover systems. In the rare event of an issue, our response time is under 15 minutes, and most problems are resolved before you even notice them. We also maintain detailed audit logs for transparency."</p>
+                            <h2>Objection 5: "What If Something Breaks?"</h2>
+                            <div class="objection-card">
+                                <div class="objection-title">The Concern</div>
+                                <p>Prospects worry about system reliability and support when things go wrong.</p>
+                                
+                                <div class="objection-response">
+                                    <div class="response-label">Powerful Response</div>
+                                    <p>"We provide 24/7 monitoring and instant fixes. Our DevOps team ensures 99.9% uptime with automatic failover systems. In the rare event of an issue, our response time is under 15 minutes, and most problems are resolved before you even notice them. We also maintain detailed audit logs for transparency."</p>
+                                </div>
+                                
+                                <p>This response reassures by:</p>
+                                <ul>
+                                    <li>Promising continuous monitoring</li>
+                                    <li>Providing specific uptime guarantees</li>
+                                    <li>Offering rapid response commitments</li>
+                                    <li>Mentioning proactive problem prevention</li>
+                                </ul>
                             </div>
-                            
-                            <p>This response reassures by:</p>
-                            <ul>
-                                <li>Promising continuous monitoring</li>
-                                <li>Providing specific uptime guarantees</li>
-                                <li>Offering rapid response commitments</li>
-                                <li>Mentioning proactive problem prevention</li>
-                            </ul>
-                        </div>
 
-                        <h2>Objection 6: "My Business is Growing"</h2>
-                        <div class="objection-card">
-                            <div class="objection-title">The Concern</div>
-                            <p>Prospects worry that automation won't scale with their business growth.</p>
-                            
-                            <div class="objection-response">
-                                <div class="response-label">Powerful Response</div>
-                                <p>"Our DevOps team ensures automations scale seamlessly in the cloud. Whether you're processing 100 transactions or 100,000, our systems maintain performance and reliability. We've successfully scaled clients from startup to enterprise level, handling thousands of tasks daily without performance degradation."</p>
+                            <h2>Objection 6: "My Business is Growing"</h2>
+                            <div class="objection-card">
+                                <div class="objection-title">The Concern</div>
+                                <p>Prospects worry that automation won't scale with their business growth.</p>
+                                
+                                <div class="objection-response">
+                                    <div class="response-label">Powerful Response</div>
+                                    <p>"Our DevOps team ensures automations scale seamlessly in the cloud. Whether you're processing 100 transactions or 100,000, our systems maintain performance and reliability. We've successfully scaled clients from startup to enterprise level, handling thousands of tasks daily without performance degradation."</p>
+                                </div>
+                                
+                                <p>This response addresses scalability by:</p>
+                                <ul>
+                                    <li>Highlighting cloud-based architecture</li>
+                                    <li>Providing concrete scaling examples</li>
+                                    <li>Mentioning successful growth stories</li>
+                                    <li>Emphasizing performance consistency</li>
+                                </ul>
                             </div>
-                            
-                            <p>This response addresses scalability by:</p>
-                            <ul>
-                                <li>Highlighting cloud-based architecture</li>
-                                <li>Providing concrete scaling examples</li>
-                                <li>Mentioning successful growth stories</li>
-                                <li>Emphasizing performance consistency</li>
-                            </ul>
-                        </div>
 
-                        <h2>Objection 7: "I Already Have an App/Site"</h2>
-                        <div class="objection-card">
-                            <div class="objection-title">The Concern</div>
-                            <p>Prospects worry about integration with existing systems and applications.</p>
-                            
-                            <div class="objection-response">
-                                <div class="response-label">Powerful Response</div>
-                                <p>"Perfect! We specialize in integrating automation with existing systems via API keys. Whether it's your website, mobile app, or custom software, we connect seamlessly without disrupting your current operations. Our integration process typically takes 3-5 days and requires minimal involvement from your team."</p>
+                            <h2>Objection 7: "I Already Have an App/Site"</h2>
+                            <div class="objection-card">
+                                <div class="objection-title">The Concern</div>
+                                <p>Prospects worry about integration with existing systems and applications.</p>
+                                
+                                <div class="objection-response">
+                                    <div class="response-label">Powerful Response</div>
+                                    <p>"Perfect! We specialize in integrating automation with existing systems via API keys. Whether it's your website, mobile app, or custom software, we connect seamlessly without disrupting your current operations. Our integration process typically takes 3-5 days and requires minimal involvement from your team."</p>
+                                </div>
+                                
+                                <p>This response turns a concern into an advantage by:</p>
+                                <ul>
+                                    <li>Framing existing systems as beneficial</li>
+                                    <li>Highlighting integration expertise</li>
+                                    <li>Providing specific timeline expectations</li>
+                                    <li>Minimizing client involvement requirements</li>
+                                </ul>
                             </div>
-                            
-                            <p>This response turns a concern into an advantage by:</p>
-                            <ul>
-                                <li>Framing existing systems as beneficial</li>
-                                <li>Highlighting integration expertise</li>
-                                <li>Providing specific timeline expectations</li>
-                                <li>Minimizing client involvement requirements</li>
-                            </ul>
-                        </div>
 
-                        <h2>Objection 8: "Automation Will Make Mistakes"</h2>
-                        <div class="objection-card">
-                            <div class="objection-title">The Concern</div>
-                            <p>Prospects worry that automated systems will introduce new errors or problems.</p>
-                            
-                            <div class="objection-response">
-                                <div class="response-label">Powerful Response</div>
-                                <p>"Actually, automation eliminates human error. Our systems process information consistently and accurately, ensuring that data entry, calculations, and task execution are error-free. We build in validation checks and exception handling, so the system catches and flags any anomalies before they become issues."</p>
+                            <h2>Objection 8: "Automation Will Make Mistakes"</h2>
+                            <div class="objection-card">
+                                <div class="objection-title">The Concern</div>
+                                <p>Prospects worry that automated systems will introduce new errors or problems.</p>
+                                
+                                <div class="objection-response">
+                                    <div class="response-label">Powerful Response</div>
+                                    <p>"Actually, automation eliminates human error. Our systems process information consistently and accurately, ensuring that data entry, calculations, and task execution are error-free. We build in validation checks and exception handling, so the system catches and flags any anomalies before they become issues."</p>
+                                </div>
+                                
+                                <p>This response reframes the concern by:</p>
+                                <ul>
+                                    <li>Flipping the narrative (automation reduces errors)</li>
+                                    <li>Highlighting consistency benefits</li>
+                                    <li>Mentioning built-in quality controls</li>
+                                    <li>Emphasizing proactive problem prevention</li>
+                                </ul>
                             </div>
-                            
-                            <p>This response reframes the concern by:</p>
+
+                            <h2>Advanced Objection Handling Techniques</h2>
+
+                            <h3>Listen Actively and Empathize</h3>
+                            <p>Before responding to any objection, demonstrate that you understand and respect the concern:</p>
+                            <p><em>"That's a really important consideration, and I appreciate you bringing that up."</em></p>
+
+                            <h3>Ask Clarifying Questions</h3>
+                            <p>Deepen your understanding of the specific concern:</p>
+                            <p><em>"Can you tell me more about what aspects of security are most important to you?"</em></p>
+
+                            <h3>Share Relevant Case Studies</h3>
+                            <p>Provide concrete examples of how others overcame similar concerns:</p>
+                            <p><em>"We had a similar concern from a healthcare client, and here's how we addressed it..."</em></p>
+
+                            <h3>Offer Customized Solutions</h3>
+                            <p>Show flexibility in addressing unique concerns:</p>
+                            <p><em>"Based on your specific needs, we can customize the approach to address that concern directly."</em></p>
+
+                            <h2>Turning Objections into Opportunities</h2>
+                            <p>The most skilled sales professionals view objections not as barriers, but as opportunities to:</p>
                             <ul>
-                                <li>Flipping the narrative (automation reduces errors)</li>
-                                <li>Highlighting consistency benefits</li>
-                                <li>Mentioning built-in quality controls</li>
-                                <li>Emphasizing proactive problem prevention</li>
+                                <li><strong>Build Trust:</strong> Addressing concerns thoughtfully demonstrates expertise and care</li>
+                                <li><strong>Deepen Understanding:</strong> Objections reveal important client priorities and values</li>
+                                <li><strong>Show Value:</strong> Thoughtful responses highlight the comprehensive nature of your solution</li>
+                                <li><strong>Advance the Conversation:</strong> Successfully handled objections move prospects closer to decision</li>
                             </ul>
-                        </div>
 
-                        <h2>Advanced Objection Handling Techniques</h2>
+                            <blockquote>
+                                "Mastering objection handling transformed our sales approach. By addressing concerns with confidence and specific examples, we increased our close rate by 40% and shortened our sales cycle by an average of 8 days. Clients appreciate our transparency and expertise."
+                                <cite class="block mt-2">— Sarah Chen, Sales Director at TechFlow Solutions</cite>
+                            </blockquote>
 
-                        <h3>Listen Actively and Empathize</h3>
-                        <p>Before responding to any objection, demonstrate that you understand and respect the concern:</p>
-                        <p><em>"That's a really important consideration, and I appreciate you bringing that up."</em></p>
+                            <h2>Preparation Tips</h2>
+                            <p>To handle objections effectively:</p>
+                            <ul>
+                                <li><strong>Anticipate Common Concerns:</strong> Prepare responses for the 80% of objections you'll hear 80% of the time</li>
+                                <li><strong>Practice Your Responses:</strong> Rehearse until responses feel natural and conversational</li>
+                                <li><strong>Collect Case Studies:</strong> Gather specific examples of how you've addressed similar concerns</li>
+                                <li><strong>Stay Calm and Confident:</strong> Objections are normal and expected—embrace them as part of the process</li>
+                                <li><strong>Listen More Than You Speak:</strong> Understanding the root concern is more important than delivering a canned response</li>
+                            </ul>
 
-                        <h3>Ask Clarifying Questions</h3>
-                        <p>Deepen your understanding of the specific concern:</p>
-                        <p><em>"Can you tell me more about what aspects of security are most important to you?"</em></p>
+                            <p>Remember, objections are often buying signals in disguise. When prospects raise concerns, they're engaged and interested—they just need reassurance. By addressing objections with empathy, expertise, and specific examples, you transform concerns into confidence and move closer to a successful partnership.</p>
 
-                        <h3>Share Relevant Case Studies</h3>
-                        <p>Provide concrete examples of how others overcame similar concerns:</p>
-                        <p><em>"We had a similar concern from a healthcare client, and here's how we addressed it..."</em></p>
-
-                        <h3>Offer Customized Solutions</h3>
-                        <p>Show flexibility in addressing unique concerns:</p>
-                        <p><em>"Based on your specific needs, we can customize the approach to address that concern directly."</em></p>
-
-                        <h2>Turning Objections into Opportunities</h2>
-                        <p>The most skilled sales professionals view objections not as barriers, but as opportunities to:</p>
-                        <ul>
-                            <li><strong>Build Trust:</strong> Addressing concerns thoughtfully demonstrates expertise and care</li>
-                            <li><strong>Deepen Understanding:</strong> Objections reveal important client priorities and values</li>
-                            <li><strong>Show Value:</strong> Thoughtful responses highlight the comprehensive nature of your solution</li>
-                            <li><strong>Advance the Conversation:</strong> Successfully handled objections move prospects closer to decision</li>
-                        </ul>
-
-                        <blockquote>
-                            "Mastering objection handling transformed our sales approach. By addressing concerns with confidence and specific examples, we increased our close rate by 40% and shortened our sales cycle by an average of 8 days. Clients appreciate our transparency and expertise."
-                            <cite class="block mt-2">— Sarah Chen, Sales Director at TechFlow Solutions</cite>
-                        </blockquote>
-
-                        <h2>Preparation Tips</h2>
-                        <p>To handle objections effectively:</p>
-                        <ul>
-                            <li><strong>Anticipate Common Concerns:</strong> Prepare responses for the 80% of objections you'll hear 80% of the time</li>
-                            <li><strong>Practice Your Responses:</strong> Rehearse until responses feel natural and conversational</li>
-                            <li><strong>Collect Case Studies:</strong> Gather specific examples of how you've addressed similar concerns</li>
-                            <li><strong>Stay Calm and Confident:</strong> Objections are normal and expected—embrace them as part of the process</li>
-                            <li><strong>Listen More Than You Speak:</strong> Understanding the root concern is more important than delivering a canned response</li>
-                        </ul>
-
-                        <p>Remember, objections are often buying signals in disguise. When prospects raise concerns, they're engaged and interested—they just need reassurance. By addressing objections with empathy, expertise, and specific examples, you transform concerns into confidence and move closer to a successful partnership.</p>
-
-                        <div class="mt-10 pt-6 border-t border-dark-700">
-                            <h3 class="text-xl font-black mb-4">Related Articles</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <a href="/pages/blogs/sales-pitch-techniques.html" class="glass rounded-lg p-4 hover-glow block transition-all">
-                                    <h4 class="font-bold mb-2">Mastering the AI Automation Sales Pitch</h4>
-                                    <p class="text-sm text-light-700">Learn proven sales techniques</p>
-                                </a>
-                                <a href="/pages/blogs/security-best-practices.html" class="glass rounded-lg p-4 hover-glow block transition-all">
-                                    <h4 class="font-bold mb-2">Security Best Practices</h4>
-                                    <p class="text-sm text-light-700">Enterprise-grade security measures</p>
-                                </a>
+                            <div class="mt-10 pt-6 border-t border-dark-700">
+                                <h3 class="text-xl font-black mb-4">Related Articles</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <a href="/pages/blogs/sales-pitch-techniques.html" class="glass rounded-lg p-4 hover-glow block transition-all">
+                                        <h4 class="font-bold mb-2">Mastering the AI Automation Sales Pitch</h4>
+                                        <p class="text-sm text-light-700">Learn proven sales techniques</p>
+                                    </a>
+                                    <a href="/pages/blogs/security-best-practices.html" class="glass rounded-lg p-4 hover-glow block transition-all">
+                                        <h4 class="font-bold mb-2">Security Best Practices</h4>
+                                        <p class="text-sm text-light-700">Enterprise-grade security measures</p>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="mt-12 text-center">
+                        <a href="/pages/blogs/" class="btn-secondary slime-glow">
+                            <i class="fas fa-arrow-left mr-2"></i> Back to Blog
+                        </a>
+                    </div>
                 </div>
-
-                <div class="mt-12 text-center">
-                    <a href="/pages/blogs/" class="btn-secondary slime-glow">
-                        <i class="fas fa-arrow-left mr-2"></i> Back to Blog
-                    </a>
-                </div>
-            </div>
-        </section>
-
-    <!-- Load footer component -->
-    <div id="footer-container"></div>
-
+            </section>
+        </main>
 
         <!-- Load footer component -->
-    <div id="footer-container"></div>
+        <div
+            hx-get="/components/footer.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
 
-    <!-- Load components after page load -->
-    <script>
-        // Function to load component and strip Vite client script
-        function loadComponent(url, targetId) {
-            fetch(url)
-                .then(response => response.text())
-                .then(html => {
-                    // Remove Vite client script if present
-                    const cleanedHtml = html.replace(/<script[^>]*@vite\/client[^>]*><\/script>/g, '');
-                    document.getElementById(targetId).innerHTML = cleanedHtml;
-                })
-                .catch(error => {
-                    console.error('Error loading component:', url, error);
-                });
-        }
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            // Load components
-            loadComponent('/components/header.html', 'header-container');
-            loadComponent('/components/nav.html', 'nav-container');
-            loadComponent('/components/footer.html', 'footer-container');
-        });
-    </script>
-
-    <script src="../../assets/js/main.js"></script>
-</body>
+        <!-- Load scripts partial -->
+        <div
+            hx-get="/components/scripts.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+    </body>
 </html>

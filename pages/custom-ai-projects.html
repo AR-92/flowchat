@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Custom AI Projects - FlowChat</title>
+        <meta
+            name="description"
+            content="Need something specific? Our DevOps + AI engineers build custom automations that integrate with your apps, sites, and APIs. Each custom project is just $700/month."
+        />
+        <link rel="icon" type="image/png" href="/assets/images/ico.png" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <!-- HTMX loaded without type="module" as we're not using ES modules -->
+        <script src="/assets/js/htmx.min.js"></script>
+        <link rel="stylesheet" href="/assets/css/output.css" />
+    </head>
+    <body>
+        <!-- Load header component -->
+        <div
+            hx-get="/components/header.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Load simple navigation component -->
+        <div
+            hx-get="/components/simple-nav.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Custom AI Projects Hero Section -->
+        <section class="py-24 px-4 sm:px-6 relative overflow-hidden">
+            <!-- Orb in Hero Section -->
+            <div class="absolute top-1/4 right-10 w-64 h-64 section-orb animate-float pulse-glow" style="--orb-color: rgba(107, 60, 255, 0.2);"></div>
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto">
+                    <div class="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-dark-600 animate-on-scroll mx-auto">
+                        <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
+                        <span class="text-xs font-black tracking-widest text-accent-500">CUSTOM</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-black tracking-tight animate-on-scroll leading-tight">
+                        Custom <span class="text-accent-500">AI Projects</span><br class="hidden sm:block"> Tailored to Your Needs
+                    </h1>
+                    <p class="mt-6 text-xl text-light-700 max-w-2xl mx-auto animate-on-scroll leading-relaxed">
+                        Need something specific? Our DevOps + AI engineers build custom automations that integrate with your apps, sites, and APIs. Each project is just $700/month.
+                    </p>
+                    <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+                        <a href="#features" class="btn-primary slime-glow px-8 py-3 rounded-lg hover-glow">
+                            Explore Features
+                        </a>
+                        <a href="/pages/contact.html" class="btn-secondary slime-glow px-8 py-3 rounded-lg hover-glow">
+                            Schedule Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Features Section -->
+            <section id="features" class="py-24 px-4 sm:px-6 relative overflow-hidden">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center max-w-3xl mx-auto">
+                        <h2 class="text-3xl font-black tracking-tight animate-on-scroll">
+                            Key Custom AI Project Features
+                        </h2>
+                        <p class="mt-4 text-xl text-light-700 max-w-2xl mx-auto animate-on-scroll">
+                            Powerful capabilities designed to solve your unique business challenges.
+                        </p>
+                    </div>
+
+                    <div class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        <div class="feature-card glass p-8 rounded-2xl animate-on-scroll">
+                            <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center mb-6">
+                                <i class="fas fa-lightbulb text-xl text-accent-500"></i>
+                            </div>
+                            <h3 class="text-xl font-black mb-3">Strategic Planning</h3>
+                            <p class="text-light-700">
+                                Collaborative approach to define requirements, scope, and success metrics for your custom AI solution.
+                            </p>
+                        </div>
+
+                        <div class="feature-card glass p-8 rounded-2xl animate-on-scroll">
+                            <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center mb-6">
+                                <i class="fas fa-cogs text-xl text-accent-500"></i>
+                            </div>
+                            <h3 class="text-xl font-black mb-3">Custom Development</h3>
+                            <p class="text-light-700">
+                                Build bespoke AI solutions tailored to your specific business processes and integration requirements.
+                            </p>
+                        </div>
+
+                        <div class="feature-card glass p-8 rounded-2xl animate-on-scroll">
+                            <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center mb-6">
+                                <i class="fas fa-plug text-xl text-accent-500"></i>
+                            </div>
+                            <h3 class="text-xl font-black mb-3">API Integration</h3>
+                            <p class="text-light-700">
+                                Seamless integration with your existing applications, databases, and third-party services.
+                            </p>
+                        </div>
+
+                        <div class="feature-card glass p-8 rounded-2xl animate-on-scroll">
+                            <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center mb-6">
+                                <i class="fas fa-sync-alt text-xl text-accent-500"></i>
+                            </div>
+                            <h3 class="text-xl font-black mb-3">Continuous Improvement</h3>
+                            <p class="text-light-700">
+                                Ongoing optimization and enhancement based on performance data and evolving business needs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Benefits Section -->
+            <section class="py-24 px-4 sm:px-6 relative overflow-hidden bg-dark-900/50">
+                <div class="max-w-7xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="text-3xl font-black tracking-tight animate-on-scroll">
+                                Transform Your Business with Custom AI Solutions
+                            </h2>
+                            <p class="mt-4 text-lg text-light-700 leading-relaxed animate-on-scroll">
+                                Our Custom AI Projects are designed to address your unique challenges with solutions that perfectly fit your workflows. Each project is priced at just $700/month, making advanced AI accessible to businesses of all sizes.
+                            </p>
+                            <div class="mt-8 space-y-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                    <p class="text-light-700">Solve complex, unique business problems</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                    <p class="text-light-700">Integrate with any existing system or platform</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                    <p class="text-light-700">Scale solutions as your business grows</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                    <p class="text-light-700">Maintain complete control over your automation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glass rounded-2xl p-8 animate-on-scroll">
+                            <h3 class="text-xl font-black mb-4">Pricing & Implementation</h3>
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center pb-3 border-b border-dark-700">
+                                    <span>Monthly Retainer</span>
+                                    <span class="font-black text-accent-500">$700/month</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-dark-700">
+                                    <span>One-time Setup Fee</span>
+                                    <span class="font-black text-accent-500">$700</span>
+                                </div>
+                                <div class="flex justify-between items-center pt-3">
+                                    <span class="font-bold">Total First Month</span>
+                                    <span class="font-black text-accent-500">$1,400</span>
+                                </div>
+                            </div>
+                            <a href="/pages/contact.html" class="btn-primary slime-glow w-full mt-6 text-center block hover-glow">
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <div
+                hx-get="/components/cta.html"
+                hx-trigger="load"
+                hx-swap="innerHTML"
+            ></div>
+        </main>
+
+        <!-- Load footer component -->
+        <div
+            hx-get="/components/footer.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Load scripts partial -->
+        <div
+            hx-get="/components/scripts.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+    </body>
+</html>

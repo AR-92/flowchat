@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "FlowChat - AI Automation Solutions Website",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "kill-port 3000 && concurrently \"vite --port 3000\" \"npm run tailwind\"",
     "build": "npm run tailwind-build && vite build",
     "preview": "vite preview",
     "tailwind": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch",
-    "tailwind-build": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css"
+    "tailwind-build": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css",
+    "server": "node dev-server.js",
+    "lint": "eslint assets/js/index-orbs.js assets/js/main.js assets/js/pricing-config.js",
+    "lint:fix": "eslint assets/js/index-orbs.js assets/js/main.js assets/js/pricing-config.js --fix",
+    "format": "prettier --write assets/js/index-orbs.js assets/js/main.js assets/js/pricing-config.js"
   },
   "keywords": [
     "website",
@@ -22,9 +27,12 @@
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "concurrently": "^9.2.1",
+    "eslint": "^9.35.0",
+    "eslint-config-prettier": "^10.1.8",
     "express": "^4.18.2",
     "kill-port": "^2.0.1",
     "postcss": "^8.4.24",
+    "prettier": "^3.6.2",
     "tailwindcss": "^3.3.2",
     "vite": "^4.3.9"
   }

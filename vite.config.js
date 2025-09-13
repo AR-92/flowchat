@@ -11,7 +11,7 @@ export default defineConfig({
   },
   css: {
     devSourcemap: true,
-    postcss: './postcss.config.js'
+    postcss: './postcss.config.cjs'
   },
   resolve: {
     // Ensure proper handling of asset paths

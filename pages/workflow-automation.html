@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Workflow Automation - FlowChat</title>
+        <meta
+            name="description"
+            content="Automate repetitive tasks like data entry, reporting, and approval routing with our Workflow Automation solution. Save hours of manual work and eliminate human errors for just $700/month."
+        />
+        <link rel="icon" type="image/png" href="/assets/images/ico.png" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <!-- HTMX loaded without type="module" as we're not using ES modules -->
+        <script src="/assets/js/htmx.min.js"></script>
+        <link rel="stylesheet" href="/assets/css/output.css" />
+    </head>
+    <body>
+        <!-- Skip to main content link for accessibility -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <!-- Load header component -->
+        <div
+            hx-get="/components/header.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Load simple navigation component -->
+        <div
+            hx-get="/components/simple-nav.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Workflow Automation Hero Section -->
+        <section class="py-24 px-4 sm:px-6 relative overflow-hidden">
+            <!-- Orb in Hero Section -->
+            <div class="absolute top-1/4 right-10 w-64 h-64 section-orb animate-float pulse-glow" style="--orb-color: rgba(107, 60, 255, 0.2);"></div>
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto">
+                    <div class="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-dark-600 animate-on-scroll mx-auto">
+                        <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
+                        <span class="text-xs font-black tracking-widest text-accent-500">AUTOMATION</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-black tracking-tight animate-on-scroll leading-tight">
+                        Workflow <span class="text-accent-500">Automation</span><br class="hidden sm:block"> That Saves Hours Daily
+                    </h1>
+                    <p class="mt-6 text-xl text-light-700 max-w-2xl mx-auto animate-on-scroll leading-relaxed">
+                        Automate repetitive tasks like data entry, reporting, and approval routing — saving hours of manual work and eliminating human errors. Each workflow includes a $700 setup fee and $700/month retainer.
+                    </p>
+                    <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+                        <a href="#features" class="btn-primary slime-glow px-8 py-3 rounded-lg hover-glow">
+                            Explore Features
+                        </a>
+                        <a href="/pages/contact.html" class="btn-secondary slime-glow px-8 py-3 rounded-lg hover-glow">
+                            Schedule Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Features Section -->
+            <section id="features" class="py-24 px-4 sm:px-6 relative overflow-hidden">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center max-w-3xl mx-auto">
+                        <h2 class="text-3xl font-black tracking-tight animate-on-scroll">
+                            Key Workflow Automation Features
+                        </h2>
+                        <p class="mt-4 text-xl text-light-700 max-w-2xl mx-auto animate-on-scroll">
+                            Powerful capabilities designed to transform how your team works.
+                        </p>
+                    </div>
+
+                    <div class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        <div class="feature-card glass p-8 rounded-2xl animate-on-scroll">
+                            <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center mb-6">
+                                <i class="fas fa-bolt text-xl text-accent-500"></i>
+                            </div>
+                            <h3 class="text-xl font-black mb-3">Task Bots</h3>
+                            <p class="text-light-700">
+                                Automate routine tasks like data entry, form processing, and file organization with intelligent bots that work 24/7.
+                            </p>
+                        </div>
+
+                        <div class="feature-card glass p-8 rounded-2xl animate-on-scroll">
+                            <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center mb-6">
+                                <i class="fas fa-sync-alt text-xl text-accent-500"></i>
+                            </div>
+                            <h3 class="text-xl font-black mb-3">Co-Automation</h3>
+                            <p class="text-light-700">
+                                Seamlessly integrate automation with human workflows, ensuring the right tasks are handled by the right resource.
+                            </p>
+                        </div>
+
+                        <div class="feature-card glass p-8 rounded-2xl animate-on-scroll">
+                            <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center mb-6">
+                                <i class="fas fa-chart-line text-xl text-accent-500"></i>
+                            </div>
+                            <h3 class="text-xl font-black mb-3">Performance Analytics</h3>
+                            <p class="text-light-700">
+                                Track automation performance with detailed metrics and insights to continuously optimize your workflows.
+                            </p>
+                        </div>
+
+                        <div class="feature-card glass p-8 rounded-2xl animate-on-scroll">
+                            <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center mb-6">
+                                <i class="fas fa-shield-alt text-xl text-accent-500"></i>
+                            </div>
+                            <h3 class="text-xl font-black mb-3">Error Prevention</h3>
+                            <p class="text-light-700">
+                                Built-in validation and error handling to ensure data integrity and process consistency across all workflows.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Benefits Section -->
+            <section class="py-24 px-4 sm:px-6 relative overflow-hidden bg-dark-900/50">
+                <div class="max-w-7xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="text-3xl font-black tracking-tight animate-on-scroll">
+                                Transform Your Operations with Workflow Automation
+                            </h2>
+                            <p class="mt-4 text-lg text-light-700 leading-relaxed animate-on-scroll">
+                                Our workflow automation solutions are designed to eliminate repetitive tasks, reduce errors, and accelerate business processes. Each workflow automation includes a $700 setup fee and $700/month retainer, making it an affordable solution for businesses of all sizes.
+                            </p>
+                            <div class="mt-8 space-y-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                    <p class="text-light-700">Reduce manual work by up to 80%</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                    <p class="text-light-700">Eliminate human errors in data processing</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                    <p class="text-light-700">Accelerate approval processes by 60%+</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-500 mt-1 mr-3"></i>
+                                    <p class="text-light-700">Gain real-time visibility into workflow status</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glass rounded-2xl p-8 animate-on-scroll">
+                            <h3 class="text-xl font-black mb-4">Pricing & Implementation</h3>
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center pb-3 border-b border-dark-700">
+                                    <span>Monthly Retainer</span>
+                                    <span class="font-black text-accent-500">$700/month</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b border-dark-700">
+                                    <span>One-time Setup Fee</span>
+                                    <span class="font-black text-accent-500">$700</span>
+                                </div>
+                                <div class="flex justify-between items-center pt-3">
+                                    <span class="font-bold">Total First Month</span>
+                                    <span class="font-black text-accent-500">$1,400</span>
+                                </div>
+                            </div>
+                            <a href="/pages/contact.html" class="btn-primary slime-glow w-full mt-6 text-center block hover-glow">
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <div
+                hx-get="/components/cta.html"
+                hx-trigger="load"
+                hx-swap="innerHTML"
+            ></div>
+        </main>
+
+        <!-- Load footer component -->
+        <div
+            hx-get="/components/footer.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Load scripts partial -->
+        <div
+            hx-get="/components/scripts.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+    </body>
+</html>

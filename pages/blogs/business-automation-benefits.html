@@ -1,201 +1,168 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top 6 Benefits of AI Automation for Your Business | FlowChat Blog</title>
-    <link rel="icon" type="image/png" href="../../assets/images/ico.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../../assets/css/output.css">
-    <link rel="stylesheet" href="../../assets/css/shared.css">
-    
-    
-</head>
-<body class="bg-dark-950 text-light-900 font-sans">
-    <!-- Skip to content link for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Top 6 Benefits of AI Automation for Your Business | FlowChat Blog</title>
+        <link rel="icon" type="image/png" href="/assets/images/ico.png" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <!-- HTMX loaded without type="module" as we're not using ES modules -->
+        <script src="/assets/js/htmx.min.js"></script>
+        <link rel="stylesheet" href="/assets/css/output.css" />
+        <link rel="stylesheet" href="/assets/css/htmx.css" />
+        <link rel="stylesheet" href="/assets/css/fix-footer.css" />
+    </head>
+    <body class="bg-dark-950 text-light-900 font-sans">
+        <!-- Skip to content link for accessibility -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Load header component -->
-    <div id="header-container"></div>
+        <!-- Load header component -->
+        <div
+            hx-get="/components/header.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
 
-    <!-- Load navigation component -->
-    <div id="nav-container"></div>
+        <!-- Load navigation component -->
+        <div
+            hx-get="/components/simple-nav.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
 
-    <!-- Load components after page load -->
-    <script>
-        // Function to load component and strip Vite client script
-        function loadComponent(url, targetId) {
-            fetch(url)
-                .then(response => response.text())
-                .then(html => {
-                    // Remove Vite client script if present
-                    const cleanedHtml = html.replace(/<script[^>]*@vite\/client[^>]*><\/script>/g, '');
-                    document.getElementById(targetId).innerHTML = cleanedHtml;
-                    
-                    // Initialize components if this is the nav component
-                    if (targetId === 'nav-container') {
-                        // Small delay to ensure DOM is updated
-                        setTimeout(() => {
-                            if (typeof initMobileMenu === 'function') {
-                                initMobileMenu();
-                            }
-                        }, 100);
-                    }
-                })
-                .catch(error => {
-                    console.error('Error loading component:', url, error);
-                });
-        }
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            // Load components
-            loadComponent('/components/header.html', 'header-container');
-            loadComponent('/components/nav.html', 'nav-container');
-        });
-    </script>
+        <!-- Fashion-Style Hero Section with Smooth Gradient -->
+        <header class="hero-container relative px-6 overflow-hidden pt-24">
+            <!-- Large Orb Gradient in Hero Section -->
+            <div class="absolute top-1/2 left-2/5 w-[400px] h-[400px] hero-orb transform -translate-x-1/2 -translate-y-1/2 animate-float float"></div>
+            <!-- Secondary Orb on Right Side -->
+            <div class="absolute top-1/3 right-1/4 w-[300px] h-[300px] hero-orb transform -translate-y-1/2 opacity-70 animate-pulse float"></div>
 
-    <!-- Fashion-Style Hero Section with Smooth Gradient -->
-    <header class="hero-container relative px-6 overflow-hidden pt-24">
-        <!-- Large Orb Gradient in Hero Section -->
-        <div class="absolute top-1/2 left-2/5 w-[400px] h-[400px] hero-orb transform -translate-x-1/2 -translate-y-1/2 animate-float float"></div>
-        <!-- Secondary Orb on Right Side -->
-        <div class="absolute top-1/3 right-1/4 w-[300px] h-[300px] hero-orb transform -translate-y-1/2 opacity-70 animate-pulse float"></div>
+            <div class="max-w-7xl mx-auto relative z-10 text-center pt-12 pb-8 px-4">
+                <div class="inline-flex items-center gap-3 glass px-4 py-2 rounded-full mb-6 border border-dark-600 animate-on-scroll">
+                    <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
+                    <span class="text-xs font-black tracking-widest text-accent-500">BUSINESS</span>
+                    <span class="text-xs font-medium text-light-900">AUTOMATION</span>
+                </div>
 
-        <div class="max-w-7xl mx-auto relative z-10 text-center pt-12 pb-8 px-4">
-            <div class="inline-flex items-center gap-3 glass px-4 py-2 rounded-full mb-6 border border-dark-600 animate-on-scroll">
-                <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
-                <span class="text-xs font-black tracking-widest text-accent-500">BUSINESS</span>
-                <span class="text-xs font-medium text-light-900">AUTOMATION</span>
+                <h1 class="text-4xl md:text-5xl font-black tracking-tight max-w-4xl mx-auto leading-tight animate-on-scroll">
+                    Top 6 Benefits of AI Automation for Your Business
+                </h1>
+
+                <p class="mt-4 text-xl text-light-700 max-w-2xl mx-auto leading-relaxed animate-on-scroll">
+                    Discover how AI automation can transform your operations and drive measurable results.
+                </p>
+
+                <div class="mt-6 flex items-center justify-center text-light-500 animate-on-scroll">
+                    <span>By Ahmed Rana</span>
+                    <span class="mx-3">•</span>
+                    <span>May 15, 2025</span>
+                    <span class="mx-3">•</span>
+                    <span>5 min read</span>
+                </div>
             </div>
+        </header>
 
-            <h1 class="text-4xl md:text-5xl font-black tracking-tight max-w-4xl mx-auto leading-tight animate-on-scroll">
-                Top 6 Benefits of AI Automation for Your Business
-            </h1>
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Article Content -->
+            <section class="py-16 px-4 sm:px-6">
+                <div class="max-w-3xl mx-auto">
+                    <div class="glass rounded-2xl p-8 animate-on-scroll">
+                        <div class="article-content">
+                            <p>In today's fast-paced business environment, companies are constantly searching for ways to stay ahead of the competition while managing costs and improving efficiency. AI automation has emerged as a game-changing solution that delivers remarkable results across industries. Here are the top six benefits that make AI automation an essential investment for modern businesses.</p>
 
-            <p class="mt-4 text-xl text-light-700 max-w-2xl mx-auto leading-relaxed animate-on-scroll">
-                Discover how AI automation can transform your operations and drive measurable results.
-            </p>
+                            <h2>1. Dramatic Time Savings</h2>
+                            <p>AI automation replaces hours of repetitive work with digital systems that run 24/7. Tasks that once took your team days or weeks can now be completed in seconds. From processing invoices to generating reports, AI handles the busywork so your team can focus on strategic initiatives that drive growth.</p>
+                            <p>Real-world example: A marketing agency reduced their weekly reporting time from 20 hours to just 2 hours by automating data collection and report generation.</p>
 
-            <div class="mt-6 flex items-center justify-center text-light-500 animate-on-scroll">
-                <span>By FlowChat Team</span>
-                <span class="mx-3">•</span>
-                <span>May 15, 2025</span>
-                <span class="mx-3">•</span>
-                <span>5 min read</span>
-            </div>
-        </div>
-    </header>
+                            <h2>2. Significant Cost Reduction</h2>
+                            <p>One well-designed automation can replace a full-time employee, saving you not just salary costs but also benefits, training, and overhead expenses. AI systems work around the clock without breaks, vacations, or sick days, delivering consistent value at a fraction of the cost.</p>
+                            <p>Our clients typically see a 70-90% reduction in costs for automated processes compared to manual execution.</p>
 
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Article Content -->
-        <section class="py-16 px-4 sm:px-6">
-            <div class="max-w-3xl mx-auto">
-                <div class="glass rounded-2xl p-8 animate-on-scroll">
-                    <div class="article-content">
-                        <p>In today's fast-paced business environment, companies are constantly searching for ways to stay ahead of the competition while managing costs and improving efficiency. AI automation has emerged as a game-changing solution that delivers remarkable results across industries. Here are the top six benefits that make AI automation an essential investment for modern businesses.</p>
+                            <h2>3. Increased Sales Through Faster Response Times</h2>
+                            <p>In business, timing is everything. AI automation ensures that leads are captured, qualified, and responded to within minutes rather than hours or days. This speed significantly increases conversion rates, as customers are more likely to engage when their interest is fresh.</p>
+                            <p>Industries like real estate and e-commerce see up to 40% higher conversion rates when implementing lead response automation.</p>
 
-                        <h2>1. Dramatic Time Savings</h2>
-                        <p>AI automation replaces hours of repetitive work with digital systems that run 24/7. Tasks that once took your team days or weeks can now be completed in seconds. From processing invoices to generating reports, AI handles the busywork so your team can focus on strategic initiatives that drive growth.</p>
-                        <p>Real-world example: A marketing agency reduced their weekly reporting time from 20 hours to just 2 hours by automating data collection and report generation.</p>
+                            <h2>4. Elimination of Human Error</h2>
+                            <p>AI systems don't get tired, distracted, or forgetful. They process information consistently and accurately, ensuring that data entry, calculations, and task execution are error-free. This reliability reduces costly mistakes and improves customer satisfaction.</p>
+                            <p>Companies report up to 95% reduction in process errors after implementing AI automation.</p>
 
-                        <h2>2. Significant Cost Reduction</h2>
-                        <p>One well-designed automation can replace a full-time employee, saving you not just salary costs but also benefits, training, and overhead expenses. AI systems work around the clock without breaks, vacations, or sick days, delivering consistent value at a fraction of the cost.</p>
-                        <p>Our clients typically see a 70-90% reduction in costs for automated processes compared to manual execution.</p>
+                            <h2>5. Enterprise-Grade Scalability</h2>
+                            <p>Built with DevOps principles, our AI automation solutions scale seamlessly from startup to enterprise level. Whether you're processing 100 transactions or 100,000, our systems maintain performance and reliability. Cloud-based architecture ensures that your automation grows with your business needs.</p>
 
-                        <h2>3. Increased Sales Through Faster Response Times</h2>
-                        <p>In business, timing is everything. AI automation ensures that leads are captured, qualified, and responded to within minutes rather than hours or days. This speed significantly increases conversion rates, as customers are more likely to engage when their interest is fresh.</p>
-                        <p>Industries like real estate and e-commerce see up to 40% higher conversion rates when implementing lead response automation.</p>
+                            <h2>6. Complete Customization and Integration</h2>
+                            <p>Unlike one-size-fits-all solutions, our AI automation is tailored to your specific business processes. We integrate with your existing apps, websites, and APIs, creating a seamless workflow that enhances rather than disrupts your current operations.</p>
 
-                        <h2>4. Elimination of Human Error</h2>
-                        <p>AI systems don't get tired, distracted, or forgetful. They process information consistently and accurately, ensuring that data entry, calculations, and task execution are error-free. This reliability reduces costly mistakes and improves customer satisfaction.</p>
-                        <p>Companies report up to 95% reduction in process errors after implementing AI automation.</p>
+                            <h2>Measuring the Impact</h2>
+                            <p>The benefits of AI automation compound over time. Businesses typically see:</p>
+                            <ul>
+                                <li>20+ hours saved per week per automated process</li>
+                                <li>30-50% reduction in operational costs</li>
+                                <li>25-60% increase in lead conversion rates</li>
+                                <li>99.9% uptime and reliability</li>
+                            </ul>
 
-                        <h2>5. Enterprise-Grade Scalability</h2>
-                        <p>Built with DevOps principles, our AI automation solutions scale seamlessly from startup to enterprise level. Whether you're processing 100 transactions or 100,000, our systems maintain performance and reliability. Cloud-based architecture ensures that your automation grows with your business needs.</p>
+                            <h2>Getting Started</h2>
+                            <p>Ready to experience these benefits in your business? Our implementation process is designed to deliver value quickly:</p>
+                            <ol>
+                                <li><strong>Discovery Call:</strong> We identify your repetitive tasks and growth goals</li>
+                                <li><strong>Proposal:</strong> We outline the scope, timeline, and investment</li>
+                                <li><strong>Implementation:</strong> Our engineers build your custom automation</li>
+                                <li><strong>Testing:</strong> We ensure everything works perfectly before launch</li>
+                                <li><strong>Go Live:</strong> Your automation begins delivering results 24/7</li>
+                            </ol>
 
-                        <h2>6. Complete Customization and Integration</h2>
-                        <p>Unlike one-size-fits-all solutions, our AI automation is tailored to your specific business processes. We integrate with your existing apps, websites, and APIs, creating a seamless workflow that enhances rather than disrupts your current operations.</p>
+                            <blockquote>
+                                "AI automation has transformed our business operations. What used to take our team 30 hours a week now happens automatically, and we've seen a 35% increase in sales conversions since implementation."
+                                <cite class="block mt-2">— Sarah Johnson, Operations Director at TechFlow Solutions</cite>
+                            </blockquote>
 
-                        <h2>Measuring the Impact</h2>
-                        <p>The benefits of AI automation compound over time. Businesses typically see:</p>
-                        <ul>
-                            <li>20+ hours saved per week per automated process</li>
-                            <li>30-50% reduction in operational costs</li>
-                            <li>25-60% increase in lead conversion rates</li>
-                            <li>99.9% uptime and reliability</li>
-                        </ul>
+                            <p>Don't let repetitive tasks hold your business back. With AI automation, you can save time, reduce costs, and accelerate growth while maintaining the highest quality standards.</p>
 
-                        <h2>Getting Started</h2>
-                        <p>Ready to experience these benefits in your business? Our implementation process is designed to deliver value quickly:</p>
-                        <ol>
-                            <li><strong>Discovery Call:</strong> We identify your repetitive tasks and growth goals</li>
-                            <li><strong>Proposal:</strong> We outline the scope, timeline, and investment</li>
-                            <li><strong>Implementation:</strong> Our engineers build your custom automation</li>
-                            <li><strong>Testing:</strong> We ensure everything works perfectly before launch</li>
-                            <li><strong>Go Live:</strong> Your automation begins delivering results 24/7</li>
-                        </ol>
-
-                        <blockquote>
-                            "AI automation has transformed our business operations. What used to take our team 30 hours a week now happens automatically, and we've seen a 35% increase in sales conversions since implementation."
-                            <cite class="block mt-2">— Sarah Johnson, Operations Director at TechFlow Solutions</cite>
-                        </blockquote>
-
-                        <p>Don't let repetitive tasks hold your business back. With AI automation, you can save time, reduce costs, and accelerate growth while maintaining the highest quality standards.</p>
-
-                        <div class="mt-10 pt-6 border-t border-dark-700">
-                            <h3 class="text-xl font-black mb-4">Related Articles</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <a href="/pages/blogs/implementation-guide.html" class="glass rounded-lg p-4 hover-glow block transition-all">
-                                    <h4 class="font-bold mb-2">Complete Guide to Implementing AI Automation</h4>
-                                    <p class="text-sm text-light-700">Step-by-step process for successful automation</p>
-                                </a>
-                                <a href="/pages/blogs/roi-calculator.html" class="glass rounded-lg p-4 hover-glow block transition-all">
-                                    <h4 class="font-bold mb-2">Calculating ROI for AI Automation</h4>
-                                    <p class="text-sm text-light-700">Measure the financial benefits of automation</p>
-                                </a>
+                            <div class="mt-10 pt-6 border-t border-dark-700">
+                                <h3 class="text-xl font-black mb-4">Related Articles</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <a href="/pages/blogs/implementation-guide.html" class="glass rounded-lg p-4 hover-glow block transition-all">
+                                        <h4 class="font-bold mb-2">Complete Guide to Implementing AI Automation</h4>
+                                        <p class="text-sm text-light-700">Step-by-step process for successful automation</p>
+                                    </a>
+                                    <a href="/pages/blogs/roi-calculator.html" class="glass rounded-lg p-4 hover-glow block transition-all">
+                                        <h4 class="font-bold mb-2">Calculating ROI for AI Automation</h4>
+                                        <p class="text-sm text-light-700">Measure the financial benefits of automation</p>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="mt-12 text-center">
+                        <a href="/pages/blogs/" class="btn-secondary slime-glow">
+                            <i class="fas fa-arrow-left mr-2"></i> Back to Blog
+                        </a>
+                    </div>
                 </div>
+            </section>
+        </main>
 
-                <div class="mt-12 text-center">
-                    <a href="/pages/blogs/" class="btn-secondary slime-glow">
-                        <i class="fas fa-arrow-left mr-2"></i> Back to Blog
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+        <!-- Load footer component -->
+        <div
+            hx-get="/components/footer.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
 
-    <!-- Load footer component -->
-    <div id="footer-container"></div>
-
-    <!-- Load components after page load -->
-    <script>
-        // Function to load component and strip Vite client script
-        function loadComponent(url, targetId) {
-            fetch(url)
-                .then(response => response.text())
-                .then(html => {
-                    // Remove Vite client script if present
-                    const cleanedHtml = html.replace(/<script[^>]*@vite\/client[^>]*><\/script>/g, '');
-                    document.getElementById(targetId).innerHTML = cleanedHtml;
-                })
-                .catch(error => {
-                    console.error('Error loading component:', url, error);
-                });
-        }
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            // Load components
-            loadComponent('/components/header.html', 'header-container');
-            loadComponent('/components/simple-nav.html', 'nav-container');
-            loadComponent('/components/footer.html', 'footer-container');
-        });
-    </script>
-
-    <script src="../../assets/js/main.js"></script>
-</body>
+        <!-- Load scripts partial -->
+        <div
+            hx-get="/components/scripts.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+    </body>
 </html>
