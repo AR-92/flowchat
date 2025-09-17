@@ -111,6 +111,29 @@ function handleAnchorClick(e) {
  * This function is safe to call multiple times
  */
 function initScrollAnimations() {
+  // On index page, make all elements visible immediately
+  if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+    // Make all animate-on-scroll elements visible immediately
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    animateElements.forEach(el => {
+      el.classList.add('visible');
+    });
+    
+    // Make all animate-futuristic-enter elements visible immediately
+    const futuristicElements = document.querySelectorAll('.animate-futuristic-enter');
+    futuristicElements.forEach(el => {
+      el.classList.add('visible');
+    });
+    
+    // Make all feature cards, process steps, and pricing cards visible immediately
+    const featureElements = document.querySelectorAll('.feature-card, .process-step, .pricing-card');
+    featureElements.forEach(el => {
+      el.classList.add('animate-fade-in');
+    });
+    
+    return; // Skip setting up observers on index page
+  }
+  
   // Clean up existing observers to prevent duplicates
   if (window.scrollObservers) {
     window.scrollObservers.forEach(observer => observer.disconnect());

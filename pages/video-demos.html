@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Video Demos - FlowChat</title>
+        <meta
+            name="description"
+            content="Watch our video demos to see how FlowChat's AI automation solutions can transform your business workflows."
+        />
+        <link rel="icon" type="image/png" href="/assets/images/ico.png" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <!-- HTMX loaded without type="module" as we're not using ES modules -->
+        <script src="/assets/js/htmx.min.js"></script>
+        <link rel="stylesheet" href="/assets/css/output.css" />
+    </head>
+    <body>
+        <!-- Skip to main content link for accessibility -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <!-- Load header component -->
+        <div
+            hx-get="/components/header.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Load simple navigation component -->
+        <div
+            hx-get="/components/simple-nav.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Video Demos Hero Section -->
+        <section class="py-24 px-4 sm:px-6 relative overflow-hidden">
+            <!-- Orb in Hero Section -->
+            <div class="absolute top-1/4 right-10 w-64 h-64 section-orb animate-float pulse-glow" style="--orb-color: rgba(107, 60, 255, 0.2);"></div>
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto">
+                    <div class="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-dark-600 animate-on-scroll mx-auto">
+                        <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
+                        <span class="text-xs font-black tracking-widest text-accent-500">VIDEO DEMOS</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-black tracking-tight animate-on-scroll leading-tight">
+                        See FlowChat in Action
+                    </h1>
+                    <p class="mt-6 text-xl text-light-700 max-w-2xl mx-auto animate-on-scroll leading-relaxed">
+                        Watch our video demonstrations to see how FlowChat's AI-powered automation solutions can transform your business workflows and save you hours every week.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Video Demos Section -->
+            <section class="py-16 px-4 sm:px-6">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-4xl font-black tracking-tight">
+                            Product Demonstrations
+                        </h2>
+                        <p class="mt-4 text-xl text-light-700 max-w-2xl mx-auto">
+                            Explore our AI automation capabilities through these guided video tours
+                        </p>
+                    </div>
+
+                    <!-- Video Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Video 1 -->
+                        <div class="bg-dark-800 rounded-xl overflow-hidden border border-dark-600 hover:border-accent-500 transition-all duration-300 hover-glow">
+                            <div class="relative pt-[56.25%] bg-dark-700"> <!-- 16:9 Aspect Ratio -->
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full bg-accent-500/20 flex items-center justify-center backdrop-blur-sm">
+                                        <i class="fas fa-play text-accent-500 text-2xl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold">Workflow Automation</h3>
+                                <p class="mt-2 text-light-700">
+                                    See how FlowChat automates complex business processes with minimal setup.
+                                </p>
+                                <div class="mt-4 flex items-center text-sm text-light-600">
+                                    <i class="far fa-clock mr-2"></i>
+                                    <span>5:22 mins</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video 2 -->
+                        <div class="bg-dark-800 rounded-xl overflow-hidden border border-dark-600 hover:border-accent-500 transition-all duration-300 hover-glow">
+                            <div class="relative pt-[56.25%] bg-dark-700"> <!-- 16:9 Aspect Ratio -->
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full bg-accent-500/20 flex items-center justify-center backdrop-blur-sm">
+                                        <i class="fas fa-play text-accent-500 text-2xl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold">AI Assistant Integration</h3>
+                                <p class="mt-2 text-light-700">
+                                    Learn how our AI assistant can handle customer inquiries and support tickets.
+                                </p>
+                                <div class="mt-4 flex items-center text-sm text-light-600">
+                                    <i class="far fa-clock mr-2"></i>
+                                    <span>4:15 mins</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video 3 -->
+                        <div class="bg-dark-800 rounded-xl overflow-hidden border border-dark-600 hover:border-accent-500 transition-all duration-300 hover-glow">
+                            <div class="relative pt-[56.25%] bg-dark-700"> <!-- 16:9 Aspect Ratio -->
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full bg-accent-500/20 flex items-center justify-center backdrop-blur-sm">
+                                        <i class="fas fa-play text-accent-500 text-2xl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold">Sales Automation</h3>
+                                <p class="mt-2 text-light-700">
+                                    Discover how FlowChat can automate your entire sales pipeline from lead capture to follow-up.
+                                </p>
+                                <div class="mt-4 flex items-center text-sm text-light-600">
+                                    <i class="far fa-clock mr-2"></i>
+                                    <span>6:40 mins</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video 4 -->
+                        <div class="bg-dark-800 rounded-xl overflow-hidden border border-dark-600 hover:border-accent-500 transition-all duration-300 hover-glow">
+                            <div class="relative pt-[56.25%] bg-dark-700"> <!-- 16:9 Aspect Ratio -->
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full bg-accent-500/20 flex items-center justify-center backdrop-blur-sm">
+                                        <i class="fas fa-play text-accent-500 text-2xl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold">Custom AI Solutions</h3>
+                                <p class="mt-2 text-light-700">
+                                    See how we build custom AI tools tailored to your specific business needs.
+                                </p>
+                                <div class="mt-4 flex items-center text-sm text-light-600">
+                                    <i class="far fa-clock mr-2"></i>
+                                    <span>7:18 mins</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video 5 -->
+                        <div class="bg-dark-800 rounded-xl overflow-hidden border border-dark-600 hover:border-accent-500 transition-all duration-300 hover-glow">
+                            <div class="relative pt-[56.25%] bg-dark-700"> <!-- 16:9 Aspect Ratio -->
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full bg-accent-500/20 flex items-center justify-center backdrop-blur-sm">
+                                        <i class="fas fa-play text-accent-500 text-2xl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold">Analytics Dashboard</h3>
+                                <p class="mt-2 text-light-700">
+                                    Explore our real-time analytics and reporting features that give you insights into your automation performance.
+                                </p>
+                                <div class="mt-4 flex items-center text-sm text-light-600">
+                                    <i class="far fa-clock mr-2"></i>
+                                    <span>3:55 mins</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video 6 -->
+                        <div class="bg-dark-800 rounded-xl overflow-hidden border border-dark-600 hover:border-accent-500 transition-all duration-300 hover-glow">
+                            <div class="relative pt-[56.25%] bg-dark-700"> <!-- 16:9 Aspect Ratio -->
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full bg-accent-500/20 flex items-center justify-center backdrop-blur-sm">
+                                        <i class="fas fa-play text-accent-500 text-2xl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold">Integration Capabilities</h3>
+                                <p class="mt-2 text-light-700">
+                                    Learn how FlowChat integrates with your existing tools and platforms for seamless automation.
+                                </p>
+                                <div class="mt-4 flex items-center text-sm text-light-600">
+                                    <i class="far fa-clock mr-2"></i>
+                                    <span>4:33 mins</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Section -->
+                    <div class="mt-20 text-center max-w-3xl mx-auto">
+                        <h3 class="text-2xl font-black">Ready to Transform Your Business?</h3>
+                        <p class="mt-4 text-xl text-light-700">
+                            Schedule a personalized demo to see how FlowChat can specifically benefit your organization.
+                        </p>
+                        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+                            <a href="/pages/contact.html" class="btn-primary slime-glow px-8 py-3 rounded-lg hover-glow">
+                                Request a Demo
+                            </a>
+                            <a href="/pages/services.html" class="btn-secondary slime-glow px-8 py-3 rounded-lg hover-glow">
+                                View Our Services
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Load footer component -->
+        <div
+            hx-get="/components/footer.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Load scripts partial -->
+        <div
+            hx-get="/components/scripts.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+    </body>
+</html>
