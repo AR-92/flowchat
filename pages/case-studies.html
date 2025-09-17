@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Case Studies - FlowChat</title>
+        <meta
+            name="description"
+            content="Real-world examples of how FlowChat's AI automation solutions have transformed businesses across industries. Detailed metrics, ROI calculations, and implementation insights."
+        />
+        <link rel="icon" type="image/png" href="/assets/images/ico.png" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <!-- HTMX loaded without type="module" as we're not using ES modules -->
+        <script src="/assets/js/htmx.min.js"></script>
+        <link rel="stylesheet" href="/assets/css/output.css" />
+    </head>
+    <body>
+        <!-- Skip to main content link for accessibility -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <!-- Load header component -->
+        <div
+            hx-get="/components/header.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Load simple navigation component -->
+        <div
+            hx-get="/components/simple-nav.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Load hero section -->
+        <div
+            hx-get="/components/case-studies-hero.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Load Case Studies Section -->
+            <div
+                hx-get="/components/case-studies-content.html"
+                hx-trigger="load"
+                hx-swap="innerHTML"
+            ></div>
+        </main>
+
+        <!-- Load footer component -->
+        <div
+            hx-get="/components/footer.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Load scripts partial -->
+        <div
+            hx-get="/components/scripts.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+    </body>
+</html>

@@ -25,6 +25,66 @@ p, li, span, div {
   color: #c9cccf; /* light-700 */
 }
 
+/* Big margins with centered content */
+.page-content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .page-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-content {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .page-content {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+/* Reduced margins for case study pages */
+.case-study-content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .case-study-content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .case-study-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .case-study-content {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
 a {
   color: #f0f2f5; /* light-900 */
 }
@@ -574,6 +634,16 @@ select.form-input {
     0 0 50px rgba(155, 92, 255, 0.2);
   /* Simulate neural connections pulsing */
   animation: pulse-glow 6s ease-in-out infinite;
+}
+
+/* Purple gradient text for hero sections */
+.hero-gradient-text {
+  background: linear-gradient(135deg, #9b5cff, #6b3cff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
 }
 
 /* Mobile-specific improvements */
