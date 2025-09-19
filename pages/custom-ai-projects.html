@@ -42,9 +42,12 @@
             <div class="absolute top-1/4 right-10 w-64 h-64 section-orb animate-float pulse-glow" style="--orb-color: rgba(107, 60, 255, 0.2);"></div>
             <div class="max-w-7xl mx-auto">
                 <div class="text-center max-w-3xl mx-auto">
-                    <div class="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-dark-600 animate-on-scroll mx-auto">
-                        <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
-                        <span class="text-xs font-black tracking-widest text-accent-500">CUSTOM</span>
+                    <div class="inline-flex items-center glass px-4 py-2 rounded-full mb-6 border border-dark-600 animate-on-scroll mx-auto">
+                        <!-- dot: do NOT let it shrink, center it inside the flex row -->
+                        <span class="flex-shrink-0 self-center w-1.5 h-1.5 rounded-full bg-accent-500 animate-pulse mr-2.5 mt-1"></span>
+
+                        <!-- main label -->
+                        <span class="text-xs font-black tracking-widest text-accent-500 leading-none whitespace-nowrap">CUSTOM</span>
                     </div>
                     <h1 class="text-4xl md:text-5xl font-black tracking-tight animate-on-scroll leading-tight">
                         Custom <span class="text-accent-500">AI Projects</span><br class="hidden sm:block"> Tailored to Your Needs

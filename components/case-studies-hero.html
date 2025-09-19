@@ -6,10 +6,15 @@
     <div class="absolute top-1/3 right-1/4 w-[300px] h-[300px] hero-orb transform -translate-y-1/2 opacity-70 animate-pulse"></div>
 
     <div class="max-w-7xl mx-auto page-content relative z-10 text-center pt-12 pb-8 px-4">
-        <div class="inline-flex items-center gap-3 glass px-4 py-2 rounded-full mb-6 border border-dark-600 animate-on-scroll">
-            <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
-            <span class="text-xs font-black tracking-widest text-accent-500">CLIENT SUCCESS</span>
-            <span class="text-xs font-medium text-light-900">CASE STUDIES</span>
+        <div class="inline-flex items-center glass px-4 py-2 rounded-full mb-6 border border-dark-600 animate-on-scroll">
+            <!-- dot: do NOT let it shrink, center it inside the flex row -->
+            <span class="flex-shrink-0 self-center w-1.5 h-1.5 rounded-full bg-accent-500 animate-pulse mr-2.5 mt-1"></span>
+
+            <!-- main label -->
+            <span class="text-xs font-black tracking-widest text-accent-500 mr-2 leading-none whitespace-nowrap">CLIENT SUCCESS</span>
+
+            <!-- secondary label -->
+            <span class="text-xs font-medium text-light-900 leading-none whitespace-nowrap">CASE STUDIES</span>
         </div>
 
         <h1 class="text-4xl md:text-5xl font-black tracking-tight max-w-4xl mx-auto leading-tight animate-on-scroll">
