@@ -22,3 +22,56 @@
         <link rel="stylesheet" href="/assets/css/output.css" />
     </head>
     <body>
+        <!-- Load header component -->
+        <div
+            hx-get="/components/header.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Load simple navigation component -->
+        <div
+            hx-get="/components/simple-nav.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Load hero section -->
+        <div
+            hx-get="/components/services-hero.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Load Services Section -->
+            <div
+                hx-get="/components/services.html"
+                hx-trigger="load"
+                hx-swap="innerHTML"
+            ></div>
+
+            <!-- Load CTA Section -->
+            <div
+                hx-get="/components/cta.html"
+                hx-trigger="load"
+                hx-swap="innerHTML"
+            ></div>
+        </main>
+
+        <!-- Load footer component -->
+        <div
+            hx-get="/components/footer.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+
+        <!-- Load scripts partial -->
+        <div
+            hx-get="/components/scripts.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+        ></div>
+    </body>
+</html>
