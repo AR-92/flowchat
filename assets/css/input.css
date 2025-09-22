@@ -6,6 +6,7 @@
 @import 'fix-footer.css';
 @import 'htmx.css';
 @import 'icons-fix.css';
+@import 'slim-design.css';
 
 /* Base styles for consistent text colors */
 html {

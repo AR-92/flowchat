@@ -9,10 +9,6 @@ function processHtmlFile(filePath) {
     
     // Replace script references with minified versions
     content = content.replace(
-      '<script src="/assets/js/pricing-config.js"></script>',
-      '<script src="/assets/js/pricing-config.min.js"></script>'
-    );
-    content = content.replace(
       '<script src="/assets/js/main.js"></script>',
       '<script src="/assets/js/main.min.js"></script>'
     );
@@ -29,8 +25,7 @@ function processHtmlFile(filePath) {
 // Copy minified JavaScript files to dist/assets/js directory
 const jsFiles = [
   'index-orbs.min.js',
-  'main.min.js',
-  'pricing-config.min.js'
+  'main.min.js'
 ];
 
 // Ensure the dist/assets/js directory exists

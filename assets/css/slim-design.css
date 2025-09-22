@@ -1,0 +1,312 @@
+/* Professional Slim Design System */
+
+/* Slim Button Styles */
+.btn-slim {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  min-height: 36px;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-decoration: none;
+  background: transparent;
+  color: #f0f2f5;
+  border: 1px solid #2d2d3a;
+}
+
+.btn-slim:hover {
+  background: rgba(155, 92, 255, 0.1);
+  border-color: #9b5cff;
+  color: #9b5cff;
+}
+
+.btn-slim-primary {
+  background: #9b5cff;
+  color: #ffffff;
+  border: 1px solid #9b5cff;
+  font-weight: 500;
+}
+
+.btn-slim-primary:hover {
+  background: #8a4de0;
+  border-color: #8a4de0;
+  box-shadow: 0 2px 8px rgba(155, 92, 255, 0.2);
+}
+
+.btn-slim-secondary {
+  background: transparent;
+  border: 1px solid #c9cccf;
+  color: #c9cccf;
+}
+
+.btn-slim-secondary:hover {
+  background: rgba(201, 204, 207, 0.1);
+  border-color: #f0f2f5;
+  color: #f0f2f5;
+}
+
+/* Slim Link Styles */
+.link-slim {
+  color: #9b5cff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.link-slim:hover {
+  color: #8a4de0;
+  border-bottom: 1px solid #9b5cff;
+}
+
+.link-slim-underline {
+  color: #f0f2f5;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.link-slim-underline:hover {
+  color: #9b5cff;
+  border-bottom: 1px solid #9b5cff;
+}
+
+/* Minimal Glass Effect */
+.glass-slim {
+  background: rgba(18, 18, 24, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Slim Form Elements */
+.form-input-slim {
+  background: rgba(18, 18, 24, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f0f2f5;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  min-height: 36px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  box-shadow: none;
+}
+
+.form-input-slim:focus {
+  outline: none;
+  border-color: #9b5cff;
+  box-shadow: 0 0 0 2px rgba(155, 92, 255, 0.2);
+  background: rgba(18, 18, 24, 0.8);
+}
+
+/* Slim Typography */
+.text-slim {
+  font-weight: 400;
+  line-height: 1.5;
+  color: #c9cccf;
+}
+
+.text-slim-heading {
+  font-weight: 600;
+  color: #f0f2f5;
+  letter-spacing: -0.01em;
+}
+
+/* Slim Tags */
+.tag-slim {
+  background: rgba(155, 92, 255, 0.15);
+  color: #9b5cff;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  border: 1px solid rgba(155, 92, 255, 0.2);
+}
+
+/* Slim Divider */
+.divider-slim {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 1.5rem 0;
+}
+
+/* Slim Card */
+.card-slim {
+  background: rgba(18, 18, 24, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.card-slim:hover {
+  border-color: rgba(155, 92, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Slim Spacing Utilities */
+.py-slim { padding-top: 1rem; padding-bottom: 1rem; }
+.px-slim { padding-left: 1rem; padding-right: 1rem; }
+.py-slim-sm { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.px-slim-sm { padding-left: 0.75rem; padding-right: 0.75rem; }
+.py-slim-lg { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.px-slim-lg { padding-left: 1.5rem; padding-right: 1.5rem; }
+
+.my-slim { margin-top: 1rem; margin-bottom: 1rem; }
+.mx-slim { margin-left: 1rem; margin-right: 1rem; }
+.my-slim-sm { margin-top: 0.75rem; margin-bottom: 0.75rem; }
+.mx-slim-sm { margin-left: 0.75rem; margin-right: 0.75rem; }
+.my-slim-lg { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+.mx-slim-lg { margin-left: 1.5rem; margin-right: 1.5rem; }
+
+/* Slim Animation */
+.animate-slim-fade {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.animate-slim-fade.visible {
+  opacity: 1;
+}
+
+/* Slim Orbs (less prominent) */
+.orb-slim {
+  background: radial-gradient(
+    circle,
+    rgba(155, 92, 255, 0.1) 0%,
+    rgba(107, 60, 255, 0.05) 50%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: -1;
+  position: absolute;
+  opacity: 0.3;
+}
+
+/* Slim Navigation */
+.nav-slim {
+  background: rgba(10, 10, 15, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.75rem 1.5rem;
+}
+
+.nav-slim .nav-link {
+  color: #c9cccf;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.nav-slim .nav-link:hover {
+  color: #9b5cff;
+  background: rgba(155, 92, 255, 0.1);
+}
+
+.nav-slim .btn-slim {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Slim Hero Section */
+.hero-slim {
+  padding: 6rem 1.5rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-slim .hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.hero-slim .hero-subtitle {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #c9cccf;
+  max-width: 48rem;
+  margin-bottom: 2rem;
+}
+
+.hero-slim .hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(155, 92, 255, 0.1);
+  border: 1px solid rgba(155, 92, 255, 0.2);
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.hero-slim .hero-tag .dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #9b5cff;
+}
+
+/* Slim Section */
+.section-slim {
+  padding: 4rem 1.5rem;
+}
+
+.section-slim .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+.section-slim .section-subtitle {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #c9cccf;
+  max-width: 48rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Slim Footer */
+.footer-slim {
+  padding: 3rem 1.5rem;
+  background: rgba(10, 10, 15, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-slim .footer-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-slim .footer-link {
+  display: block;
+  color: #c9cccf;
+  font-size: 0.875rem;
+  padding: 0.25rem 0;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-slim .footer-link:hover {
+  color: #9b5cff;
+}

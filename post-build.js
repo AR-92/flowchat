@@ -15,10 +15,6 @@ htmlFiles.forEach(file => {
     
     // Replace script references with minified versions
     content = content.replace(
-      '<script src="/assets/js/pricing-config.js"></script>',
-      '<script src="/assets/js/pricing-config.min.js"></script>'
-    );
-    content = content.replace(
       '<script src="/assets/js/main.js"></script>',
       '<script src="/assets/js/main.min.js"></script>'
     );

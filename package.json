@@ -9,10 +9,10 @@
     "preview": "vite preview",
     "tailwind": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch",
     "tailwind-build": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css",
-    "minify-js": "terser assets/js/index-orbs.js -o assets/js/index-orbs.min.js -c -m && terser assets/js/main.js -o assets/js/main.min.js -c -m && terser assets/js/pricing-config.js -o assets/js/pricing-config.min.js -c -m",
-    "lint": "eslint assets/js/index-orbs.js assets/js/main.js assets/js/pricing-config.js",
-    "lint:fix": "eslint assets/js/index-orbs.js assets/js/main.js assets/js/pricing-config.js --fix",
-    "format": "prettier --write assets/js/index-orbs.js assets/js/main.js assets/js/pricing-config.js"
+    "minify-js": "terser assets/js/index-orbs.js -o assets/js/index-orbs.min.js -c -m && terser assets/js/main.js -o assets/js/main.min.js -c -m",
+    "lint": "eslint assets/js/index-orbs.js assets/js/main.js",
+    "lint:fix": "eslint assets/js/index-orbs.js assets/js/main.js --fix",
+    "format": "prettier --write assets/js/index-orbs.js assets/js/main.js"
   },
   "keywords": [
     "website",
