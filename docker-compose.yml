@@ -4,7 +4,7 @@ services:
   flowchat-website:
     image: nginx:alpine
     ports:
-      - "4000:80"
+      - "80:80"
     volumes:
       - .:/usr/share/nginx/html
     restart: unless-stopped
